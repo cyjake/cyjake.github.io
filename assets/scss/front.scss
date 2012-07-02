@@ -1,0 +1,69 @@
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #222;
+  font: 12px/1.5 tahoma, arial;
+}
+
+#background {
+  background: #222 url(/assets/img/background.jpg) 0 0 no-repeat;
+  height: 852px;
+  width: 1800px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -428px 0 0 -900px;
+}
+
+#page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  h1 {
+    font-family: Helvetica, Arial;
+    font-weight: 800;
+    font-size: 300%;
+    text-transform: uppercase;
+    position: absolute;
+    right: 40px;
+    top: 200px;
+
+    a, a:visited {
+      color: #fff;
+      text-decoration: none;
+    }
+    .name {
+      color: #f50;
+    }
+  }
+}
+
+#badge {
+  background: #efefef;
+  background: rgba(255, 255, 255, .4);
+  position: absolute;
+  top: 280px;
+  right: 40px;
+  width: 670px;
+  padding: 5px 10px 0;
+  color: #111;
+  font-size: 120%;
+  border-radius: 2px;
+
+  p {
+    margin: 0 0 5px 0;
+  }
+  a {
+    color: #333;
+  }
+  a:hover {
+    color: #0063DC;
+  }
+}
