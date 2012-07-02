@@ -4,4 +4,4 @@ lsi: false
 pygments: true
 markdown: rdiscount
 permalink: /:categories/:title.html
-exclude: [Gemfile, Gemfile.lock, Guardfile]
+exclude: [Gemfile, Gemfile.lock, Guardfile, README.md, CNAME]
