@@ -1,0 +1,37 @@
+@import 'variable';
+
+.row {
+  margin-left: $gridGutterWidth * -1;
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin span($columns ) {
+  width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
+}
+
+@for $i from 1 through $gridColumns {
+  .span#{$i} {
+    float: left;
+    _display: inline;
+    margin-left: $gridGutterWidth;
+    @include span($i);
+  }
+}
+
+@for $i from 1 through $gridColumns {
+  .offset#{$i} {
+    margin-left: ($gridColumnWidth * $i) + ($gridGutterWidth * ($i - 1));
+  }
+}
+
+.container {
+  @include span($gridColumns);
+}

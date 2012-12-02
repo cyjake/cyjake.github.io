@@ -1,16 +1,16 @@
+@import "../brix/mixin";
+
+@import "base";
+
 html, body {
   height: 100%;
 }
 body {
-  margin: 0;
-  padding: 0;
   overflow: hidden;
-  background: #222;
-  font: 12px/1.5 tahoma, arial;
 }
 
 #background {
-  background: #222 url(/assets/img/background.jpg) 0 0 no-repeat;
+  background: #222 url(/assets/img/cross.jpg) 0 0 no-repeat;
   height: 852px;
   width: 1800px;
   position: absolute;
@@ -21,19 +21,18 @@ body {
 
 #page {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 100px;
+  right: 40px;
   height: 100%;
+  width: 690px;
 
   h1 {
     font-family: Helvetica, Arial;
     font-weight: 800;
     font-size: 300%;
     text-transform: uppercase;
-    position: absolute;
-    right: 40px;
-    top: 200px;
+    text-align: right;
+    line-height: 1;
 
     a, a:visited {
       color: #fff;
@@ -43,27 +42,61 @@ body {
       color: #f50;
     }
   }
-}
-
-#badge {
-  background: #efefef;
-  background: rgba(255, 255, 255, .4);
-  position: absolute;
-  top: 280px;
-  right: 40px;
-  width: 670px;
-  padding: 5px 10px 0;
-  color: #111;
-  font-size: 120%;
-  border-radius: 2px;
-
   p {
     margin: 0 0 5px 0;
   }
-  a {
-    color: #333;
+  a:link, a:visited {
+    color: #394B61;
   }
   a:hover {
     color: #0063DC;
+    text-decoration: none;
   }
 }
+
+.dashboard {
+  position: relative;
+  color: #21212B;
+
+  .board {
+    background: #f0f0f0;
+    background: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+    @include border-radius(2px);
+
+    h3 {
+      text-transform: uppercase;
+      font-weight: 300;
+      margin: 0;
+      font-size: 100%;
+      background: #fff;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 2px 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .content {
+      padding: 5px 10px;
+    }
+  }
+}
+
+.aside {
+  position: absolute;
+  width: 280px;
+  left: -300px;
+  top: 0;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+
+      ul {
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
