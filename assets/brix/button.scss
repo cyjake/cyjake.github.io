@@ -1,0 +1,196 @@
+// Buttons.less
+// Base styles for various buttons
+// -------------------------------------------------------------
+
+@import "mixin";
+
+.btn {
+  box-sizing: content-box;  // for input, button
+  display: inline-block;
+  border: 1px solid #ddd;
+  @include border-radius(2px);
+  margin-bottom: 0; // for input
+  padding: 0 10px;
+  width: auto;  // for input
+  height: 21px;
+  line-height: 21px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom-color: #bbb;
+  @include gradient-vertical(#f8f8f8, #eee);
+
+  &,
+  &:hover,
+  &:visited {
+    color:#333!important;
+  }
+
+  &:hover {
+    @include box-shadow(none);
+    @include gradient-vertical(#f2f2f2, #e6e6e6);
+    // form.scss overwrites these properties.
+    border-color: #ddd;
+  }
+
+  &:active {
+    @include gradient-vertical(#e6e6e6, #f2f2f2);
+    border-color: #ddd;
+  }
+  &:focus {
+    border-style: solid;
+  }
+
+  .iconfont {
+    font-size:12px!important;
+    font-weight: normal;
+  }
+}
+input, button {
+  &.btn {
+    *height: 23px;
+    *line-height: 20px;
+  }
+}
+
+/*group btn*/
+.btn-group {
+  @include clearfix;
+
+  .btn {
+    @include border-radius(0);
+    border-left-width: 0;
+    float: left;
+    *margin-right: 0;
+    *margin-left: 0;
+
+    /*border-right-width: 0;*/
+    &:first-child {
+      border-left-width: 1px;
+      @include border-top-left-radius(2px);
+      @include border-bottom-left-radius(2px);
+    }
+    &:last-child {
+      /*border-right-width: 1px;*/
+      @include border-top-right-radius(2px);
+      @include border-bottom-right-radius(2px);
+    }
+  }
+}
+
+// red button
+.btn-red {
+  border-color: transparent;
+  border-bottom-color: #c21b1b;
+  @include gradient-vertical(#f44, #f22);
+
+  &,
+  &:hover,
+  &:visited {
+    color:#FFF!important;
+  }
+
+  &:hover {
+    @include gradient-vertical(#ee2020, #d51314);
+    border-color: transparent;
+  }
+
+  &:active {
+    @include gradient-vertical(#d51314, #ee2020);
+    border-color: transparent;
+  }
+}
+
+.btn-orange {
+  border-color: transparent;
+  border-bottom-color: #cf370c;
+  @include gradient-vertical(#f50, #f40);
+
+  &,
+  &:hover,
+  &:visited {
+    color: #FFF!important;
+  }
+
+  &:hover {
+    @include gradient-vertical(#f40, #d73900);
+    border-color: transparent;
+  }
+
+  &:active {
+    @include gradient-vertical(#d73900, #f40);
+    border-color: transparent;
+  }
+}
+
+.btn-blue {
+  border-color: transparent;
+  border-bottom-color: #0960ab;
+  @include gradient-vertical(#488fcd, #3a7db8);
+
+  &,
+  &:hover,
+  &:visited {
+    color:#FFF!important;
+  }
+
+  &:hover {
+    @include gradient-vertical(#4087c6, #25659c);
+    border-color: transparent;
+  }
+
+  &:active {
+    @include gradient-vertical(#25659c, #4087c6);
+    border-color: transparent;
+  }
+}
+
+.btn-disabled {
+  border: 1px solid #e0e0e0;
+  border-bottom-color: #ccc;
+  cursor: default;
+
+  &,
+  &:hover,
+  &:visited {
+    color: #ccc !important;
+    @include gradient-vertical(#f2f2f2, #e6e6e6);
+  }
+  &:hover {
+    border-color: #e0e0e0;
+  }
+}
+
+//size 45px buttons
+.btn-size45, .btn-xlarge {
+  padding: 0 20px;
+  height: 43px;
+  line-height: 43px;
+  font-size: 18px;
+  .iconfont { font-size:18px!important; }
+}
+
+.btn-size40, .btn-large {
+  padding: 0 20px;
+  height: 38px;
+  line-height: 38px;
+  font-size: 14px;
+  .iconfont { font-size:14px!important; }
+}
+
+.btn-size30, .btn-medium {
+  height: 28px;
+  line-height: 28px;
+  padding: 0 20px;
+}
+
+.btn-size28, .btn-small {
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px;
+}
+
+.btn-size25, .btn-xsmall {
+  height: 23px;
+  line-height: 23px;
+}

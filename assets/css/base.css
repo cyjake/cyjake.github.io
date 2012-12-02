@@ -1,0 +1,36 @@
+/*
+Syntax error: Invalid CSS after "base.scss": expected "{", was ""
+        on line 1 of assets/css/base.scss
+
+1: base.scss
+
+Backtrace:
+assets/css/base.scss:1
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.1/lib/sass/scss/parser.rb:1130:in `expected'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.1/lib/sass/scss/parser.rb:1066:in `expected'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.1/lib/sass/scss/parser.rb:1061:in `tok!'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.1/lib/sass/scss/parser.rb:517:in `block'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.1/lib/sass/scss/parser.rb:512:in `ruleset'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.1/lib/sass/scss/parser.rb:536:in `block_child'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.1/lib/sass/scss/parser.rb:526:in `block_contents'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.1/lib/sass/scss/parser.rb:70:in `stylesheet'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.1/lib/sass/scss/parser.rb:27:in `parse'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.1/lib/sass/engine.rb:342:in `_to_tree'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.1/lib/sass/engine.rb:315:in `_render'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.1/lib/sass/engine.rb:262:in `render'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.1/lib/sass/plugin/compiler.rb:340:in `update_stylesheet'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.1/lib/sass/plugin/compiler.rb:202:in `block in update_stylesheets'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.1/lib/sass/plugin/compiler.rb:200:in `each'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.1/lib/sass/plugin/compiler.rb:200:in `update_stylesheets'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.1/lib/sass/plugin/compiler.rb:298:in `block in watch'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/listen-0.4.7/lib/listen/multi_listener.rb:86:in `call'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/listen-0.4.7/lib/listen/multi_listener.rb:86:in `on_change'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/listen-0.4.7/lib/listen/multi_listener.rb:95:in `block in initialize_adapter'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/listen-0.4.7/lib/listen/adapter.rb:162:in `call'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/listen-0.4.7/lib/listen/adapter.rb:162:in `poll_changed_dirs'
+/Users/nil/.rvm/gems/ruby-1.9.2-p290/gems/listen-0.4.7/lib/listen/adapters/darwin.rb:28:in `block in start'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"base.scss\": expected \"{\", was \"\"\A         on line 1 of assets/css/base.scss\A \A 1: base.scss"; }

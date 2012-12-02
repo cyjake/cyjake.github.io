@@ -1,7 +1,5 @@
 # jekyll settings
-safe: true
-lsi: false
 pygments: true
 markdown: rdiscount
-permalink: /:categories/:title.html
+permalink: /:categories/:title
 exclude: [Gemfile, Gemfile.lock, Guardfile, README.md, CNAME]

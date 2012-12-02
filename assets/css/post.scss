@@ -1,0 +1,18 @@
+@import "../brix/normalize";
+@import "../brix/variable";
+@import "../brix/mixin";
+@import "../brix/grid";
+
+@import "base";
+
+#page {
+  margin: 0 auto;
+  width: 690px;
+}
+#aside {
+  position: fixed;
+  top: 65px;
+  left: 50%;
+  margin-left: -565px;
+  width: 200px;
+}

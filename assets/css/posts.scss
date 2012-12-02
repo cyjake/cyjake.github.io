@@ -1,0 +1,57 @@
+@import "../brix/mixin";
+
+@import "base";
+
+body {
+  overflow: hidden;
+  background: #21212B;
+}
+
+.cover {
+  width: 960px;
+  height: 640px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -320px 0 0 -480px;
+  color: #f0f0f0;
+  @include box-shadow(rgba(0, 0, 0, 0.3) 0 0 4px);
+  @include border-radius(2px);
+
+  a:link, a:visited {
+    color: #f0f0f0;
+    text-decoration: none;
+  }
+}
+
+#life {
+  background: #efefef;
+
+  .cover {
+    background: url(../img/flower.jpg) no-repeat;
+  }
+  .posts {
+    width: 600px;
+    margin: 100px auto 0;
+    text-align: right;
+
+    ul {
+      float: right;
+    }
+
+  }
+}
+
+#bin {
+  .cover {
+    background: url(../img/tunnel.jpg) no-repeat;
+  }
+  .posts {
+    text-align: right;
+    padding: 190px 60px 0 0;
+
+    ul {
+      float: right;
+    }
+  }
+}

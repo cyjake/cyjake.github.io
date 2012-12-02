@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }} &mdash; cyj.me</title>
+  <link rel="stylesheet" type="text/css" href="/assets/css/post.css">
+</head>
+<body>
+  <div id="aside" class="span12">
+    <ul>
+      {% for category in site.categories %}
+      <li>
+        <a href="{{ site.baseurl }}/{{ category[0] }}">{{ category[0] | capitalize }}</a>
+        {% if page.categories contains category[0] %}
+        <ul>
+          {% for post in category[1] %}
+          <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div id="page">
+    <article>
+      <h1>{{ page.title }}</h1>
+      {{ content }}
+    </article>
+  </div>
+</body>
+</html>
