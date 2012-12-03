@@ -902,13 +902,92 @@ a:link {
 a:hover {
   text-decoration: underline; }
 
+body {
+  text-align: center; }
+
 #page {
-  margin: 0 auto;
-  width: 690px; }
+  margin: 50px auto 0;
+  width: 690px;
+  text-align: left; }
 
 #aside {
   position: fixed;
-  top: 65px;
+  top: 115px;
   left: 50%;
-  margin-left: -565px;
-  width: 200px; }
+  margin-left: -645px;
+  width: 280px;
+  text-align: left; }
+  #aside ul {
+    padding: 0;
+    margin: 0; }
+    #aside ul li {
+      list-style: none; }
+  #aside .category {
+    margin-bottom: 10px; }
+  #aside .category:last-child {
+    margin-bottom: 0; }
+  #aside .entries {
+    padding-left: 15px; }
+
+#footer {
+  margin: 40px 0 20px; }
+
+#post-body {
+  background: #efefef; }
+
+#front-body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #21212b url(/assets/img/cross.jpg) 0 0 no-repeat; }
+  #front-body h1 {
+    font-family: Helvetica, Arial;
+    font-size: 300%;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1;
+    position: relative; }
+    #front-body h1 a, #front-body h1 a:visited {
+      color: #fff;
+      text-decoration: none; }
+    #front-body h1 .name {
+      color: #f50;
+      font-weight: 800; }
+  #front-body p {
+    margin: 0 0 5px 0; }
+  #front-body a:link, #front-body a:visited {
+    color: #394B61; }
+  #front-body a:hover {
+    color: #0063DC;
+    text-decoration: none; }
+  #front-body .board {
+    background: #f0f0f0;
+    background: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px; }
+    #front-body .board h3 {
+      text-transform: uppercase;
+      font-weight: 300;
+      margin: 0;
+      font-size: 100%;
+      background: #fff;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 2px 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+    #front-body .board .content {
+      padding: 5px 10px; }
+  #front-body #dashboard {
+    position: relative;
+    color: #21212B; }
+  #front-body #disqus-board {
+    position: relative; }
+  #front-body #footer {
+    color: #fff; }
+    #front-body #footer a:link, #front-body #footer a:visited {
+      color: #fff; }
+    #front-body #footer .home {
+      font-weight: 400; }
+    #front-body #footer .name {
+      color: #f50;
+      font-weight: 800; }
