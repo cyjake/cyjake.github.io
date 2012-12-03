@@ -1,0 +1,12 @@
+<ul class="categories">
+  {% for category in site.categories %}
+  <li class="category">
+    <label>{{ category[0] | capitalize }}</label>
+    <ul class="entries">
+      {% for post in category[1] %}
+      <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </li>
+  {% endfor %}
+</ul>
