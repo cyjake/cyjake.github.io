@@ -4,7 +4,6 @@
 @import "../brix/grid";
 
 html, body {
-  height: 100%;
   font: 14px/1.5 normal Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
 }
 h1, h2, h3, h4 {
@@ -12,6 +11,7 @@ h1, h2, h3, h4 {
 }
 a:link {
   text-decoration: none;
+  color: #0063DC;
 }
 a:hover {
   text-decoration: underline;
@@ -57,6 +57,13 @@ body {
 
 #post-body {
   background: #efefef;
+
+  .article {
+    margin-bottom: 40px;
+  }
+  .back-home {
+    margin-bottom: 20px;
+  }
 }
 
 #front-body {
@@ -68,30 +75,13 @@ body {
     font-family: Helvetica, Arial;
     font-size: 300%;
     font-weight: 400;
-    text-transform: uppercase;
     line-height: 1;
     position: relative;
 
-    a, a:visited {
+    #branding:link, #branding:visited {
       color: #fff;
-      text-decoration: none;
-    }
-    .name {
-      color: #f50;
-      font-weight: 800;
     }
   }
-  p {
-    margin: 0 0 5px 0;
-  }
-  a:link, a:visited {
-    color: #394B61;
-  }
-  a:hover {
-    color: #0063DC;
-    text-decoration: none;
-  }
-
   .board {
     background: #f0f0f0;
     background: rgba(255, 255, 255, 0.6);
@@ -128,12 +118,18 @@ body {
     a:link, a:visited {
       color: #fff;
     }
-    .home {
-      font-weight: 400;
-    }
-    .name {
-      color: #f50;
-      font-weight: 800;
-    }
+  }
+}
+
+#branding {
+  text-transform: uppercase;
+  font-weight: 400;
+
+  &:link, &:visited {
+    text-decoration: none;
+  }
+  .name {
+    color: #f50;
+    font-weight: 800;
   }
 }

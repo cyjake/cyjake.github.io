@@ -890,14 +890,14 @@ table {
   width: 990px; }
 
 html, body {
-  height: 100%;
   font: 14px/1.5 normal Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif; }
 
 h1, h2, h3, h4 {
   font-weight: 300; }
 
 a:link {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #0063DC; }
 
 a:hover {
   text-decoration: underline; }
@@ -934,6 +934,10 @@ body {
 
 #post-body {
   background: #efefef; }
+  #post-body .article {
+    margin-bottom: 40px; }
+  #post-body .back-home {
+    margin-bottom: 20px; }
 
 #front-body {
   overflow-x: hidden;
@@ -943,22 +947,10 @@ body {
     font-family: Helvetica, Arial;
     font-size: 300%;
     font-weight: 400;
-    text-transform: uppercase;
     line-height: 1;
     position: relative; }
-    #front-body h1 a, #front-body h1 a:visited {
-      color: #fff;
-      text-decoration: none; }
-    #front-body h1 .name {
-      color: #f50;
-      font-weight: 800; }
-  #front-body p {
-    margin: 0 0 5px 0; }
-  #front-body a:link, #front-body a:visited {
-    color: #394B61; }
-  #front-body a:hover {
-    color: #0063DC;
-    text-decoration: none; }
+    #front-body h1 #branding:link, #front-body h1 #branding:visited {
+      color: #fff; }
   #front-body .board {
     background: #f0f0f0;
     background: rgba(255, 255, 255, 0.6);
@@ -986,8 +978,12 @@ body {
     color: #fff; }
     #front-body #footer a:link, #front-body #footer a:visited {
       color: #fff; }
-    #front-body #footer .home {
-      font-weight: 400; }
-    #front-body #footer .name {
-      color: #f50;
-      font-weight: 800; }
+
+#branding {
+  text-transform: uppercase;
+  font-weight: 400; }
+  #branding:link, #branding:visited {
+    text-decoration: none; }
+  #branding .name {
+    color: #f50;
+    font-weight: 800; }

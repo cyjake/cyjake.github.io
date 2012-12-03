@@ -7,13 +7,19 @@
 </head>
 <body id="post-body">
   <div id="aside">
-    {% include categories.html %}
+    <div class="back-home">
+      {% include branding.html %}
+    </div>
+    <div class="blog">
+      {% include categories.html %}
+    </div>
   </div>
   <div id="page">
-    <article>
+    <div class="article">
       <h1>{{ page.title }}</h1>
       {{ content }}
-    </article>
+    </div>
+    {% include disqus.html %}
     {% include footer.html %}
   </div>
 </body>
