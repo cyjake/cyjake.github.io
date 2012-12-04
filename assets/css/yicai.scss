@@ -27,7 +27,7 @@ body {
 }
 #aside {
   position: fixed;
-  top: 115px;
+  top: 120px;
   left: 50%;
   margin-left: -(690px / 2 + 300px);
   width: 280px;
@@ -58,6 +58,9 @@ body {
 #post-body {
   background: #efefef;
 
+  #aside {
+    top: 112px;
+  }
   .article {
     margin-bottom: 40px;
   }
