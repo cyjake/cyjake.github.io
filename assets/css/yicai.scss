@@ -1,6 +1,7 @@
 @import "../brix/normalize";
 @import "../brix/variable";
 @import "../brix/mixin";
+@import "syntax/pygments";
 
 h1, h2, h3, h4 {
   font-weight: 300;
@@ -48,9 +49,6 @@ html, body {
   .category:last-child {
     margin-bottom: 0;
   }
-  .entries {
-    padding-left: 15px;
-  }
 }
 #footer {
   margin: 40px 0 20px;
@@ -67,6 +65,10 @@ html, body {
   }
   .back-home {
     margin-bottom: 20px;
+  }
+  img {
+    padding: 4px;
+    border: 1px solid #ddd;
   }
 }
 
@@ -214,5 +216,14 @@ html, body {
     body {
       font-size: 28px;
     }
+  }
+}
+
+@media only print {
+  #disqus-board {
+    display: none;
+  }
+  #aside {
+    display: none;
   }
 }
