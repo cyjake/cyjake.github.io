@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <title>{{ page.title }} &mdash; cyj.me</title>
-  <link rel="stylesheet" type="text/css" href="/assets/css/yicai.css">
+  {% include stylesheets.html %}
 </head>
 <body id="post-body">
-  <div id="aside">
-    <div class="back-home">
-      {% include branding.html %}
-    </div>
-    <div class="blog">
-      {% include categories.html %}
-    </div>
-  </div>
   <div id="page">
     <div class="article">
       <h1>{{ page.title }}</h1>
       {{ content }}
+    </div>
+    <div id="aside">
+      <div class="back-home">
+        {% include branding.html %}
+      </div>
+      <div class="blog">
+        {% include categories.html %}
+      </div>
     </div>
     {% include disqus.html %}
     {% include footer.html %}
