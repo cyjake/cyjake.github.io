@@ -1,11 +1,7 @@
 @import "../brix/normalize";
 @import "../brix/variable";
 @import "../brix/mixin";
-@import "../brix/grid";
 
-html, body {
-  font: 14px/1.5 normal Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
-}
 h1, h2, h3, h4 {
   font-weight: 300;
 }
@@ -17,20 +13,25 @@ a:hover {
   text-decoration: underline;
 }
 
-body {
-  text-align: center;
+html, body {
+  font: 14px/1.5 normal Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
 }
-#page {
-  margin: 50px auto 0;
-  width: 690px;
-  text-align: left;
+
+#branding {
+  text-transform: uppercase;
+  font-weight: 400;
+
+  &:link, &:visited {
+    text-decoration: none;
+  }
+  .name {
+    color: #f50;
+    font-weight: 800;
+  }
 }
+
 #aside {
-  position: fixed;
-  top: 120px;
-  left: 50%;
-  margin-left: -(690px / 2 + 300px);
-  width: 280px;
+  margin-bottom: 40px;
   text-align: left;
 
   ul {
@@ -69,70 +70,149 @@ body {
   }
 }
 
-#front-body {
-  overflow-x: hidden;
-  overflow-y: auto;
-  background: #21212B url(/assets/img/cross.jpg) 0 0 no-repeat;
+@media only screen and (min-width: 600px) {
+  body {
+    text-align: center;
+  }
+  #page {
+    margin: 50px auto 0;
+    width: 580px;
+    text-align: left;
+  }
+  #aside {
+    position: fixed;
+    top: 120px;
+    left: 50%;
+    margin-left: -(580px / 2 + 200px);
+    width: 180px;
+  }
+}
 
-  h1 {
-    font-family: Helvetica, Arial;
-    font-size: 300%;
-    font-weight: 400;
-    line-height: 1;
-    position: relative;
+@media only screen and(min-width: 1200px) {
+  #page {
+    width: 690px;
+  }
+  #aside {
+    width: 230px;
+    margin-left: -(690px / 2 + 250px);
+  }
+}
 
-    #branding:link, #branding:visited {
+@media only screen and (max-width: 999px) {
+  #aside {
+    position: static;
+    margin-left: auto;
+    width: 580px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #front-body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #21212B url(/assets/img/cross.jpg) 0 0 no-repeat;
+
+    h1 {
+      font-family: Helvetica, Arial;
+      font-size: 300%;
+      font-weight: 400;
+      line-height: 1;
+      position: relative;
+
+      #branding:link, #branding:visited {
+        color: #fff;
+      }
+    }
+    .board {
+      background: #f0f0f0;
+      background: rgba(255, 255, 255, 0.6);
+      margin-bottom: 20px;
+      @include border-radius(2px);
+
+      h3 {
+        text-transform: uppercase;
+        font-weight: 300;
+        margin: 0;
+        font-size: 100%;
+        background: #fff;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 2px 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .content {
+        padding: 5px 10px;
+      }
+    }
+
+    #dashboard {
+      position: relative;
+      color: #21212B;
+    }
+
+    #disqus-board {
+      position: relative;
+    }
+
+    #footer {
       color: #fff;
-    }
-  }
-  .board {
-    background: #f0f0f0;
-    background: rgba(255, 255, 255, 0.6);
-    margin-bottom: 20px;
-    @include border-radius(2px);
 
-    h3 {
-      text-transform: uppercase;
-      font-weight: 300;
-      margin: 0;
-      font-size: 100%;
-      background: #fff;
-      background: rgba(255, 255, 255, 0.2);
-      padding: 2px 10px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    }
-    .content {
-      padding: 5px 10px;
-    }
-  }
-
-  #dashboard {
-    position: relative;
-    color: #21212B;
-  }
-
-  #disqus-board {
-    position: relative;
-  }
-
-  #footer {
-    color: #fff;
-
-    a:link, a:visited {
-      color: #fff;
+      a:link, a:visited {
+        color: #fff;
+      }
     }
   }
 }
 
-#branding {
-  text-transform: uppercase;
-  font-weight: 400;
+@media only screen and (max-width: 599px) {
+  #page {
+    padding: 0 20px;
 
-  &:link, &:visited {
-    text-decoration: none;
+    .board {
+      margin-bottom: 30px;
+    }
   }
-  .name {
-    color: #f50;
-    font-weight: 800;
+}
+
+@media only screen and (max-device-width: 480px) {
+  #page {
+    width: auto;
+    padding: 0 20px;
+
+    .board {
+      margin-bottom: 36px
+    }
+  }
+  #aside {
+    width: auto;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    font-size: 48px;
+  }
+  #page {
+    padding: 0 36px;
+  }
+  #front-body {
+    background: none;
+
+    .board {
+      margin-bottom: 36px
+    }
+    h1 {
+      font-size: 200%;
+    }
+    h1, #footer {
+      #branding:link, #branding:visited {
+        color: #21212B;
+      }
+    }
+  }
+
+  @media only screen and (orientation: landscape) {
+    body {
+      font-size: 28px;
+    }
   }
 }
