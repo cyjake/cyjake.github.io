@@ -15,7 +15,7 @@ a:hover {
 }
 
 html, body {
-  font: 14px/1.5 normal Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+  font: 14px/1.5 normal "Hiragino Sans GB", Tahoma, "Microsoft Yahei", Helvetica, Arial, sans-serif;
 }
 
 #branding {
@@ -69,6 +69,20 @@ html, body {
   img {
     padding: 4px;
     border: 1px solid #ddd;
+  }
+}
+code, pre {
+  font-family: Monaco, Consolas, monospace, serif;
+  line-height: 1.4;
+  font-size: 12px;
+}
+p {
+  code {
+    @include border-radius(2px);
+    border: 1px solid #ddd;
+    background: #eee;
+    white-space: nowrap;
+    padding: 0 3px;
   }
 }
 
@@ -192,6 +206,9 @@ html, body {
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   body {
     font-size: 48px;
+  }
+  code, pre {
+    font-size: 40px;
   }
   #page {
     padding: 0 36px;
