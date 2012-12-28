@@ -643,7 +643,7 @@ a:hover {
   text-decoration: underline; }
 
 html, body {
-  font: 14px/1.5 normal Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif; }
+  font: 14px/1.5 normal "Hiragino Sans GB", Tahoma, "Microsoft Yahei", Helvetica, Arial, sans-serif; }
 
 #branding {
   text-transform: uppercase;
@@ -682,6 +682,20 @@ html, body {
     padding: 4px;
     border: 1px solid #ddd; }
 
+code, pre {
+  font-family: Monaco, Consolas, monospace, serif;
+  line-height: 1.4;
+  font-size: 12px; }
+
+p code {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+  background: #eee;
+  white-space: nowrap;
+  padding: 0 3px; }
+
 @media only screen and (min-width: 600px) {
   body {
     text-align: center; }
@@ -697,7 +711,7 @@ html, body {
     left: 50%;
     margin-left: -490px;
     width: 180px; } }
-@media only screen and (min-width: 1200px) {
+@media only screen and(min-width: 1200px) {
   #page {
     width: 690px; }
 
@@ -767,6 +781,9 @@ html, body {
   body {
     font-size: 48px; }
 
+  code, pre {
+    font-size: 40px; }
+
   #page {
     padding: 0 36px; }
 
@@ -778,7 +795,7 @@ html, body {
       font-size: 200%; }
     #front-body h1 #branding:link, #front-body h1 #branding:visited, #front-body #footer #branding:link, #front-body #footer #branding:visited {
       color: #21212B; } }
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and only screen and (orientation: landscape) {
   body {
     font-size: 28px; } }
 @media only print {
