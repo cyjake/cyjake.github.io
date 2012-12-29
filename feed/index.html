@@ -4,15 +4,15 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-    <title type="text" xml:lang="en">Everything Jake &raquo; Feed</title>
+    <title type="text" xml:lang="en">Everything Jake &#187; Feed</title>
     <link type="application/atom+xml" href="http://cyj.me/feed/" rel="self"/>
     <link type="text" href="http://cyj.me" rel="alternate"/>
     <updated>{{ site.time | date_to_xmlschema }}</updated>
     <id>http://cyj.me</id>
     <author>
-        <name>Paul Stamatiou</name>
+        <name>Jake Chen</name>
     </author>
-    <rights>Copyright (c) 2005-2011, Paul Stamatiou; all rights reserved.</rights>
+    <rights>Everything Jake &#169; 2012</rights>
 
     {% for post in site.posts limit:20 %}
     <entry>
