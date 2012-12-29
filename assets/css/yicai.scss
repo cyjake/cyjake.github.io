@@ -170,22 +170,22 @@ p {
   }
 }
 
-@media only screen and (min-width: 600px) {
-  body {
-    text-align: center;
-  }
-  #page {
-    margin: 50px auto 0;
-    width: 580px;
-    text-align: left;
-  }
-  #aside {
-    position: fixed;
-    top: 120px;
-    left: 50%;
-    margin-left: -(580px / 2 + 200px);
-    width: 180px;
-  }
+// Basic layout settings
+// we can override those settings later via media query
+body {
+  text-align: center;
+}
+#page {
+  margin: 50px auto 0;
+  width: 580px;
+  text-align: left;
+}
+#aside {
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  margin-left: -(580px / 2 + 200px);
+  width: 180px;
 }
 
 @media only screen and(min-width: 1200px) {
@@ -198,10 +198,16 @@ p {
   }
 }
 
-@media only screen and (max-width: 999px) {
+@media only screen and (max-width: 1199px) {
   #aside {
     position: static;
     margin-left: auto;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  #page {
     width: 580px;
   }
 }
@@ -266,6 +272,8 @@ p {
 @media only screen and (max-width: 599px) {
   #page {
     padding: 0 20px;
+    width: auto;
+    min-width: 400px;
 
     .board {
       margin-bottom: 30px;
@@ -287,15 +295,13 @@ p {
   }
 }
 
+// For retina screen
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   body {
-    font-size: 48px;
+    font-size: 24px;
   }
   code, pre {
     font-size: 40px;
-  }
-  #page {
-    padding: 0 36px;
   }
   #front-body {
     background: none;
@@ -312,11 +318,8 @@ p {
       }
     }
   }
-
-  @media only screen and (orientation: landscape) {
-    body {
-      font-size: 28px;
-    }
+  #footer .branding {
+    font-size: 24px;
   }
 }
 
