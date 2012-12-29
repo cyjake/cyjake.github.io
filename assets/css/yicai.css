@@ -806,21 +806,21 @@ p code {
     -moz-border-radius: 12px;
     border-radius: 12px; }
 
-@media only screen and (min-width: 600px) {
-  body {
-    text-align: center; }
+body {
+  text-align: center; }
 
-  #page {
-    margin: 50px auto 0;
-    width: 580px;
-    text-align: left; }
+#page {
+  margin: 50px auto 0;
+  width: 580px;
+  text-align: left; }
 
-  #aside {
-    position: fixed;
-    top: 120px;
-    left: 50%;
-    margin-left: -490px;
-    width: 180px; } }
+#aside {
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  margin-left: -490px;
+  width: 180px; }
+
 @media only screen and(min-width: 1200px) {
   #page {
     width: 690px; }
@@ -828,10 +828,13 @@ p code {
   #aside {
     width: 230px;
     margin-left: -595px; } }
-@media only screen and (max-width: 999px) {
+@media only screen and (max-width: 1199px) {
   #aside {
     position: static;
     margin-left: auto;
+    width: auto; } }
+@media only screen and (max-width: 799px) {
+  #page {
     width: 580px; } }
 @media only screen and (min-width: 600px) {
   #front-body {
@@ -875,7 +878,9 @@ p code {
         color: #fff; } }
 @media only screen and (max-width: 599px) {
   #page {
-    padding: 0 20px; }
+    padding: 0 20px;
+    width: auto;
+    min-width: 400px; }
     #page .board {
       margin-bottom: 30px; } }
 @media only screen and (max-device-width: 480px) {
@@ -889,13 +894,10 @@ p code {
     width: auto; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   body {
-    font-size: 48px; }
+    font-size: 24px; }
 
   code, pre {
     font-size: 40px; }
-
-  #page {
-    padding: 0 36px; }
 
   #front-body {
     background: none; }
@@ -904,10 +906,10 @@ p code {
     #front-body h1 {
       font-size: 200%; }
     #front-body h1 .branding:link, #front-body h1 .branding:visited, #front-body #footer .branding:link, #front-body #footer .branding:visited {
-      color: #21212B; } }
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and only screen and (orientation: landscape) {
-  body {
-    font-size: 28px; } }
+      color: #21212B; }
+
+  #footer .branding {
+    font-size: 24px; } }
 @media only print {
   #disqus-board {
     display: none; }
