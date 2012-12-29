@@ -39,6 +39,8 @@ html, body {
 }
 #footer {
   margin: 40px 0 20px;
+  height: 17px;
+  line-height: 17px;
 }
 
 #post-body {
@@ -75,13 +77,55 @@ p {
 .branding {
   text-transform: uppercase;
   font-weight: 400;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  font-family: Chango, Helvetica, Arial, sans-serif;
+  @include transition(color .15s ease);
+  @include perspective(400px);
+  @include perspective-origin(50% 50%);
 
   &:link, &:visited {
     text-decoration: none;
   }
   .name {
-    color: #f50;
+    color: #DA4701;
     font-weight: 800;
+  }
+  .roll {
+    display: inline-block;
+    position: relative;
+    padding: 0 2px;
+    pointer-events: none;
+    @include transition(all 400ms ease);
+    @include transform-origin(50% 0%);
+    @include transform-style(preserve-3d);
+  }
+  .roll:after {
+    content: attr(data-title);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0 2px;
+    color: white;
+    background: #377BEE;
+    @include transform-origin(50% 0%);
+    @include transform(translate3d( 0px, 105%, 0px ) rotateX( -90deg ));
+  }
+  .name:after {
+    background: #DA4701;
+  }
+  &:hover {
+    color: #71E9F4;
+    text-shadow: none;
+    border: none;
+    border-radius: 2px;
+
+    .roll {
+      background: rgba(0, 0, 0, 0.5);
+      @include transform(translate3d( 0px, -1px, -45px ) rotateX( 90deg ));
+    }
   }
 }
 .rss {

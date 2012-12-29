@@ -28,7 +28,7 @@ BrickCategory should `has_many :bricks`. But to cut long story short, it
 
 And back to the bug. The cause is that the category should be an instance of
 BrickCategory but it appeared to be PostCategory instead. So it was searching
-wrong type of `posts'. So to rectify the data:
+wrong type of `posts'. We can simply run this to rectify data:
 
 {% highlight ruby %}
 # c.channel.brick? determines whether or not this category should be BrickCategory

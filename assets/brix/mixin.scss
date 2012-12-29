@@ -46,6 +46,41 @@
           border-bottom-right-radius: $radius;
 }
 
+@mixin perspective($per) {
+  -webkit-perspective: $per;
+     -moz-perspective: $per;
+      -ms-perspective: $per;
+          perspective: $per;
+}
+
+@mixin perspective-origin($origin) {
+  -webkit-perspective-origin: $origin;
+     -moz-perspective-origin: $origin;
+      -ms-perspective-origin: $origin;
+          perspective-origin: $origin;
+}
+
+@mixin transform-style($style) {
+  -webkit-transform-style: $style;
+     -moz-transform-style: $style;
+      -ms-transform-style: $style;
+          transform-style: $style;
+}
+
+@mixin transform-origin($origin) {
+  -webkit-transform-origin: $origin;
+     -moz-transform-origin: $origin;
+      -ms-transform-origin: $origin;
+          transform-origin: $origin;
+}
+
+@mixin transform($val) {
+  -webkit-transform: $val;
+     -mox-transform: $val;
+      -ms-transform: $val;
+          transform: $val;
+}
+
 // Drop shadows
 @mixin box-shadow($shadow) {
   -webkit-box-shadow: $shadow;
