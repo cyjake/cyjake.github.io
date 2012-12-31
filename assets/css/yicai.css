@@ -674,6 +674,16 @@ html, body {
   #post-body img {
     padding: 4px;
     border: 1px solid #ddd; }
+  #post-body #footer .rss:link {
+    color: #fff; }
+  #post-body .rss {
+    border-color: #0063DC;
+    background: #0063DC; }
+    #post-body .rss .dot {
+      background: #fff; }
+    #post-body .rss .ring {
+      background: #0063DC;
+      border: 3px solid #fff; }
 
 code, pre {
   font-family: Monaco, Consolas, monospace, serif;
@@ -740,7 +750,7 @@ p code {
     top: 0;
     padding: 0 2px;
     color: white;
-    background: #377BEE;
+    background: #0063DC;
     -webkit-transform-origin: 50% 0%;
     -moz-transform-origin: 50% 0%;
     -ms-transform-origin: 50% 0%;
