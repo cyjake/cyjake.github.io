@@ -59,6 +59,21 @@ html, body {
     padding: 4px;
     border: 1px solid #ddd;
   }
+  #footer .rss:link {
+    color: #fff;
+  }
+  .rss {
+    border-color: #0063DC;
+    background: #0063DC;
+
+    .dot {
+      background: #fff;
+    }
+    .ring {
+      background: #0063DC;
+      border: 3px solid #fff;
+    }
+  }
 }
 code, pre {
   font-family: Monaco, Consolas, monospace, serif;
@@ -109,7 +124,7 @@ p {
     top: 0;
     padding: 0 2px;
     color: white;
-    background: #377BEE;
+    background: #0063DC;
     @include transform-origin(50% 0%);
     @include transform(translate3d( 0px, 105%, 0px ) rotateX( -90deg ));
   }
