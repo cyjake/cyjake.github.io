@@ -861,7 +861,7 @@ body {
         color: #fff; }
     #front-body .board {
       background: #f0f0f0;
-      background: rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.8);
       margin-bottom: 20px;
       -webkit-border-radius: 2px;
       -moz-border-radius: 2px;
@@ -880,8 +880,9 @@ body {
     #front-body #dashboard {
       position: relative;
       color: #21212B; }
-    #front-body #disqus-board {
-      position: relative; }
+    #front-body #comments-board {
+      position: relative;
+      background: #fff; }
     #front-body #footer {
       color: #fff; }
       #front-body #footer a:link, #front-body #footer a:visited {
@@ -921,7 +922,7 @@ body {
   #footer .branding {
     font-size: 24px; } }
 @media only print {
-  #disqus-board {
+  #comments-board {
     display: none; }
 
   #aside {

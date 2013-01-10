@@ -246,7 +246,7 @@ body {
     }
     .board {
       background: #f0f0f0;
-      background: rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.8);
       margin-bottom: 20px;
       @include border-radius(2px);
 
@@ -270,8 +270,9 @@ body {
       color: #21212B;
     }
 
-    #disqus-board {
+    #comments-board {
       position: relative;
+      background: #fff;
     }
 
     #footer {
@@ -339,7 +340,7 @@ body {
 }
 
 @media only print {
-  #disqus-board {
+  #comments-board {
     display: none;
   }
   #aside {
