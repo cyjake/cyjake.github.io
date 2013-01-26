@@ -7,7 +7,7 @@ title: Velocity China 2012 小记
 上一次去参加这个大会是我刚入职淘宝的时候，2010年，也是在北京。
 两次的时间差不多，一样的冷，不一样的议题。但很遗憾，对前端工程师来说，今年的不如两年前的给力。
 
-![飞行途中]({{ site.baseurl }}/assets/img/flight.jpg)
+![飞行途中](http://pic.yupoo.com/yicai-cyj_v/CAVq3udy/BefX8.jpg)
 
 两天大会，上午基本都是广告时间。下午的议题，有的十分精彩。
 
@@ -87,7 +87,7 @@ SPDY 并非 HTTP 的直接替代，这是 Google 说的，不过既然是 underd
 第二场，<http://etsy.com> 的同学，讲他们的持续发布的经验；这方面，对我这种 Rails 程序员来说，是个很方便玩的事情，
 观点都不错，但欠新意。闲话休提，演讲者说，他们平均每天要发这么多次：
 
-![33 deploys/day]({{ site.baseurl }}/assets/img/33_deploys.jpg)
+![33 deploys/day](http://pic.yupoo.com/yicai-cyj_v/CAVq3BvP/gU9q.jpg)
 
 协调这么多次发布的方式十分简单，就跟英国议会投票表决的方式一样原始，他们搞了个 IRC 频道，谁要发布就在那个频道里吼一下，
 同时改一下频道名字，类似 John Doe is Deploying……
@@ -101,7 +101,7 @@ SPDY 并非 HTTP 的直接替代，这是 Google 说的，不过既然是 underd
 唯一的区别是，屌丝 Rails 项目，会在连 CI 都木有、单元测试都没跑的情况下，直接发布；而高富帅则有完善的流程。
 顺便，还记得这张图吗？
 
-![I do it in production]({{ site.baseurl }}/assets/img/i-dont-always-test-my-code-but-when-i-do-i-do-it-in-production.jpg)
+![I do it in production](http://pic.yupoo.com/yicai-cyj_v/CAVq5ACq/nidiw.jpg)
 
 高富帅的流程，主要区别在两个方面：
 
@@ -225,4 +225,4 @@ YUI 的使用者，国内本来就少，淘宝自己都改用了 KISSY，其余�
 
 顺便，此时的北京室外，真的好冷……
 
-![后海]({{ site.baseurl }}/assets/img/houhai.jpg)
+![后海](http://pic.yupoo.com/yicai-cyj_v/CAVq4wfF/OCi8L.jpg)
