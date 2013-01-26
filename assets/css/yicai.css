@@ -903,7 +903,7 @@ body {
 
   #aside {
     width: auto; } }
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 1136px) {
   body {
     font-size: 24px; }
 
