@@ -7,7 +7,7 @@ title: Gitolite 工作原理
 [Gitolite](https://github.com/sitaramc/gitolite)
 的工作原理，他也是开发 GitLab 的组织 [gitlabhq](https://github.com/gitlabhq) 的成员。
 我当时理解的并不透彻，算是一知半解；恰好最近公司也搭了 GitLab 服务，但因为各种安全方面的顾虑，
-有些限制让人很摸不着头脑，于是翻出 gitolite 的文档 看了一遍。挑几篇翻译一下。
+有些限制，让人很摸不着头脑，于是翻出 gitolite 的文档 看了一遍。挑几篇翻译一下。
 
 [How does gitolite work?](http://sitaramc.github.com/gitolite/how.html)
 
