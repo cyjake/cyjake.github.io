@@ -32,7 +32,8 @@ glibc: /usr/lib/ld-linux-x86-64.so.2 exists in filesystem
 我把服务器给整挂了。
 
 原因是，Arch 发了[一次比较疼的更新](https://www.archlinux.org/news/the-lib-directory-becomes-a-symlink/)，
-把 `/lib` 下的文件丢到 `/usr/lib` 下，`/lib` 只是个指向 `/usr/lib` 的软连接了。正确的更新方式是：
+把 `/lib` 下的文件丢到 `/usr/lib` 下，`/lib` 只是个指向 `/usr/lib` 的软连接了。
+正确的更新方式是：
 
 {% highlight bash %}
 pacman -Syu --ignore glibc
