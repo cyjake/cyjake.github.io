@@ -21,21 +21,6 @@ html, body {
 #aside {
   margin-bottom: 40px;
   text-align: left;
-
-  ul {
-    padding: 0;
-    margin: 0;
-
-    li {
-      list-style: none;
-    }
-  }
-  .category {
-    margin-bottom: 10px;
-  }
-  .category:last-child {
-    margin-bottom: 0;
-  }
 }
 #footer {
   margin: 40px 0 20px;
@@ -234,7 +219,6 @@ body {
     background: #21212B url(http://pic.yupoo.com/yicai-cyj_v/CAVrhMHa/b1Cd0.jpg) 0 0 no-repeat;
 
     h1 {
-      font-family: Helvetica, Arial;
       font-size: 300%;
       font-weight: 400;
       line-height: 1;
@@ -245,26 +229,25 @@ body {
       }
     }
     .board {
-      background: #f0f0f0;
-      background: rgba(255, 255, 255, 0.8);
       margin-bottom: 20px;
-      @include border-radius(2px);
 
       h3 {
+        font-family: Chango, Helvetica, Arial, sans-serif;
+        margin: 0;
         text-transform: uppercase;
         font-weight: 300;
-        margin: 0;
         font-size: 100%;
-        background: #fff;
-        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
         padding: 2px 10px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       }
       .content {
+        background: #f0f0f0;
+        background: rgba(255, 255, 255, 0.8);
         padding: 5px 10px;
+        @include border-radius(2px);
       }
     }
-
     #dashboard {
       position: relative;
       color: #21212B;
