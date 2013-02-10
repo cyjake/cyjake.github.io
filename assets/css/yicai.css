@@ -648,15 +648,6 @@ html, body {
 #aside {
   margin-bottom: 40px;
   text-align: left; }
-  #aside ul {
-    padding: 0;
-    margin: 0; }
-    #aside ul li {
-      list-style: none; }
-  #aside .category {
-    margin-bottom: 10px; }
-  #aside .category:last-child {
-    margin-bottom: 0; }
 
 #footer {
   margin: 40px 0 20px;
@@ -852,7 +843,6 @@ body {
     overflow-y: auto;
     background: #21212b url(http://pic.yupoo.com/yicai-cyj_v/CAVrhMHa/b1Cd0.jpg) 0 0 no-repeat; }
     #front-body h1 {
-      font-family: Helvetica, Arial;
       font-size: 300%;
       font-weight: 400;
       line-height: 1;
@@ -860,23 +850,23 @@ body {
       #front-body h1 .branding:link, #front-body h1 .branding:visited {
         color: #fff; }
     #front-body .board {
-      background: #f0f0f0;
-      background: rgba(255, 255, 255, 0.8);
-      margin-bottom: 20px;
-      -webkit-border-radius: 2px;
-      -moz-border-radius: 2px;
-      border-radius: 2px; }
+      margin-bottom: 20px; }
       #front-body .board h3 {
+        font-family: Chango, Helvetica, Arial, sans-serif;
+        margin: 0;
         text-transform: uppercase;
         font-weight: 300;
-        margin: 0;
         font-size: 100%;
-        background: #fff;
-        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
         padding: 2px 10px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
       #front-body .board .content {
-        padding: 5px 10px; }
+        background: #f0f0f0;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 5px 10px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px; }
     #front-body #dashboard {
       position: relative;
       color: #21212B; }
