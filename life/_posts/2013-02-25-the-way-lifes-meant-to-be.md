@@ -92,13 +92,60 @@ JavaScript 的诸位，或许你们该重新考虑一下职业规划：
 
  1. [JavaScript 语言精粹](http://book.douban.com/subject/3590768/)
  2. [DOM Scripting](http://book.douban.com/subject/1461786/)
- 3. [基于MVC的JavaScript Web富应用开发](http://book.douban.com/subject/10733304/)
+ 3. [基于 MVC 的 JavaScript Web 富应用开发](http://book.douban.com/subject/10733304/)
  4. [Professional JavaScript for Web Developers](http://book.douban.com/subject/3346905/)
  5. [JavaScript 设计模式](http://book.douban.com/subject/3329540/)
 
 刚上路的同学，看掉前两本就可以了，想进阶的同学，把剩下的看掉吧。还有本很有名而且超级厚的书，
 叫做犀牛书，《[JavaScript 权威指南](http://book.douban.com/subject/10549733/)》，
 非常厚脸皮地说，我没有看过，自行判断吧。
+
+### 技术爱好者
+
+学无止境的，搞定了 JavaScript，用熟了 jQuery、KISSY 之流，我们可能仍然发现做一些事情力不从心。
+模块化到底是什么意思？大牛们扯的 AMD、CMD 又是什么，不会跟美帝国主义的导弹防御系统（TMD）有啥联系吧？
+听说后端有个东西叫做 NodeJS，什么无阻塞、事件化的 IO，好像很厉害诶？
+
+怎么突然有人说[分号](http://mislav.uniqpath.com/2010/05/semicolons/)
+[不需要用了](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding)？
+那个看起来很离经叛道的 [CoffeeScript](http://coffeescript.org/) 到底是干啥用的？
+哇，原来还有 [SASS](http://sass-lang.com/)、[Less](http://lesscss.org) 这种东西，
+终于不用重复写 `.products-bd .product .title span` 了。
+
+然后突然又有人说，回调写起来好讨厌，类似 jQuery 里的 `$.get`、`$.ajax`，每个 API 的参数还不一样，
+它们[得统一起来](http://documentup.com/kriskowal/q/)。
+
+`Brick.prototype.strike = function() {}` 这么写面向对象好像也很有些累啊，
+既然 JavaScript 原生的这么挫，我们应该有个[自己的解决办法](http://aralejs.org/class/)。
+
+突然又有人说，我们的网页早就不仅仅是几次异步请求，和黄黄的消息提示框就能摆平的了，看看 gmail 和
+Google Calendar 之流吧，它们更像是软件而非网页，要有
+[MVC](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)！
+于是，我们又有了 [Backbone](http://backbonejs.org/)，
+有了 [Magix](http://magixjs.github.com/doc/)。
+
+等等，这个时候你该会有个问题了，**为什么大牛们总能够搞出各种五花八门，让前端世界日新月异呢**？
+
+因为创造出这些满目玲琅，决定了整个前端生态的人们，他们都是真正的技术爱好者，他们的眼界，
+不仅仅是 HTML、CSS、JavaScript 这一亩三分地，他们知道除了我们已经有的这些之外，还有更好的。
+于是，任何对这三项技术的补完，基于这三项技术的抽象，只要它们提高了前端开发的效率，就完成了一次创新。
+而绝大多数时候，这些创新都不是从头开始的，我们可以在许许多多领域找到它们的影子。
+
+所以，因为**眼界**。
+
+而拓宽眼界的最好办法，就是成为一个真正的技术爱好者，喜欢探索、发现，了解计算机的技术演化历史。
+熟悉本职工作之外的语言；接触过除了 Windows 之外的操作系统；了解 GBK、UTF-8 这些编码是怎么回事，
+什么是 Unicode，它们是要解决什么问题；知道什么是命令行，正则表达式从何而来；甚至了解什么叫语法树，
+有限状态机又是什么货色，等等。
+
+学习它们，对你的年终评审可能没有半毛钱用处，但是它们能够拓宽你的眼界，直到有一天，
+突然有个合适的问题出现在你眼前，你拿出自己的工具箱，干干脆脆地结果它。
+
+如此，方成大牛。
+
+最后给大家推荐一部电影，它以 Linux 的演化史为主线，串出多位计算机史上影响深远的任务，
+假如你在学习、进步的路上需要技术大拿作为偶像，不妨从中挑选。这部电影叫做
+《[操作系统革命](http://movie.douban.com/subject/1437389/)》。
 
 ### 烂尾
 
