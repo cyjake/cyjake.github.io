@@ -153,7 +153,11 @@ var a = this.foo(),
 {% highlight js %}
 var a = this.foo()
 var b = this.bar()
+
+return Math.round((a + b) / 100)
 {% endhighlight %}
+
+这里还有个要注意的是，变量声明和表达式正文之间，空一行。
 
 ### 命名
 
@@ -245,6 +249,22 @@ if (typeof a === 'undefined')
 // 如果只在一行内，大括号是不必要的，别画蛇添足啦
 while (i++ !== 8848) { clibm() }
 {% endhighlight %}
+
+### else
+
+{% highlight js %}
+if (a > 100) {
+    // 爆表啦！
+}
+else if (a < 0) {
+    // 负分！滚粗！
+}
+else {
+    // 同学你最乖了
+}
+{% endhighlight %}
+
+`else` 另起一行，这样条件的各个分支区块会清楚许多。
 
 ### 对象字面量
 
