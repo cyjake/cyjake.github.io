@@ -3,6 +3,8 @@ layout: post
 title: Style Guide
 ---
 
+## JavaScript
+
 [代码风格](http://en.wikipedia.org/wiki/Indent_style)或者说规范，是件有点宗教意义的事情，
 科班出身的程序员们，开始写代码没多久就会遇到这个问题，比如说我的第二门编程语言 C，
 就有两个比较典型的缩进风格：
@@ -258,6 +260,53 @@ module.exports = {
 冒号后头一个空格即可。
 
 Node 的逗号前置风格，太另类了，还是不采用吧。
+
+## CSS 与 SCSS
+
+CSS 的缩进风格与 JavaScript 相似，不同的是这里我们采用两个空格宽度：
+
+{% highlight css %}
+.content {
+  padding: 5px 10px;
+
+  .title {
+    font-weight: bold;
+  }
+}
+{% endhighlight %}
+
+需要有浏览器厂商前缀（vender prefix）的声明，按长短循序排列：
+
+{% highlight scss %}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+{% endhighlight %}
+
+## HTML
+
+请使用 HTML5，两个空格缩进：
+
+{% highlight html %}
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Skeleton</title>
+</head>
+<body>
+  <!-- your content goes here -->
+  <script>
+  // JavaScript 代码的缩进，仍然是四个空格
+  ;(function() {
+      console.log('foobar')
+  })()
+  </script>
+</body>
+</html>
+{% endhighlight %}
 
 ### 跋
 
