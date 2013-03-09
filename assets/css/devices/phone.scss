@@ -1,0 +1,25 @@
+@media only screen and (max-width: 599px) {
+  #page {
+    padding: 0 20px;
+    width: auto;
+    min-width: 400px;
+
+    .board {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  #page {
+    width: auto;
+    padding: 0 20px;
+
+    .board {
+      margin-bottom: 36px
+    }
+  }
+  #aside {
+    width: auto;
+  }
+}

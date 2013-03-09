@@ -646,17 +646,12 @@ html, body {
   font: 14px/1.5 normal "Hiragino Sans GB", Tahoma, "Microsoft Yahei", Helvetica, Arial, sans-serif; }
 
 #aside {
-  margin-bottom: 40px;
   text-align: left; }
   #aside ul {
     padding: 0;
     margin: 0; }
     #aside ul li {
       list-style: none; }
-  #aside .category {
-    margin-bottom: 10px; }
-  #aside .category:last-child {
-    margin-bottom: 0; }
 
 #footer {
   margin: 40px 0 20px;
@@ -665,8 +660,6 @@ html, body {
 
 #post-body {
   background: #efefef; }
-  #post-body #aside {
-    top: 112px; }
   #post-body .article {
     margin-bottom: 40px; }
   #post-body .back-home {
@@ -826,19 +819,22 @@ body {
 
 #aside {
   position: fixed;
-  top: 120px;
+  top: 150px;
   left: 50%;
   margin-left: -490px;
   width: 180px; }
 
-@media only screen and (min-width: 1200px) {
+#post-body #aside {
+  top: 102px; }
+
+@media only screen and (min-width: 1000px) {
   #page {
     width: 690px; }
 
   #aside {
-    width: 230px;
-    margin-left: -595px; } }
-@media only screen and (max-width: 1199px) {
+    width: 130px;
+    margin-left: -495px; } }
+@media only screen and (max-width: 999px) {
   #aside {
     position: static;
     margin-left: auto;
@@ -847,6 +843,53 @@ body {
   #page {
     width: 580px; } }
 @media only screen and (min-width: 600px) {
+  #aside .category {
+    height: 24px;
+    display: block;
+    position: relative;
+    z-index: 100; }
+    #aside .category .label {
+      height: 24px;
+      line-height: 24px;
+      padding: 0 10px;
+      display: block; }
+      #aside .category .label:hover {
+        background: #fff;
+        background: rgba(255, 255, 255, 0.9);
+        text-decoration: none;
+        color: #505050; }
+    #aside .category .arrow {
+      position: absolute;
+      right: 10px;
+      top: 7px;
+      width: 0;
+      height: 0;
+      border-width: 4px 4px;
+      border-style: solid;
+      border-color: transparent;
+      border-left-color: #666;
+      font-size: 0;
+      line-height: 0;
+      -moz-transition: -moz-transform 0.2s ease-in;
+      -o-transition: -o-transform 0.2s ease-in;
+      transition: transform 0.2s ease-in; }
+    #aside .category .entries {
+      position: absolute;
+      left: 130px;
+      top: 0;
+      width: 280px;
+      padding: 0 10px 5px;
+      background: #fff;
+      background: rgba(255, 255, 255, 0.9);
+      height: auto;
+      display: none;
+      z-index: 1000; }
+      #aside .category .entries li {
+        display: block;
+        padding-top: 5px; }
+    #aside .category:hover .entries {
+      display: block; }
+
   #front-body {
     overflow-x: hidden;
     overflow-y: auto;
@@ -867,8 +910,7 @@ body {
         font-weight: 300;
         font-size: 100%;
         color: #fff;
-        padding: 2px 10px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+        padding: 2px 10px; }
       #front-body .board .content {
         background: #f0f0f0;
         background: rgba(255, 255, 255, 0.8);
@@ -876,6 +918,14 @@ body {
         -webkit-border-radius: 2px;
         -moz-border-radius: 2px;
         border-radius: 2px; }
+    #front-body #aside {
+      top: 120px; }
+      #front-body #aside .blog .content {
+        padding: 0;
+        background: none;
+        color: #fff; }
+        #front-body #aside .blog .content .arrow {
+          border-left-color: #fff; }
     #front-body #dashboard {
       position: relative;
       color: #21212B; }
