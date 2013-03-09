@@ -1,22 +1,23 @@
-(function(undefined) {
+;(function(undefined) {
 
-    var doc = document,
-        referer = doc.referer || location.href,
-        dispatcher = doc.getElementById('dispatcher'),
-        cands = dispatcher.getElementsByTagName('a'),
-        path, i, a, len;
+    var doc = document
+    var referer = doc.referer || location.href
+    var dispatcher = doc.getElementById('dispatcher')
+    var cands = dispatcher.getElementsByTagName('a')
 
     if (referer && /cyj.me/.test(referer)) {
-        path = referer.replace(/http:\/\/([^.]+\.)?cyj.me\//, '');
+        var path = referer.replace(/http:\/\/([^.]+\.)?cyj.me\//, '')
+
         if (path) {
-            for (i = 0, len = cands.length; i < len; i++) {
-                a = cands[i];
-                a.href += path;
-                a.innerHTML += '/' + path;
+            for (var i = 0, len = cands.length; i < len; i++) {
+                var a = cands[i]
+
+                a.href += path
+                a.innerHTML += '/' + path
             }
         }
     }
     else {
-        dispatcher.style.display = 'none';
+        dispatcher.style.display = 'none'
     }
-})();
+})()

@@ -1,0 +1,27 @@
+// For retina screen
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 1136px) {
+  body {
+    font-size: 24px;
+  }
+  code, pre {
+    font-size: 40px;
+  }
+  #front-body {
+    background: none;
+
+    .board {
+      margin-bottom: 36px
+    }
+    h1 {
+      font-size: 200%;
+    }
+    h1, #footer {
+      .branding:link, .branding:visited {
+        color: #21212B;
+      }
+    }
+  }
+  #footer .branding {
+    font-size: 24px;
+  }
+}

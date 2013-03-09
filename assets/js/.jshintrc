@@ -1,0 +1,12 @@
+{
+    "browser": true,
+    "jquery": true,
+
+    "asi": true,
+
+    "predef": [
+        "define",
+        "seajs",
+        "console"
+    ]
+}
