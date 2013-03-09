@@ -1,27 +1,38 @@
 <div id="aside">
-  <div class="blog board">
-    <h3>Blog</h3>
-    <div class="content">
-      {% include categories.html %}
-    </div>
-  </div>
-  <div class="projects board">
-    <h3>Pojects</h3>
-    <div class="content">
-      <ul>
+  <ul class="categories">
+    {% for category in site.categories %}
+    <li class="category">
+      <a class="label">
+        <label>{{ category[0] | capitalize }}</label>
+        <i class="arrow"></i>
+      </a>
+      <ul class="entries">
+        {% for post in category[1] %}
+        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </li>
+    {% endfor %}
+    <li class="category">
+      <a class="label">
+        <label>Projects</label>
+        <i class="arrow"></i>
+      </a>
+      <ul class="entries">
         <li><a href="http://cyj.me/ent">ent</a></li>
         <li><a href="http://github.com/dotnil/ceaseless">ceaseless</a></li>
         <li><a href="http://cyj.me/why-seajs/zh">Why SeaJS</a></li>
       </ul>
-    </div>
-  </div>
-  <div class="webpages board">
-    <h3>Webpages</h3>
-    <div class="content">
-      <ul>
+    </li>
+    <li class="category">
+      <a class="label">
+        <label>Webpages</label>
+        <i class="arrow"></i>
+      </a>
+      <ul class="entries">
         <li><a href="http://gitref.org/zh">Git Reference</a></li>
         <li><a href="http://cyj.me/betrothal">Betrothal</a></li>
       </ul>
-    </div>
-  </div>
+    </li>
+  </ul>
 </div>

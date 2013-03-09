@@ -93,18 +93,6 @@ body {
   width: 580px;
   text-align: left;
 }
-#aside {
-  position: fixed;
-  top: 150px;
-  left: 50%;
-  margin-left: -(580px / 2 + 200px);
-  width: 180px;
-}
-#post-body {
-  #aside {
-    top: 102px;
-  }
-}
 
 @import 'devices/screen';
 @import 'devices/phone';
