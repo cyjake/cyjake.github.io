@@ -832,7 +832,8 @@ body {
     top: 102px;
     left: 50%;
     margin-left: -440px;
-    width: 130px; }
+    width: 130px;
+    z-index: 1000; }
     #aside .categories {
       position: relative; }
     #aside a {

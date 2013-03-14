@@ -19,6 +19,7 @@
     left: 50%;
     margin-left: -(580px / 2 + 150px);
     width: 130px;
+    z-index: 1000;
 
     .categories {
       position: relative;
