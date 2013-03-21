@@ -4,11 +4,38 @@
     font-size: 24px;
   }
   code, pre {
-    font-size: 40px;
+    font-size: 24px;
+  }
+  #aside {
+    position: static;
+    width: auto;
+    margin-left: auto;
+
+    .category {
+      height: auto;
+      position: static;
+      margin-bottom: 10px;
+    }
+    .entries {
+      position: static;
+      width: auto;
+      display: block;
+      background: none;
+
+      a:link {
+        color: #0063DC;
+      }
+    }
+    .arrow {
+      display: none;
+    }
   }
   #front-body {
     background: none;
 
+    .label {
+      color: #333;
+    }
     .board {
       margin-bottom: 36px
     }
