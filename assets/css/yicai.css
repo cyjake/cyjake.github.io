@@ -893,6 +893,8 @@ body {
       color: #333; }
     #aside .category-active .arrow {
       border-left-color: #333; }
+    #aside .archive {
+      padding: 10px 0 0 10px; }
 
   #front-body {
     overflow-x: hidden;
