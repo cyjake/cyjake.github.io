@@ -1,54 +1,15 @@
 // For retina screen
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 1136px) {
+  @import 'reset-aside';
+
   body {
     font-size: 24px;
+    width: 100%;
   }
-  code, pre {
+  code, pre, #footer .branding {
     font-size: 24px;
   }
-  #aside {
-    position: static;
-    width: auto;
-    margin-left: auto;
-
-    .category {
-      height: auto;
-      position: static;
-      margin-bottom: 10px;
-    }
-    .entries {
-      position: static;
-      width: auto;
-      display: block;
-      background: none;
-
-      a:link {
-        color: #0063DC;
-      }
-    }
-    .arrow {
-      display: none;
-    }
-  }
-  #front-body {
-    background: none;
-
-    .label {
-      color: #333;
-    }
-    .board {
-      margin-bottom: 36px
-    }
-    h1 {
-      font-size: 200%;
-    }
-    h1, #footer {
-      .branding:link, .branding:visited {
-        color: #21212B;
-      }
-    }
-  }
-  #footer .branding {
-    font-size: 24px;
+  #front-body h1 {
+    font-size: 200%;
   }
 }

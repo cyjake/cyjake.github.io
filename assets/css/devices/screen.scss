@@ -112,6 +112,11 @@
     .label {
       color: #fff;
     }
+    .archive a {
+      &:link, &:visited {
+        color: #fff;
+      }
+    }
     .arrow {
       border-left-color: #fff;
     }
@@ -126,7 +131,7 @@
       }
     }
     #aside {
-      top: 132px;
+      top: 112px;
     }
     #comments-board {
       background: #fff;

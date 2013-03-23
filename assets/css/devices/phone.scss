@@ -11,36 +11,5 @@
 }
 
 @media only screen and (max-device-width: 480px) {
-  #page {
-    width: auto;
-    padding: 0 20px;
-
-    .board {
-      margin-bottom: 36px
-    }
-  }
-  #aside {
-    position: static;
-    width: auto;
-    margin-left: auto;
-
-    .category {
-      height: auto;
-      position: static;
-      margin-bottom: 10px;
-    }
-    .entries {
-      position: static;
-      width: auto;
-      display: block;
-      background: none;
-
-      a:link {
-        color: #0063DC;
-      }
-    }
-    .arrow {
-      display: none;
-    }
-  }
+  @import 'reset-aside';
 }
