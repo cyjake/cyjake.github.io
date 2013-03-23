@@ -1,0 +1,55 @@
+#aside {
+  position: static;
+  width: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+
+  .category {
+    height: auto;
+    position: static;
+    margin-bottom: 10px;
+  }
+  .entries {
+    position: static;
+    width: auto;
+    display: block;
+    background: none;
+  }
+  .entries, .archive {
+    a:link, a:visited {
+      color: #0063DC;
+      display: inline;
+    }
+  }
+  .arrow {
+    display: none;
+  }
+}
+
+#front-body {
+  background: none;
+
+  .label {
+    color: #333;
+  }
+  h1, #footer {
+    .branding:link, .branding:visited {
+      color: #21212B;
+    }
+  }
+}
+
+#page {
+  width: 100%;
+  margin: 20px;
+
+  .intro {
+    padding: 0;
+  }
+  #comments-board {
+    padding: 0;
+  }
+  .label, .archive {
+    padding-left: 0;
+  }
+}

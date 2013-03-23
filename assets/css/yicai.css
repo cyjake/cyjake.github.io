@@ -902,6 +902,8 @@ body {
     background: #21212b url(http://pic.yupoo.com/yicai-cyj_v/CAVrhMHa/b1Cd0.jpg) 0 0 no-repeat; }
     #front-body .label {
       color: #fff; }
+    #front-body .archive a:link, #front-body .archive a:visited {
+      color: #fff; }
     #front-body .arrow {
       border-left-color: #fff; }
     #front-body h1 {
@@ -912,7 +914,7 @@ body {
       #front-body h1 .branding:link, #front-body h1 .branding:visited {
         color: #fff; }
     #front-body #aside {
-      top: 132px; }
+      top: 112px; }
     #front-body #comments-board {
       background: #fff;
       padding: 0 10px;
@@ -955,16 +957,11 @@ body {
     #page .board {
       margin-bottom: 30px; } }
 @media only screen and (max-device-width: 480px) {
-  #page {
-    width: auto;
-    padding: 0 20px; }
-    #page .board {
-      margin-bottom: 36px; }
-
   #aside {
     position: static;
     width: auto;
-    margin-left: auto; }
+    margin-left: auto;
+    margin-bottom: 30px; }
     #aside .category {
       height: auto;
       position: static;
@@ -974,32 +971,9 @@ body {
       width: auto;
       display: block;
       background: none; }
-      #aside .entries a:link {
-        color: #0063DC; }
-    #aside .arrow {
-      display: none; } }
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 1136px) {
-  body {
-    font-size: 24px; }
-
-  code, pre {
-    font-size: 24px; }
-
-  #aside {
-    position: static;
-    width: auto;
-    margin-left: auto; }
-    #aside .category {
-      height: auto;
-      position: static;
-      margin-bottom: 10px; }
-    #aside .entries {
-      position: static;
-      width: auto;
-      display: block;
-      background: none; }
-      #aside .entries a:link {
-        color: #0063DC; }
+    #aside .entries a:link, #aside .entries a:visited, #aside .archive a:link, #aside .archive a:visited {
+      color: #0063DC;
+      display: inline; }
     #aside .arrow {
       display: none; }
 
@@ -1007,15 +981,65 @@ body {
     background: none; }
     #front-body .label {
       color: #333; }
-    #front-body .board {
-      margin-bottom: 36px; }
-    #front-body h1 {
-      font-size: 200%; }
     #front-body h1 .branding:link, #front-body h1 .branding:visited, #front-body #footer .branding:link, #front-body #footer .branding:visited {
       color: #21212B; }
 
-  #footer .branding {
-    font-size: 24px; } }
+  #page {
+    width: 100%;
+    margin: 20px; }
+    #page .intro {
+      padding: 0; }
+    #page #comments-board {
+      padding: 0; }
+    #page .label, #page .archive {
+      padding-left: 0; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 1136px) {
+  #aside {
+    position: static;
+    width: auto;
+    margin-left: auto;
+    margin-bottom: 30px; }
+    #aside .category {
+      height: auto;
+      position: static;
+      margin-bottom: 10px; }
+    #aside .entries {
+      position: static;
+      width: auto;
+      display: block;
+      background: none; }
+    #aside .entries a:link, #aside .entries a:visited, #aside .archive a:link, #aside .archive a:visited {
+      color: #0063DC;
+      display: inline; }
+    #aside .arrow {
+      display: none; }
+
+  #front-body {
+    background: none; }
+    #front-body .label {
+      color: #333; }
+    #front-body h1 .branding:link, #front-body h1 .branding:visited, #front-body #footer .branding:link, #front-body #footer .branding:visited {
+      color: #21212B; }
+
+  #page {
+    width: 100%;
+    margin: 20px; }
+    #page .intro {
+      padding: 0; }
+    #page #comments-board {
+      padding: 0; }
+    #page .label, #page .archive {
+      padding-left: 0; }
+
+  body {
+    font-size: 24px;
+    width: 100%; }
+
+  code, pre, #footer .branding {
+    font-size: 24px; }
+
+  #front-body h1 {
+    font-size: 200%; } }
 @media only print {
   #comments-board {
     display: none; }
