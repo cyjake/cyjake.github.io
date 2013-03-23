@@ -3,12 +3,9 @@
 <head>
   {% include header.html %}
 </head>
-<body id="front-body">
+<body id="{{ body_id }}">
   <div id="page">
-    <h1>{% include branding.html %}</h1>
-    <div id="dashboard">
-      {{ content }}
-    </div>
+    {{ content }}
     {% include duoshuo.html %}
     {% include footer.html %}
   </div>

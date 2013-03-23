@@ -678,6 +678,9 @@ html, body {
       background: #0063DC;
       border: 3px solid white; }
 
+#archive {
+  margin-bottom: 30px; }
+
 code, pre {
   font-family: Monaco, Consolas, monospace, serif;
   line-height: 1.4;
