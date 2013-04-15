@@ -9,11 +9,13 @@ caption: 青芝坞、太子湾、浴鹄湾、紫金港
 
 ![苏堤晴好](http://pic.yupoo.com/yicai-cyj_v/CMVvgNCn/pWNX2.jpg)
 
-而不是这样的：
+应该是看发了嫩芽儿的柳枝在和煦春日里自在摇摆，看游人如织，看波澜不惊。
+
+而非像这将将入夜时的小雨，和那拥堵不堪：
 
 ![文二路小雨](http://pic.yupoo.com/yicai-cyj_v/CMVvgHRe/FxmNa.jpg)
 
-终于到了清明小长假，终于不再雨纷纷，起了个晚，去青芝坞的朴墅吃饭。
+所幸，到了清明小长假，不再雨纷纷，于是起了个晚，去青芝坞的朴墅吃饭。
 
 ![朴墅](http://pic.yupoo.com/yicai-cyj_v/CMVwJ5IH/SDq8J.jpg)
 
@@ -31,11 +33,13 @@ caption: 青芝坞、太子湾、浴鹄湾、紫金港
 
 ![粉色郁金香](http://pic.yupoo.com/yicai-cyj_v/CMVANKoN/kwewk.jpg)
 
-园里某处，种了一片杂色郁金香，色彩斑斓。
+太子湾公园里，比肩继踵，你在花前赏花，人在花前摆拍，到底是赏花人在赏花，还是花在赏游人自拍，
+不得而知。幸好，曲径通幽，越往里走，人群越分散，不经意间抬头，园里某处，看到一片郁金香，色彩斑斓。
 
 ![五彩斑斓](http://pic.yupoo.com/yicai-cyj_v/CMVANSyx/S5C2g.jpg)
 
-也是在门口，各色郁金香与菊花交织，穿插了许多旁的，叫不出名字，老婆说这个叫长寿花。
+满眼都是人自然憋闷，出得园门，豁然开朗，南山路旁竟然各色郁金香与菊花交织。穿插了许多旁的，叫不出名字，
+老婆说这个叫长寿花。
 
 ![长寿花](http://pic.yupoo.com/yicai-cyj_v/CMVAOmxW/Y1mUr.jpg)
 
@@ -55,6 +59,8 @@ caption: 青芝坞、太子湾、浴鹄湾、紫金港
 ![樱花](http://pic.yupoo.com/yicai-cyj_v/CMVI8dly/c09o5.jpg)
 
 ![樱花黑白](http://pic.yupoo.com/yicai-cyj_v/CMVI8Mv5/Pmxd4.jpg)
+
+![黑白](http://pic.yupoo.com/yicai-cyj_v/CMYsRbw9/FLXfe.jpg)
 
 一路上，有人拍婚纱，有人组团邀模特拍摄，人流终于不再密集，终于有了“好美呀”的闲暇。
 
