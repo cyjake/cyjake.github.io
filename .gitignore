@@ -3,3 +3,5 @@
 *~
 .sass-cache
 _site
+
+*.sublime-workspace
