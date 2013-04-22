@@ -297,6 +297,7 @@ KISSY.use('brix/app', function(S, app) {
 // 如果只需要初始化页面中所有组件，其他啥也不用做：
 app.boot()              // 等同于 app.boot('[bx-app]')
                         // 即如果选择器参数忽略，会自动找有自定义属性 bx-app 标记的节点
+                        // 返回 brix/page 模块的实例
 
 // 如果需要传递数据，以便使用模板的组件正确渲染：
 app.boot({
@@ -308,12 +309,15 @@ app.boot({
 app.boot('#J_someView', { ... })
 
 // 如果需要初始化完毕之后进行额外的操作：
-app.boot('#J_myView', { ... }).on('bx:ready', function(S, page) {
+app.boot('#J_myView', { ... }).on('bx:ready', function() {
+    // app.boot() 返回的是 brix/page 实例，可以通过监听该实例的 bx:ready 事件，
+    // 以进一步操作被初始化页面中组件。
+
     // 按照组件名查找组件，可能返回多个
-    page.find('ux.brix-test/ceiling')
+    this.bxFind('ux.brix-test/ceiling')
 
     // 按照组件所在节点 ID 查找组件，返回结果唯一
-    page.find('#J_ceiling')
+    this.bxFind('#J_ceiling')
 })
 {% endhighlight %}
 
