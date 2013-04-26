@@ -63,6 +63,14 @@ Computed Value ，仍然保留为相对值，直到 Used Value 被推导出来�
 （例如 backgroung-color ）同步，display 与 position 和 float 也达成一致，所有的 CSS
 属性都有值。
 
+计算值是在不渲染页面的前提下尽可能计算出的值。但有些值，只能在文档被展示时才能推出来。例如，
+如果一个节点的宽度值为其容器的百分之多少，则这个宽度在容器节点宽度被算出来之前是无从计算的。
+
+而使用值，即解决所有剩余依赖之后，计算出的绝对值。
+
+所以计算值与使用值的区别是，前者是在页面展现之前，仅处理样式时能得出的尽可能接近绝对的结果；
+而后者则是页面展示时，得出的绝对值。
+
 ## Resolved Value
 
 - [W3C Draft](http://dev.w3.org/csswg/cssom/#resolved-values)
