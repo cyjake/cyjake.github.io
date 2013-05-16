@@ -1,4 +1,5 @@
 # jekyll settings
+baseurl:
 pygments: true
 markdown: rdiscount
 lsi: false
