@@ -848,7 +848,8 @@ body {
     #aside .label {
       height: 28px;
       line-height: 28px;
-      padding-left: 10px; }
+      padding-left: 10px;
+      text-transform: uppercase; }
     #aside .arrow {
       position: absolute;
       right: 10px;
@@ -894,7 +895,8 @@ body {
     #aside .category-active .arrow {
       border-left-color: #333; }
     #aside .archive {
-      padding: 10px 0 0 10px; }
+      padding: 10px 0 0 10px;
+      text-transform: uppercase; }
 
   #front-body {
     overflow-x: hidden;
