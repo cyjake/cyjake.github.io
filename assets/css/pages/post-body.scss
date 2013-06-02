@@ -1,0 +1,33 @@
+#post-body {
+  background: #efefef;
+
+  .article {
+    margin-bottom: 40px;
+  }
+
+  .back-home {
+    margin-bottom: 20px;
+  }
+
+  img {
+    padding: 4px;
+    border: 1px solid #ddd;
+  }
+
+  #footer .rss:link {
+    color: #fff;
+  }
+
+  .rss {
+    border-color: #0063DC;
+    background: #0063DC;
+
+    .dot {
+      background: #fff;
+    }
+    .ring {
+      background: #0063DC;
+      border: 3px solid #fff;
+    }
+  }
+}
