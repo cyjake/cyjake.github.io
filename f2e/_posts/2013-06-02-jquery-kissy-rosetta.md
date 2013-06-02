@@ -695,3 +695,9 @@ S.IO.jsonp(
     </td>
   </tr>
 </table>
+
+## 致谢
+
+模仿 [jQuery - YUI Rosetta Stone](http://www.jsrosettastone.com/) 搞了这么个对照表，
+希望对熟悉 [jQuery](http://jquery.com)，但初次接触 [KISSY](http://docs.kissyui.com/)
+的同学有所帮助。
