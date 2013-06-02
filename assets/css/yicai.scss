@@ -3,89 +3,7 @@
 @import "../brix/mixin";
 @import "syntax/pygments";
 
-h1, h2, h3, h4 {
-  font-weight: 300;
-}
-a:link {
-  text-decoration: none;
-  color: #0063DC;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-html, body {
-  font: 14px/1.5 normal "Hiragino Sans GB", Tahoma, "Microsoft Yahei", Helvetica, Arial, sans-serif;
-}
-
-#aside {
-  text-align: left;
-
-  ul {
-    padding: 0;
-    margin: 0;
-
-    li {
-      list-style: none;
-    }
-  }
-}
-
-#footer {
-  margin: 40px 0 20px;
-  height: 17px;
-  line-height: 17px;
-}
-
-#post-body {
-  background: #efefef;
-
-  .article {
-    margin-bottom: 40px;
-  }
-  .back-home {
-    margin-bottom: 20px;
-  }
-  img {
-    padding: 4px;
-    border: 1px solid #ddd;
-  }
-  #footer .rss:link {
-    color: #fff;
-  }
-  .rss {
-    border-color: #0063DC;
-    background: #0063DC;
-
-    .dot {
-      background: #fff;
-    }
-    .ring {
-      background: #0063DC;
-      border: 3px solid #fff;
-    }
-  }
-}
-
-#archive {
-  margin-bottom: 30px;
-}
-
-code, pre {
-  font-family: Monaco, Consolas, monospace, serif;
-  line-height: 1.4;
-  font-size: 12px;
-}
-p {
-  code {
-    @include border-radius(2px);
-    border: 1px solid #ddd;
-    background: #eee;
-    white-space: nowrap;
-    padding: 0 3px;
-  }
-}
-
+@import 'components/base';
 @import 'components/branding';
 @import 'components/rss';
 
@@ -99,6 +17,9 @@ body {
   width: 580px;
   text-align: left;
 }
+
+@import 'pages/rosetta';
+@import 'pages/post-body';
 
 @import 'devices/screen';
 @import 'devices/phone';
