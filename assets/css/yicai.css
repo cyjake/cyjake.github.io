@@ -797,44 +797,6 @@ body {
   width: 580px;
   text-align: left; }
 
-#rosetta {
-  text-align: left;
-  padding: 20px;
-  font-size: 12px; }
-  #rosetta, #rosetta .highlight {
-    background: #f2f3f4; }
-  #rosetta code, #rosetta pre {
-    font-family: consolas, menlo, "bitstream vera sans mono", monaco, monospace; }
-  #rosetta table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%; }
-  #rosetta th {
-    padding: 5px 10px;
-    border-bottom: 1px solid #aaaaaa;
-    font-weight: normal;
-    font-size: 140%; }
-  #rosetta td {
-    padding: 5px 10px;
-    border-top: 1px solid #dddddd;
-    vertical-align: top;
-    width: 30%;
-    min-width: 300px; }
-  #rosetta td.notes {
-    width: 40%; }
-  #rosetta table p, #rosetta table ol, #rosetta table ul {
-    max-width: 580px; }
-  #rosetta #footer .rss:link {
-    color: #fff; }
-  #rosetta .rss {
-    border-color: #0063DC;
-    background: #0063DC; }
-    #rosetta .rss .dot {
-      background: #fff; }
-    #rosetta .rss .ring {
-      background: #0063DC;
-      border: 3px solid white; }
-
 #post-body {
   background: #efefef; }
   #post-body .article {
