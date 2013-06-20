@@ -55,19 +55,22 @@ Wiki 建设的非常好，社区反馈也一直很快。我的 [VPS](/binary/whe
 
 ![创建 VM]({{ site.baseurl }}/assets/img/2013-arch-linux-install-guide/create-vm.jpg)
 
-即可。创建完毕之后，在存储一栏里找到虚拟光驱，挂载好下载的 archlinux.iso ，
-然后启动机器。
+即可。会询问你给这虚拟机分配多少硬盘和内存空间，一般而言硬盘 20G ，内存 512M ，
+也就够了。将来要是觉得不够用，还可以调整。当然，调整过程看起来有点奇诡，
+所以如果你的硬盘有富余，多分配些吧就。 创建完毕之后，在存储一栏里找到虚拟光驱，
+挂载好下载的 archlinux.iso ，然后启动机器。
 
 ![从光盘启动]({{ site.baseurl }}/assets/img/2013-arch-linux-install-guide/boot-from-iso.png)
 
 选择 Boot Arch Linux ，等它启动完，就能动手开始安装了。
 
-启动好的界面可能有点吓人，啥也木有，进入的是 root 帐号，/root/ 下只有一个 install.txt 
-文件，其实是 [Install Guide](https://wiki.archlinux.org/index.php/Installation_Guide)
+启动好的界面可能有点吓人，啥也木有，进入的是 root 帐号，/root/ 下只有一个 
+install.txt 文件，其实是 
+[Install Guide](https://wiki.archlinux.org/index.php/Installation_Guide)
 的 Wiki 源码，所以直接看该页面就好啦。
 
-在之前的 Arch 版本中，提供过初始安装脚本，但在最新的 Arch 里去掉了，以几个人肉步骤代替，
-分别是：
+在之前的 Arch 版本中，提供过初始安装脚本，但在最新的 Arch 里去掉了，
+以几个人肉步骤代替，分别是：
 
 1. 选择键盘布局
 2. 划分磁盘
@@ -79,20 +82,31 @@ Wiki 建设的非常好，社区反馈也一直很快。我的 [VPS](/binary/whe
 8. 安装 GRUB 引导
 9. 重启
 
-这些步骤里，磁盘操作和启动引导部分比较有风险，幸亏我们是在虚拟机里操作。
+这些步骤里，假如物理安装，磁盘操作和启动引导部分比较有风险，幸亏我们是在虚拟机里。
 
 ### 键盘布局
 
-我们的键盘布局都很正常，默认的 us 就是，无需修改。如果你不走运和我一样，买过一些欧版键盘，
-则需要到 /usr/share/kbd/keymaps 目录寻找相应的布局，并装载：
+我们的键盘布局都很正常，默认的 us 就是，无需修改。如果你不走运和我一样，
+买过一些欧版键盘，则需要到 /usr/share/kbd/keymaps 目录寻找相应的布局，并装载：
 
     loadkeys uk
 
 ### 准备磁盘
 
-没有操作过分区软件的同学，在这一步可能会手足无措，所以 Wiki 中建议使用图形化的工具 
-GParted 。后者直接以 .iso 可驱动光盘形式提供，可以直接在虚拟机里挂载，启动，打开
-GParted 工具，鼠标点点，把分区工作做好。后面还会提到它。
+没有操作过分区软件的同学，在这一步可能会手足无措，所以 Wiki 中建议使用图形化工具 
+[GParted](http://sourceforge.net/projects/gparted/files/gparted-live-stable/0.16.1-1/) 。
+后者直接以 Live CD 形式提供，可以直接在虚拟机里挂载，启动，打开 GParted 工具，
+鼠标点点，把分区工作做好。后面还会提到它。
+
+![GParted 启动]({{ site.baseurl }}/assets/img/2013-arch-linux-install-guide/gparted-boot.png)
+
+选择第一项（GParted Live），回车即可。在启动的过程中，它会探测硬盘中安装的系统，
+并询问是否要根据系统中的配置调整从 Live CD 启动的系统。Live CD 中采用的系统是 
+[Debian](http://2008.cyj.me/debian.html) 。
+
+根据它提供的选项，貌似还提供中文界面，为了保险起见，我没有选择。启动好界面：
+
+![GParted 界面]({{ site.baseurl }}/assets/img/2013-arch-linux-install-guide/gparted-live-cd.png)
 
 如果嫌麻烦，用 cfdisk 之类的工具，按照 
 [新手指南 - 分区示例](https://wiki.archlinux.org/index.php/Beginners%27_Guide#Example)
@@ -118,9 +132,9 @@ GParted 工具，鼠标点点，把分区工作做好。后面还会提到它。
 
 ### 配置网络
 
-如果是物理安装，而且刚好没法连有线网络（例如正在用 MacBook Air 而且没有 USB 转以太网口），
-那这里会稍微麻烦点。幸好这里只是在虚拟机中安装，网络设置的又是桥接，只要你的网络环境支持 
-dhcp ，这一步应该就不用愁。
+如果是物理安装，而且刚好没法连有线网络（例如正在用 MacBook Air 而且没有 USB 
+转以太网口），那这里会稍微麻烦点。幸好这里只是在虚拟机中安装，网络设置的又是桥接，
+只要你的网络环境支持 dhcp ，这一步应该就不用愁。
 
 可以 ping Google ，确定网络正常：
 
@@ -211,11 +225,62 @@ dhcp ，这一步应该就不用愁。
 3. 安装 bundler 
 4. 用 bundler 安装项目依赖
 
-### 后记
-
 至此，基本的 Arch Linux 系统安装完毕。但一些增强可用性的软件还没装：
 
 - Xorg
 - VirtualBox Guest Additions
 
-需要我补充的，请记得留言噢。
+安装 Xorg 和相应的桌面软件（GNOME、KDE、XFCE 等）非常简单，可玩度也很高。
+此处按下不表。
+
+### 安装 VirtualBox Guest Additions
+
+[Arch Wiki](https://wiki.archlinux.org/index.php/VirtualBox) 上就有，
+我兜售一下二手资料。执行如下命令即可：
+
+    pacman -S virtualbox-guest-utils
+    modprobe -a vboxguest vboxsf vboxvideo
+
+创建 /etc/modules-load.d/virtualbox.conf 文件，内容为：
+
+    vboxguest
+    vboxsf
+    vboxvideo
+
+告诉 Arch Linux 下次启动的时候自动加载这三个模块。
+
+在 ~/.xinitrc 里加上：
+
+    exec VBoxClient-all
+
+要配置共享文件夹的话，首先需要创建分组，并将用户加到该组：
+
+    groupadd vboxsf
+    gpasswd -a john vboxsf
+
+在 VirtualBox 虚拟机里配置好需要挂载的共享目录，然后启动 vboxservice ：
+
+    systemctl enable vboxservice
+    systemctl start vboxservice
+
+这样就能在 /media/ 目录下看到共享目录了，例如 `/media/sf_Dropbox/`。
+
+把它链接到 /home/john 下面：
+
+    ln -s /media/sf_Dropbox ~/dropbox
+
+
+### Windows 下开发，Linux 下提交
+
+在两种不同系统下共享文件，文件权限控制（filemode）的问题比较讨厌。Git 
+默认会记录文件的权限设置，普通文本文件的权限应该是 0644 ，但在 Linux
+里挂载 Windows 目录，这些文件会的权限是 0777 。爽快点的办法，让 Git 别记录了：
+
+    git config code.filemode false
+
+### 后记
+
+其实这样并非长久之计，最爽利的方式该是直接在 Linux 中开发，抛弃 Windows，
+但确实用 Linux 会把人往可劲折腾的地方引，导致忘了正事。
+
+所以还是买 Mac 吧！
