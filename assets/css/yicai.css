@@ -170,7 +170,7 @@ kbd,
 pre,
 samp {
   font-family: monospace, serif;
-  _font-family: "courier new", monospace;
+  _font-family: 'courier new', monospace;
   font-size: 1em; }
 
 /*
@@ -289,7 +289,7 @@ form {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
@@ -435,7 +435,7 @@ table {
   font-style: italic; }
 
 .highlight .err {
-  border: 1px solid red; }
+  border: 1px solid #ff0000; }
 
 .highlight .k {
   color: #007020;
@@ -667,7 +667,7 @@ p code {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   background: #eee;
   white-space: nowrap;
   padding: 0 3px; }
@@ -762,7 +762,7 @@ p code {
     display: block;
     position: absolute; }
   .rss .ring {
-    border: 3px solid #555555; }
+    border: 3px solid #555; }
   .rss .dot {
     width: 3px;
     height: 3px;
@@ -805,7 +805,8 @@ body {
     margin-bottom: 20px; }
   #post-body img {
     padding: 4px;
-    border: 1px solid #dddddd; }
+    border: 1px solid #ddd;
+    max-width: 680px; }
   #post-body #footer .rss:link {
     color: #fff; }
   #post-body .rss {
@@ -815,7 +816,7 @@ body {
       background: #fff; }
     #post-body .rss .ring {
       background: #0063DC;
-      border: 3px solid white; }
+      border: 3px solid #fff; }
 
 @media only screen and (max-width: 899px) {
   #page {
@@ -859,9 +860,9 @@ body {
       border-left-color: #666;
       font-size: 0;
       line-height: 0;
-      -moz-transition: -moz-transform 0.2s ease-in;
-      -o-transition: -o-transform 0.2s ease-in;
-      transition: transform 0.2s ease-in; }
+      -moz-transition: -moz-transform .2s ease-in;
+      -o-transition: -o-transform .2s ease-in;
+      transition: transform .2s ease-in; }
     #aside .entries {
       position: absolute;
       left: 130px;
