@@ -835,19 +835,21 @@ body {
     margin-left: -440px;
     width: 130px;
     z-index: 1000; }
-    #aside .categories {
-      position: relative; }
     #aside a {
       height: 24px;
       line-height: 24px;
       display: block; }
       #aside a:hover {
         text-decoration: none; }
-    #aside .label {
+    #aside .category {
+      display: block;
       height: 28px;
       line-height: 28px;
       padding-left: 10px;
       text-transform: uppercase; }
+      #aside .category:link, #aside .category:visited {
+        text-decoration: none;
+        color: #fff; }
     #aside .arrow {
       position: absolute;
       right: 10px;
@@ -863,14 +865,16 @@ body {
       -moz-transition: -moz-transform .2s ease-in;
       -o-transition: -o-transform .2s ease-in;
       transition: transform .2s ease-in; }
-    #aside .entries {
+    #aside .content {
       position: absolute;
       left: 130px;
-      top: -3px;
-      width: 380px;
-      padding: 0 10px 5px;
+      top: -2px;
+      height: 190px;
       background: #fff;
       background: rgba(255, 255, 255, 0.9);
+      padding: 5px 10px; }
+    #aside .entries {
+      width: 380px;
       height: auto;
       display: none;
       z-index: 1000; }
