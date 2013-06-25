@@ -1,36 +1,38 @@
 <div id="aside">
-  <div id="J_Menu" class="categories">
-    {% for category in site.categories %}
-    <a href="{{ site.baseurl }}/{{ category[0] }}" class="category">
-      <label>{{ category[0] | capitalize }}</label>
-      <i class="arrow"></i>
-    </a>
-    {% endfor %}
-    <a href="{{ site.baseurl }}/projects" class="category">
-      <label>Projects</label>
-      <i class="arrow"></i>
-    </a>
-    <a href="{{ site.baseurl }}/webpages" class="category">
-      <label>Webpages</label>
-      <i class="arrow"></i>
-    </a>
-  </div>
-  <div id="J_Cont" class="content">
-    {% for category in site.categories %}
-    <div class="entries">
-      {% for post in category[1] %}
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+  <div id="J_MenuWrap">
+    <div id="J_Menu" class="categories">
+      {% for category in site.categories %}
+      <a href="{{ site.baseurl }}/{{ category[0] }}" class="category">
+        <label>{{ category[0] | capitalize }}</label>
+        <i class="arrow"></i>
+      </a>
       {% endfor %}
+      <a href="{{ site.baseurl }}/projects" class="category">
+        <label>Projects</label>
+        <i class="arrow"></i>
+      </a>
+      <a href="{{ site.baseurl }}/webpages" class="category">
+        <label>Webpages</label>
+        <i class="arrow"></i>
+      </a>
     </div>
-    {% endfor %}
-    <div class="entries">
-      <a href="http://cyj.me/ent">ent</a>
-      <a href="http://github.com/dotnil/ceaseless">ceaseless</a>
-      <a href="http://cyj.me/why-seajs/zh">Why SeaJS</a>
-    </div>
-    <div class="entries">
-      <a href="http://gitref.org/zh">Git Reference</a>
-      <a href="http://cyj.me/betrothal">Betrothal</a>
+    <div id="J_Cont" class="content">
+      {% for category in site.categories %}
+      <div class="entries">
+        {% for post in category[1] %}
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        {% endfor %}
+      </div>
+      {% endfor %}
+      <div class="entries">
+        <a href="http://cyj.me/ent">ent</a>
+        <a href="http://github.com/dotnil/ceaseless">ceaseless</a>
+        <a href="http://cyj.me/why-seajs/zh">Why SeaJS</a>
+      </div>
+      <div class="entries">
+        <a href="http://gitref.org/zh">Git Reference</a>
+        <a href="http://cyj.me/betrothal">Betrothal</a>
+      </div>
     </div>
   </div>
   <div class="archive">
