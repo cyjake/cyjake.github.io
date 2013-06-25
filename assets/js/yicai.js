@@ -3,12 +3,11 @@ var duoshuoQuery = { short_name:"dotnil" };
 KISSY.ready(function(S) {
     S.getScript('http://static.duoshuo.com/embed.js')
 
-    S.getScript('http://a.tbcdn.cn/s/kissy/gallery/menu-aim/1.1/index-min.js', function() {
-    S.use('gallery/menu-aim/1.1/menu-aim', function(S, Menu) {
+    S.use('gallery/menu-aim/1.1/index', function(S, Menu) {
 
 
         var $ = S.all
-        var wrapEl = $('#aside')
+        var wrapEl = $('#J_MenuWrap')
         var menuEl = $('#J_Menu')
         var contEl = $('#J_Cont')
         var entriesEl = contEl.all('.entries')
@@ -17,9 +16,20 @@ KISSY.ready(function(S) {
             S.Node(cat).data('index', i)
         })
 
+        menuEl.delegate('click', '.category', function(e) {
+            e.preventDefault()
+        })
+
+        wrapEl.on('mouseleave', function() {
+            contEl.hide()
+            menuEl.all('.category').removeClass('current')
+        })
+
         var enterHandler = function(row) {
             var rowEl = $(row)
             var index = parseInt(rowEl.data('index'))
+
+            contEl.show()
 
             rowEl.addClass('current')
                  .siblings().removeClass('current')
@@ -40,6 +50,5 @@ KISSY.ready(function(S) {
             }
         })
 
-    })
     })
 })

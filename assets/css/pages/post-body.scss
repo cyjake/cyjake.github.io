@@ -1,6 +1,14 @@
 #post-body {
   background: #efefef;
 
+  #aside {
+    .category {
+      &:link, &:visited {
+        color: #0063DC;
+      }
+    }
+  }
+
   .article {
     margin-bottom: 40px;
   }
