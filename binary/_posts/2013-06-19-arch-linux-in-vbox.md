@@ -4,7 +4,7 @@ layout: post
 capition: 使用 VirtualBox 搭建 Arch Linux 虚拟环境
 ---
 
-### 缘起
+## 缘起
 
 MacBook Pro 电池挂掉了，右上角电池状态是个 X ，于是交给 IT 送修，翻出一台老旧的
 Dell 760 主机，装着 Windows XP，平日里用来测 IE6 的，继续日常的工作。
@@ -15,7 +15,7 @@ Dell 760 主机，装着 Windows XP，平日里用来测 IE6 的，继续日常�
 Linux 跑项目，但是中间过程有些语焉不详，也缺乏记录。于是自己动手丰衣足食，
 实践之，并记录本文。
 
-基本过程如下：
+## 基本过程
 
 1. 下载、安装 [VirtualBox](https://www.virtualbox.org/)
 2. 下载 [Arch Linux](http://www.archlinux.org) 光盘镜像
@@ -269,7 +269,6 @@ install.txt 文件，其实是
 
     ln -s /media/sf_Dropbox ~/dropbox
 
-
 ### Windows 下开发，Linux 下提交
 
 在两种不同系统下共享文件，文件权限控制（filemode）的问题比较讨厌。Git 
@@ -278,7 +277,7 @@ install.txt 文件，其实是
 
     git config code.filemode false
 
-### 后记
+## 后记
 
 其实这样并非长久之计，最爽利的方式该是直接在 Linux 中开发，抛弃 Windows，
 但确实用 Linux 会把人往可劲折腾的地方引，导致忘了正事。
