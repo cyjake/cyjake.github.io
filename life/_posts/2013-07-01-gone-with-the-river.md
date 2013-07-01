@@ -16,9 +16,6 @@ layout: post
 ![](http://pic.yupoo.com/yicai-cyj_v/CYGdxuJy/RXJDg.jpg)
 ![](http://pic.yupoo.com/yicai-cyj_v/CYGdy5jv/QhBT0.jpg)
 
-![](http://pic.yupoo.com/yicai-cyj_v/CYGedssd/10Chml.jpg)
-![](http://pic.yupoo.com/yicai-cyj_v/CYGeg5Im/Bowx3.jpg)
-
 ![](http://pic.yupoo.com/yicai-cyj_v/CYGdyZki/vCARQ.jpg)
 ![](http://pic.yupoo.com/yicai-cyj_v/CYGdBh8p/MoZY5.jpg)
 
