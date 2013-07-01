@@ -2,6 +2,9 @@
 <html>
 <head>
   {% include header.html %}
+  {% if page.style %}
+  <link rel="stylesheet" type="text/css" href="/assets/css/posts/{{ page.style }}.css">
+  {% endif %}
 </head>
 <body id="post-body">
   <div id="page">
@@ -15,6 +18,9 @@
     {% include aside.html %}
     {% include duoshuo.html %}
     {% include footer.html %}
+    {% if page.script %}
+    <script src="/assets/js/posts/{{ page.script }}.js"></script>
+    {% endif %}
   </div>
   {% include ga.html %}
 </body>
