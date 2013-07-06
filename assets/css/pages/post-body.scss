@@ -1,6 +1,14 @@
 #post-body {
   background: #efefef;
 
+  .article:after {
+    content: "❦";
+    display: block;
+    text-align: center;
+    font-size: 36px;
+    color: #d14;
+  }
+
   #aside {
     .category {
       &:link, &:visited {
