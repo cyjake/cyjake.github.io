@@ -11,7 +11,7 @@ Base 继承。但在我们挖 RichBase 的身份是红是黑之前，先有些�
 在你初次接触 JavaScript 之前，可能就已经听到这种评价，JavaScript 有个叫做原型继承之类的东西，
 所以在 JavaScript 里要做面向对象编程，我们需要把数据和方法写成这个样子：
 
-### 原型链
+### 原型
 
 {% highlight js %}
 function Pet(attrs) {
@@ -33,7 +33,7 @@ var pet = new Pet({ name: 'Ghibli', age: 28, gender: 'male' })
 pet.greeting()      // ==> Hi there. I am Ghibli.
 {% endhighlight %}
 
-将类方法定义在原型链上，可以节省内存空间，不需要所有实例上都重新定义方法，以上定义方式，和如下写法，
+将类方法定义在原型上，可以节省内存空间，不需要所有实例上都重新定义方法，以上定义方式，和如下写法，
 自然是不同的：
 
 {% highlight js %}
@@ -53,15 +53,22 @@ function Pet(attrs) {
 这种写法，唯一的好处是可以不用写 `new`，然而每个实例都有自己的 `.greeting()` 方法，当实例变多时，
 是极大的内存浪费。
 
-言归正传，原型链写法看上去很美，可拿到实践中去又会冒出两个新问题：
+言归正传，原型写法看上去很美，可拿到实践中去又会冒出两个新问题：
 
 - 如何从 Pet 继承？
 - 如何声明私有属性？
 
 ### 如何实现继承？
 
-假设我们现在要从 Pet 派生出子类 Dog，然而 JavaScript 木有提供 extends 之类的语法，而按照
-prototype 的设计，我们需要做的事情如下：
+在 JavaScript 里，原型有个重要的副概念，称之为原型链（prototype chain），当对象在自身找不到
+属性定义时，将从原型里找，所以上例中我们可以给不同的 Pet 实例共享 greeting 方法，因为此方法是定义
+在 Pet 原型上的。假如原型上仍然找不到呢，将到 `Pet.prototype.prototype` 上找，还找不到呢？
+将到 `Pet.prototype.prototype.prototype` 上找，还找不到呢？
+
+别闹了。此即所谓原型链。
+
+现在假设我们现在要从 Pet 派生出子类 Dog，然而 JavaScript 木有提供 extends 之类的语法，而按照
+原型链设计，我们需要做的事情如下：
 
 {% highlight js %}
 function Dog(attrs) {
@@ -69,6 +76,7 @@ function Dog(attrs) {
     this.breed = attrs.breed
 }
 
+// 将 Dog 的原型指为 Pet 实例，即变相将 Dog.prototype.prototype 设为 Pet.prototype
 Dog.prototype = new Pet()
 
 Dog.prototype.bark = function() {
@@ -140,6 +148,16 @@ dog.name = 'Ronaldo'
 的正确性：
 
 {% highlight js %}
+Dog.prototype.getAge = function() {
+    return this.age
+}
+
+Dog.prototype.setAge = function(age) {
+    if (age >= 0 && age <= 20) {
+        this.age = age
+    }
+}
+
 var dog = new Dog({ age: 10 })
 
 dog.getAge()        // ==> 10
@@ -367,7 +385,99 @@ dog.on('bark', function(e) {
 - 实例化声明周期无法干预，实例销毁需要自行搞定
 - 写法蹩脚过时，看看人家 [arale/class](http://aralejs.org/class/)
 
+### 简单示例
+
 于是有了 RichBase，先来看写法：
+
+{% highlight js %}
+var Student = RichBase.extend({
+    learn: function(lesson) {
+        console.log('Yeah, yeah. I am learning ' + lesson + '...')
+    }
+}, {
+    ATTRS: {
+        college: { value: '' }
+    }
+}, 'Student')
+{% endhighlight %}
+
+咦，怎么和 Base 一个样？跟底下这写法有啥区别？
+
+{% highlight js %}
+function Student() {
+    Student.superclass.constructor.apply(this, arguments)
+}
+
+S.extend(Student, Base, {
+    learn: function(lesson) {
+        console.log('lesson ' + lesson + ' learned the hard way.')
+    }
+}, {
+    ATTRS: {
+        college: { value: '' }
+    }
+})
+{% endhighlight %}
+
+答案是如果你的类就如 Student 这么简单，那就仍然用 Base 即可，这两种定义方式没有本质区别。
+对于简单用法，`RichBase.extend` 只是个语法糖。
+
+不过，咱还没触及本质呢。
+
+### 构造函数、初始化函数与析构函数
+
+好吧，这个标题其实挺无奈的，我觉得要理解这仨，绝对要知道它们对应的英文单词：
+
+- constructor
+- initializer
+- destructor
+
+在使用 `RichBase.extend` 定义子类时，我们可以定义这三个方法，用于干预类的实例化与销毁过程。
+
+constructor 用于替换 RichBase 默认自动生成的构造函数，当调用 `RichBase.extend` 而没指定
+constructor 时，RichBase 将创建一个匿名函数：
+
+{% highlight js %}
+function () {
+    C.superclass.constructor.apply(this, arguments)
+}
+{% endhighlight %}
+
+如果指定了构造函数名，而且在 KISSY 开发模式下，则会 eval 如下匿名函数：
+
+{% highlight js %}
+"function " + CamelCase(name) + "{\n" +
+    "C.superclass.constructor.apply(this, arguments)\n" +
+"}"
+{% endhighlight %}
+
+所以，如果你要干预默认的构造函数行为，记得加上 `.superclass.constructor.apply(this, arguments)`。
+
+也正是因为构造函数重载时这个恼人的强制要求的语句，RichBase 还提供 initializer 方法以便重载，
+普通的实例化时干预，例如内部事件预绑定，初始数据正规化，可以在此函数内进行。
+
+然后是析构函数，或者说销毁函数，当调用 `.destroy()` 方法时，将执行类定义时声明的 desctructor
+方法，整个 `.destroy()` 逻辑如下：
+
+{% highlight js %}
+destroy: function() {
+    var self = this;
+    if (!self.get('destroyed')) {
+        self.callPluginsMethod("destructor");
+        destroyHierarchy(self);
+        self.detach();
+        self.set('destroyed', true);
+        self.fire('destroy');
+    }
+}
+{% endhighlight %}
+
+会先调用插件上的 destructor，然后自身按依赖层级调 destructor，然后解除自身绑定的所有事件，
+再将 `destroyed` 属性设为 `true`，最终触发 `destroy` 事件。
+
+等等，插件是什么意思？我们来看个复杂的例子。
+
+### 复杂例子
 
 {% highlight js %}
 // Extensions definition
@@ -576,3 +686,6 @@ var Man = RichBase.extend({
 2. 类定义里的 `_onSetSexualOrientation` 方法
 3. 实例化之后绑定的 `afterSexualOrientationChange` 事件
 
+## 结语
+
+以上即 RichBase 的简单说明，和个中来由，有些是我个人演绎，如有谬误，一定要指出来啊。
