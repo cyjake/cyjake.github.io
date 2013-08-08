@@ -686,6 +686,13 @@ var Man = RichBase.extend({
 2. 类定义里的 `_onSetSexualOrientation` 方法
 3. 实例化之后绑定的 `afterSexualOrientationChange` 事件
 
-## 结语
+## 跋
 
-以上即 RichBase 的简单说明，和个中来由，有些是我个人演绎，如有谬误，一定要指出来啊。
+以上即 RichBase 的简单说明，和个中来由，有些是我个人演绎，如有谬误，一定要指出来喔。
+
+最后，要知道从 util.inherits 到 Base，直到 RichBase，这一系列全都不是 JavaScript
+原生的东西，而是诸位开疆拓土的仁人志士们，利用 JavaScript 的灵活特性构造出来凭空架构，
+用得好，它们是天空之城，画出一片美丽世界，用不好，它们成了海市蜃楼，迷失自己。
+
+所以，感谢承玉给 KISSY 添加了如此之多的模块与功能；在 JavaScript 的世界里，与诸君共勉。
+
