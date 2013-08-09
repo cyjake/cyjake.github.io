@@ -545,7 +545,8 @@ S.extend(Sculptor, Base, {
 // Class definition: Italian Renaissance man
 var ItalianRenaissanceMan = RichBase.extend([Man, Italian], {
     greeting: function() {
-        ItalianRenaissanceMan.superclass.greeting.call(this)
+        // 注意，这行不通，ItalianRenaissanceMan.superclass 在此处指向的是 RichBase
+        // ItalianRenaissanceMan.superclass.greeting.call(this)
         console.log('I have no idea why I am so versatile!')
     }
 }, {
