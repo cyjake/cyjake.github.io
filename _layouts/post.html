@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="/assets/css/posts/{{ page.style }}.css">
   {% endif %}
 </head>
-<body id="post-body">
+<body id="post-body" bx-app>
   <div id="page">
     <div class="back-home">
       {% include branding.html %}
@@ -15,6 +15,7 @@
       <h1>{{ page.title }}</h1>
       {{ content }}
     </div>
+    {% include toc.html %}
     {% include aside.html %}
     {% include duoshuo.html %}
     {% include footer.html %}
