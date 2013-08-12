@@ -840,9 +840,11 @@ body {
   #post-body .toc {
     position: fixed;
     top: 50px;
-    right: 50px;
+    left: 50%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.7); }
+    background: rgba(255, 255, 255, 0.7);
+    margin-left: 375px;
+    min-width: 180px; }
     #post-body .toc label {
       display: block;
       padding: 3px 10px; }
