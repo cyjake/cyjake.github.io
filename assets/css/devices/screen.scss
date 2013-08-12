@@ -2,6 +2,7 @@
   #page {
     width: 690px;
   }
+
   #aside {
     .category {
       margin-bottom: 15px;
@@ -13,8 +14,10 @@
   #page {
     width: 580px;
   }
+
   #aside {
     position: fixed;
+    _position: absolute;
     top: 102px;
     left: 50%;
     margin-left: -(580px / 2 + 150px);
@@ -176,6 +179,7 @@
   #page {
     width: 690px;
   }
+
   #aside {
     width: 130px;
     margin-left: -(690px / 2 + 150px);

@@ -839,6 +839,7 @@ body {
       border: 3px solid white; }
   #post-body .toc {
     position: fixed;
+    _position: absolute;
     top: 50px;
     left: 50%;
     z-index: 1000;
@@ -875,6 +876,7 @@ body {
 
   #aside {
     position: fixed;
+    _position: absolute;
     top: 102px;
     left: 50%;
     margin-left: -440px;
