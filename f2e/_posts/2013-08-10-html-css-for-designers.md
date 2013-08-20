@@ -235,7 +235,7 @@ Unix + X）上[均有支持的字体](http://web.mit.edu/jmorzins/www/fonts.html
 
 然后回到微软雅黑，假如要设置标题字体成雅黑，那么正确的 CSS 应该这么写：
 
-{% highlight csss %}
+{% highlight css %}
 h1 {
     font-family: Microsoft Yahei, sans-serif;
 }
