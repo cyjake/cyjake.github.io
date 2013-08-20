@@ -91,7 +91,18 @@ Github Gist，正是其中两个编写代码演示的好去处。
 
 所有的 HTML 页面都大概长这个样子：
 
-<script src="https://gist.github.com/dotnil/6204542.js"></script>
+{% highlight html %}
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>设计师该知道的 HTML 与 CSS</h1>
+    <p>人在江湖飘，能够多一技傍身，何乐而不为？</p>
+  </body>
+</html>
+{% endhighlight %}
 
 每个 HTML 文档都有个头部声明，叫做 DOCTYPE，声明方式多年前曾经百花齐放，这么写会如何如何，那么写
 又你想怎样，等等。在我们这个示例里头，正是 HTML5 运动起始时变得风靡的写法：
@@ -151,6 +162,8 @@ HTML 头部，通常内容有：
 [`<marquee>`](http://en.wikipedia.org/wiki/Marquee_element)，更多乱七八糟的细枝末节，
 最终把 Web 开发者搞残了，直至今日，可以只为一款浏览器开发网页，都是一种幸福。
 
+<iframe width="100%" height="200" src="http://jsfiddle.net/dotnil/AVzCv/embedded/result/" scrolling="no" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
 互拼软件实现度的结果是，最终用户选择了免费的那个。
 
 所以了解用户操蛋的需求是多么重要。如今翻旧账再来揣测，IE 的免费，更像是给免费模式的互联网拉开大幕，
@@ -158,7 +171,7 @@ HTML 头部，通常内容有：
 
 扯远了，乱世之后，是大一统，当时的 Web 从业者们终于意识到，胡搅蛮缠该结束了。W3C 规范指定步入正轨，
 Firefox 冒出来扛着规范大旗鞭挞曾经对规范实现度最高的 IE6，没错，那个 IE6，在它发布后的很长一段
-时间里，它都是最牛逼的浏览器。但再牛逼的浏览器也抗不过时间，也抗不过 Firefox 的当众调戏，Opera 和
+时间里，它都是最牛逼的浏览器。但再牛逼的浏览器也抗不过时间，也抗不过 Firefox 的当众调戏、Opera 和
 Safari 的偷偷揩油。Web 开发者们开始呼吁内容与形式分离，让 HTML 回归朴素，把效果，放入 CSS。
 
 于是后来冒出一些著名的 CSS 宣传网站，[CSS Zen Garden](http://www.csszengarden.com/)
@@ -170,11 +183,133 @@ CSS 规范实现程度，这个网站做得很不赖。
 
 ### 字体
 
-TODO
+我们经常会听到设计师或者需求方这样要求，这里给我用微软雅黑，看上去高端洋气一点，啊，能不能所有的都是
+微软雅黑，微软雅黑多好看呀。对于用惯了 Windows 系统，一路宋体走过来的同学们来说，Windows
+Vista 里开始加入的雅黑、Tahoma 等反锯齿字体无疑是个福音。中文突然也不那么毛毛糙糙了，既然它这么好，
+干嘛不全用上呢？
+
+负责任的前端开发可能已经告诉你了，那在那些没有微软雅黑字体的浏览器里怎么办，用什么字体呢？
+
+要回答这个问题，我们得从 Web Safe Fonts 概念说起，在 Internet 如火如荼的日子里，Web 开发者和
+浏览器厂商都需要面对的一个问题是，都有那些字体可用。在这里需要表扬的是微软（咦，好奇怪）。1996 年，
+它开始了一项叫做 [Core Fonts for the Web](http://en.wikipedia.org/wiki/Core_fonts_for_the_Web)
+的项目，为因特网提供可免费使用的私有字体：
+
+- Andale Mono
+- Arial
+- Arial Black
+- Comic Sans MS
+- Courier New
+- Georgia
+- Impact
+- Times New Roman
+- Trebuchet MS
+- Verdana
+- Webdings
+
+支持 Windows 和 Mac。因为授权协议，虽然 2002 年项目终止，这些已经发布的字体都能免费使用，使得
+开源社区也能得享便利，因此，所谓的 Web Safe Fonts，其实就是指主流计算机平台（Windows、Mac OS、
+Unix + X）上[均有支持的字体](http://web.mit.edu/jmorzins/www/fonts.html)：
+
+- <span style="font-family:Arial">Arial</span> / <span style="font-family:Helvetica">Helvetica</span>
+- <span style="font-family:Times New Roman">Times New Roman</span> / <span style="font-family:Times">Times</span>
+- <span style="font-family:Courier New">Courier New</span> / <span style="font-family:Courier">Courier</span>
+
+注意这里的字体划分方式：
+
+- Arial 和 Helvetica 归为一类，它们是无衬线字体，即 sans-serif。在 CSS 中，这个类别概念叫做
+  字族，即 font-family 属性；
+- Times New Roman 和 Times 也是一类，它们属于 serif 字族，即有衬线字体；
+- Courier New 与 Courier 又是一类，它们是等宽字体，字族叫做 monospace。
+
+当然，随着事件推移，技术演进，能在 Web 中安全使用的字体早已不止这六个，字族也日渐丰富，但通常而言，
+字族[分成如下几类](http://en.wikipedia.org/wiki/Web_typography#Generic_font_families)：
+
+- <span style="font-family:sans-serif">sans-serif</span>：无衬线字体，通常认为它们在屏幕上表现更好，更清晰
+- <span style="font-family:serif">serif</span>：有衬线字体
+- <span style="font-family:monospace">monospace</span>：等宽字体，中文天生等宽，英文则不同
+- <span style="font-family:cursive">cursive</span>：草书
+- <span style="font-family:fantasy">fantasy</span>：含有符文或者装饰属性，但仍能表示字符的字体
+
+通常在浏览器里，前三者是可配置的，用户可以设置自己在各个字族里偏好的字体。
+
+然后回到微软雅黑，假如要设置标题字体成雅黑，那么正确的 CSS 应该这么写：
+
+{% highlight csss %}
+h1 {
+    font-family: Microsoft Yahei, sans-serif;
+}
+{% endhighlight %}
+
+我们设置了最佳字体为微软雅黑，但对于没有雅黑的用户，我们告诉它这里用用户浏览器里设置的无衬线字体即可。
+但是要注意的是，浏览器里的设置是会坑人的，浏览器并不阻止用户给等宽字族设置非等宽字体，所以，为了取得
+更好的设计体验，假如必须设置字体，则越详细越好：
+
+{% highlight css %}
+h1 {
+    font-family: Microsoft Yahei, Hiragino Sans GB, Helvetica, Arial, sans-serif;
+}
+{% endhighlight %}
+
+在这里我告诉用户，你的电脑如果有微软雅黑，那就用雅黑；如果没有雅黑，那有[冬青黑](http://www.typeisbeautiful.com/2010/01/1894/)
+（Mac 下新增的中文字体，显示效果极佳）没？还没有啊，那就用 Helvetica，不行就 Arial。再不行，就
+随便哪个无衬线字体把。
 
 ### 盒子模型
 
-TODO
+前端工程师通常都希望设计师帮忙标注设计稿中各个设计元素的尺寸，但在设计师标注完尺寸之后，又会很愤怒地
+表示这不是他想要的。
+
+![](/assets/img/2013/are-you-f-kiding-me.jpg)
+
+这里有个期望的差距，也正是本文想要填充的一个沟通的障碍。要标注符合 Web 设计的尺寸，最好先厘清 CSS
+中盒子模型的概念。
+
+前面我们说，在 HTML 诞生之初，它就是个文档的概念，是用来给研究者们共享文档、附件用的，但是在后来，
+渐渐地假如了 img、embed、video 等多媒体的内容，Web 内容也日趋丰富。于是浏览器犯难了，怎么把一份
+文档，渲染出一个层次化的页面呢？
+
+对浏览器而言，HTML 中的一个个标记，就是一个个小节点，`<video>` 标签，散落文档各处的文本，都是节点，
+每个节点都有它所属的类型，而每个类型的显示方式都可以归到如下几类：
+
+- block
+- inline
+- inline-block
+
+即区块、内联、内联区块，我们先从区块开始。
+
+<iframe width="100%" height="300" src="http://jsfiddle.net/dotnil/dBaSs/embedded" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+在 CSS 中，每个区块都有三个属性可供设置，按照从外到内的顺序：
+
+- margin：边距
+- border：边框
+- padding：填充
+
+在我的示例中，按区域颜色从浅至深的顺序设置。点 CSS 标签，可以看到 `.box` 区块的三个属性设置，为了
+显示效果，我还设置了背景色：
+
+{% highlight css %}
+.box {
+    margin: 20px;
+    border: 5px solid #ccc;
+    padding: 30px;
+    background: #999;
+}
+{% endhighlight %}
+
+修改 margin 的效果：
+
+![](/assets/img/2013/margin.gif)
+
+修改 border 的效果：
+
+![](/assets/img/2013/border.gif)
+
+修改 padding 的效果：
+
+![](/assets/img/2013/padding.gif)
+
 
 ### 浮动与定位
 
