@@ -3,6 +3,9 @@ title: Specified, Computed, Used, and Resolved Value
 layout: post
 ---
 
+前几日 HTML5 兴趣小组讨论的话题中设计到这四个值，鄙人傻傻分不清楚，所以贯彻一下求是之精神，
+仔细查阅了相关文档，一窥究竟。
+
 ## Specified Value
 
 - [MDN](https://developer.mozilla.org/en-US/docs/CSS/specified_value)

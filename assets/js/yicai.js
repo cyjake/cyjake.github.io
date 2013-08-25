@@ -86,7 +86,7 @@ KISSY.ready(function(S) {
               '</ol>' +
             '</div>';
 
-        S.one('#J_tocTemplate').html(tocTemplate)
+        S.all('#J_tocTemplate').html(tocTemplate)
 
         app.boot()
     })

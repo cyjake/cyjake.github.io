@@ -3,8 +3,6 @@ title: 我所设想的 Brix
 layout: post
 ---
 
-## 前情提要
-
 ![樱花](http://pic.yupoo.com/yicai-cyj_v/CMVI8Mv5/Pmxd4.jpg)
 
 代码 + README，似乎不能很好地表达自己，之前弄了
@@ -13,6 +11,7 @@ layout: post
 并在两个项目的说明档里表达了自己做这两件事情的想法，但是从反馈上来看，没能顺利达到目标。
 
 所以写了这篇博文，说明一下为什么我要简化 Brix 即我所设想的 Brix 又该是如何。
+
 
 ### 当我们讨论 Brix 时，我们在讨论什么
 
