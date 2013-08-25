@@ -1,10 +1,8 @@
 ---
 title: 在 Windows 下开发 Rails 项目
 layout: post
-capition: 使用 VirtualBox 搭建 Arch Linux 虚拟环境
+excerpt: 使用 VirtualBox 搭建 Arch Linux 虚拟环境
 ---
-
-## 缘起
 
 MacBook Pro 电池挂掉了，右上角电池状态是个 X ，于是交给 IT 送修，翻出一台老旧的
 Dell 760 主机，装着 Windows XP，平日里用来测 IE6 的，继续日常的工作。

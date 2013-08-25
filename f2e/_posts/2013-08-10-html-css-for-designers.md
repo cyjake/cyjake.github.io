@@ -7,9 +7,9 @@ layout: post
 最起码诸位设计师同僚们可以知道，当前端工程师谈论填充、边框与边距时都在谈论什么。幸运的是，许多
 设计师也是这么想的。
 
-开讲之前，先挖点故纸堆。
-
 ## 故纸堆
+
+开讲之前，先挖点故纸堆。
 
 ### NeXT
 
@@ -258,7 +258,7 @@ h1 {
 ### 盒子模型
 
 前端工程师通常都希望设计师帮忙标注设计稿中各个设计元素的尺寸，但在设计师标注完尺寸之后，又会很愤怒地
-表示这不是他想要的。
+表示这不是他想要的。这种时候，双方的想法估计都是：
 
 ![](/assets/img/2013/are-you-f-kiding-me.jpg)
 
@@ -278,7 +278,7 @@ h1 {
 
 即区块、内联、内联区块，我们先从区块开始。
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/dotnil/dBaSs/embedded" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="300" src="http://jsfiddle.net/dotnil/dBaSs/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 在 CSS 中，每个区块都有三个属性可供设置，按照从外到内的顺序：
 
@@ -310,6 +310,7 @@ h1 {
 
 ![](/assets/img/2013/padding.gif)
 
+每一个块级元素都有这三个属性，边距、边框、填充。
 
 ### 浮动与定位
 

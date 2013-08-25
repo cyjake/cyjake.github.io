@@ -6,25 +6,24 @@ body_id: front-body
 
 <h1>{% include branding.html %}</h1>
 <div id="dashboard">
-  <div class="intro">
-    <p>
-      蓦然回首，发现自己在网络上身份纷繁，刚开始的时候叫 ajian、irabbit、篮筐比球大、leto，后来叫 nil、dotnil，再后来叫做 逸才。
-      但我的英文名一直是 Jake，虽然离开外企很久，这名字也不再有人叫。
-    </p>
-    <p>
-      个人网站也是如此，最早练手的 <a href="http://2008.cyj.me">2008.cyj.me</a>，
-      后来的 <a href="http://2011.cyj.me">2011.cyj.me</a>。
-      年初还练手 Octopress，弄了个 <a href="http://octo.cyj.me">octo.cyj.me</a>，想把主页与博客合二为一。
-      结果因为每次更新都要重新生成网站太麻烦，直接博客都不写了。这样不好。
-    </p>
-    <p>
-      所以有了这个，<a href="http://cyj.me">Everything Jake</a>，准备听领导的话，多积累，秀成果，
-      同时占 github 的便宜，把自己能展现的东东都塞到这边来。而无足轻重的转发、水文，以后不会弄了，微博也少发，自勉。
-    </p>
-    <p>
-      <a href="http://cyj.me">Everything Jake</a>，表达的是一个愿景，希望一切安可的意思。
-    </p>
+  <div class="latest board">
+    <h2>Latest Posts</h2>
+    {% for post in site.posts limit:10 %}
+      <h3><a href="{{ post.url }}">{{ post.title}}</a></h3>
+      {{ post.excerpt }}
+    {% endfor %}
   </div>
+  <div class="weibo-show board">
+    <iframe width="100%" height="87" frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=190&height=87&fansRow=2&ptype=1&speed=0&skin=1&isTitle=0&noborder=1&isWeibo=0&isFans=0&uid=1665244307&verifier=1045430d&dpc=1"></iframe>
+  </div>
+  <div class="intro board">
+    {% capture about %}{% include about.md %}{% endcapture %}
+    {{ about | markdownify }}
+  </div>
+</div>
+<div id="toc" class="toc">
+  <div bx-name="mosaics/toc" bx-config="{essay: '#front-body'}" bx-tpl="#J_tocTemplate"></div>
+  <script type="text/template" id="J_tocTemplate"></script>
 </div>
 
 {% include aside.html %}

@@ -7,21 +7,9 @@
 @import 'components/base';
 @import 'components/branding';
 @import 'components/rss';
-
-// Basic layout settings
-// we can override those settings later via media query
-body {
-  text-align: center;
-}
-#page {
-  margin: 50px auto 0;
-  width: 580px;
-  text-align: left;
-}
+@import 'components/toc';
 
 @import 'pages/post-body';
 
 @import 'devices/screen';
-@import 'devices/phone';
-@import 'devices/retina';
 @import 'devices/print';
