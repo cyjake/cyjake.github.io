@@ -13,7 +13,7 @@ title: Gitolite 工作原理
 
 ----
 
-### “Gitolite 仓库”长什么样？
+## “Gitolite 仓库”长什么样？
 
 Gitolite 仓库与普通 Git 服务器上裸（bare）仓库看起来没什么两样。仓库里会有一些额外的文件，
 文件名前缀是 `gl-`，同时在 `hooks` 子目录，还有个更新钩子（update hook），
@@ -21,7 +21,7 @@ Gitolite 仓库与普通 Git 服务器上裸（bare）仓库看起来没什么�
 
 换句话说，你可以把 Gitolite 维护的仓库当做普通裸仓库一般对待，只要你别碰上面说的这些文件。
 
-### 行文约定
+## 行文约定
 
     --//-->    网络连接
     ------>    exec() 或者 system() 调用
@@ -29,7 +29,7 @@ Gitolite 仓库与普通 Git 服务器上裸（bare）仓库看起来没什么�
 
 “有条件的”的意思是，调用者会先做些判断，并依据其结果决定是调用方法，还是中止。
 
-### 通过纯 SSH 连接的 Git
+## 通过纯 SSH 连接的 Git
 
 如果你用过 rsync 或者其他类似需要使用 ssh 到远程主机的程序，那其实你已经懂得了通过 SSH
 连接 Git 的基本原理。
@@ -47,7 +47,7 @@ Gitolite 仓库与普通 Git 服务器上裸（bare）仓库看起来没什么�
 `ssh git@host git-receive-pack 'path/to-reponame.git'` 的命令（上例中的推送），
 等连接建立之后，本地的 `git-push` 与远端的 `git-receive-pack` 通过此连接交流。
 
-### 通过 Gitolite 连接的 Git
+## 通过 Gitolite 连接的 Git
 
 安装 Gitolite 只是在 `sshd` 与 `git-receive-pack`（或者 `git-upload-pack`，
 读操作的时候）之间加了一层，以检查是允许此操作，还是中止掉。
@@ -71,7 +71,7 @@ Gitolite 仓库与普通 Git 服务器上裸（bare）仓库看起来没什么�
 （所有这些都是通过 ssh 特性搞定的；更多细节请阅读
 [gitolite and ssh](http://sitaramc.github.com/gitolite/glssh.html)
 
-### gitolite-shell
+## gitolite-shell
 
 因此 `gitolite-shell` 有两条信息。通过参数1，它知道了用户名，通过该环境变量，
 它知道了是要哪个仓库，和要做什么操作（也就是，是要读取还是写入）。
@@ -84,7 +84,7 @@ Gitolite 仓库与普通 Git 服务器上裸（bare）仓库看起来没什么�
 对读取操作而言，Gitolite 的介入到此结束。如果允许，`git-upload-pack` 跑起来，干它的活，
 然后退出。
 
-### 更新钩子（update hook）
+## 更新钩子（update hook）
 
 对写操作而言，如果有更新钩子的话，git 在更新索引之前会先执行它。所有 Gitolite
 “精美绝伦的读写控制”即通过此钩子发生，每个它维护的仓库都有装。
