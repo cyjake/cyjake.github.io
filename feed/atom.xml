@@ -16,7 +16,7 @@ layout: nil
 
     {% for post in site.posts limit:20 %}
     <entry>
-        <title>{{ post.title }}</title>
+        <title>{{ post.title | xml_escape }}</title>
         <link href="http://cyj.me{{ post.url }}"/>
         <updated>{{ post.date | date_to_xmlschema }}</updated>
         <id>http://cyj.me{{ post.id }}</id>
