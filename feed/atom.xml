@@ -12,7 +12,7 @@ layout: nil
     <author>
         <name>Jake Chen</name>
     </author>
-    <rights>Everything Jake &#169; 2012</rights>
+    <rights>Everything Jake &#169; 2013</rights>
 
     {% for post in site.posts limit:20 %}
     <entry>
