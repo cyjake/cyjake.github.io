@@ -2,11 +2,13 @@
   display: inline-block;
   width: 13px;
   height: 13px;
-  background: #fff;
   position: relative;
   overflow: hidden;
   text-indent: -9999px;
   border: 2px solid;
+  color: #fff;
+  border-color: #0063DC;
+  background: #0063DC;
   @include border-radius(3px);
 
   span {
@@ -14,14 +16,15 @@
     position: absolute;
   }
   .ring {
-    border: 3px solid #555;
+    background: #0063DC;
+    border: 3px solid #fff;
   }
   .dot {
     width: 3px;
     height: 3px;
     left: 0;
     top: 10px;
-    background: #555;
+    background: #fff;
     @include border-radius(1.5px)
   }
   .inside {
