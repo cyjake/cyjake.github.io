@@ -1,10 +1,19 @@
 var duoshuoQuery = { short_name:"dotnil" };
 
+
+KISSY.config('packages', {
+    mosaics: {
+        base: 'http://g.tbcdn.cn/thx/m',
+        combine: true,
+        debug: false,
+        tag: '20130905'
+    }
+})
+
 KISSY.ready(function(S) {
     S.getScript('http://static.duoshuo.com/embed.js')
 
     S.use('gallery/menu-aim/1.1/index', function(S, Menu) {
-
 
         var $ = S.all
         var wrapEl = $('#J_MenuWrap')
@@ -55,39 +64,13 @@ KISSY.ready(function(S) {
         app.config({
             imports: {
                 mosaics: {
-                    affix: '0.1.0',
-                    toc: '0.1.2'
+                    stoc: '0.0.1'
                 }
-            },
-            debug: false
+            }
         })
 
-        var tocTemplate = '' +
-            '<div bx-name="mosaics/affix" bx-config="{countHeight: false}">' +
-              '<label><i class="iconfont">&#61477;</i> 目录</label>' +
-              '<ol>' +
-              '{{#each tree}}' +
-                '<li class="outmost"><a href="#{{id}}" class="j-entry level1">{{text}}</a>' +
-                  '<ol>' +
-                  '{{#each children}}' +
-                    '<li><a href="#{{id}}" class="j-entry level2">{{text}}</a>' +
-                      '{{#if children.length !== 0}}' +
-                      '<ol>' +
-                      '{{#each children}}' +
-                        '<li><a href="#{{id}}" class="j-entry level3">{{text}}</a>' +
-                      '{{/each}}' +
-                      '</ol>' +
-                      '{{/if}}' +
-                    '</li>' +
-                  '{{/each}}' +
-                  '</ol>' +
-                '</li>' +
-              '{{/each}}' +
-              '</ol>' +
-            '</div>';
-
-        S.all('#J_tocTemplate').html(tocTemplate)
-
-        app.boot()
+        app.bootStyle(function() {
+            app.boot()
+        })
     })
 })

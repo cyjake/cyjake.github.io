@@ -763,11 +763,13 @@ p code {
   display: inline-block;
   width: 13px;
   height: 13px;
-  background: #fff;
   position: relative;
   overflow: hidden;
   text-indent: -9999px;
   border: 2px solid;
+  color: #fff;
+  border-color: #0063DC;
+  background: #0063DC;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px; }
@@ -775,13 +777,14 @@ p code {
     display: block;
     position: absolute; }
   .rss .ring {
-    border: 3px solid #555; }
+    background: #0063DC;
+    border: 3px solid #fff; }
   .rss .dot {
     width: 3px;
     height: 3px;
     left: 0;
     top: 10px;
-    background: #555;
+    background: #fff;
     -webkit-border-radius: 1.5px;
     -moz-border-radius: 1.5px;
     border-radius: 1.5px; }
@@ -802,61 +805,8 @@ p code {
     -moz-border-radius: 12px;
     border-radius: 12px; }
 
-.toc {
-  position: fixed;
-  _position: absolute;
-  top: 50px;
-  left: 50%;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.7);
-  margin-left: 375px;
-  min-width: 180px; }
-  .toc label {
-    display: block;
-    padding: 3px 10px; }
-  .toc ol {
-    list-style: none;
-    padding: 0;
-    margin: 0; }
-  .toc li a {
-    display: block;
-    padding: 2px 10px; }
-  .toc .level2 {
-    padding-left: 20px; }
-  .toc .level3 {
-    padding-left: 30px; }
-  .toc .current:link, .toc .current:visited {
-    background: #00B7FF;
-    color: #fff; }
-
-#post-body {
+html {
   background: #efefef; }
-  #post-body .article:after {
-    content: "❦";
-    display: block;
-    text-align: center;
-    font-size: 36px;
-    color: #d14; }
-  #post-body #aside .category:link, #post-body #aside .category:visited {
-    color: #0063DC; }
-  #post-body .article {
-    margin-bottom: 40px; }
-  #post-body .back-home {
-    margin-bottom: 20px; }
-  #post-body img {
-    padding: 4px;
-    border: 1px solid #ddd;
-    max-width: 680px; }
-  #post-body #footer .rss:link {
-    color: #fff; }
-  #post-body .rss {
-    border-color: #0063DC;
-    background: #0063DC; }
-    #post-body .rss .dot {
-      background: #fff; }
-    #post-body .rss .ring {
-      background: #0063DC;
-      border: 3px solid #fff; }
 
 body {
   text-align: center; }
@@ -865,6 +815,17 @@ body {
   margin: 50px auto 0;
   width: 690px;
   text-align: left; }
+  #page .stoc {
+    position: fixed;
+    _position: absolute;
+    top: 50px;
+    left: 50%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.7);
+    margin-left: 375px;
+    min-width: 180px; }
+    #page .stoc li a {
+      height: auto; }
 
 #aside {
   width: 130px;
@@ -888,7 +849,7 @@ body {
     text-transform: uppercase; }
     #aside .category:link, #aside .category:visited {
       text-decoration: none;
-      color: #fff; }
+      colror: #0063DC; }
   #aside .arrow {
     position: absolute;
     right: 10px;
@@ -938,52 +899,20 @@ body {
   #aside .archive {
     padding: 10px 0 0 10px;
     text-transform: uppercase; }
-
-#front-body {
-  overflow-x: hidden;
-  overflow-y: auto;
-  background: #21212b url(http://pic.yupoo.com/yicai-cyj_v/CAVrhMHa/b1Cd0.jpg) 0 0 no-repeat; }
-  #front-body .label {
-    color: #fff; }
-  #front-body .archive a:link, #front-body .archive a:visited {
-    color: #fff; }
-  #front-body .arrow {
-    border-left-color: #fff; }
-  #front-body h1 {
-    font-size: 250%;
-    font-weight: 400;
-    line-height: 1;
-    position: relative; }
-    #front-body h1 .branding:link, #front-body h1 .branding:visited {
-      color: #fff; }
-  #front-body #aside {
-    top: 112px; }
-  #front-body #comments-board {
-    background: #fff;
-    padding: 0 10px;
-    position: relative;
-    z-index: 0; }
-  #front-body #footer {
-    color: #fff; }
-    #front-body #footer a:link, #front-body #footer a:visited {
-      color: #fff; }
-
-#dashboard {
-  position: relative;
-  z-index: 1; }
-  #dashboard .board {
-    background: #f0f0f0;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 1px 15px;
-    color: #21212B;
-    margin-bottom: 20px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px; }
-    #dashboard .board img {
-      max-width: 660px; }
-  #dashboard .weibo-show {
-    padding: 0; }
+  #aside .article:after {
+    content: "❦";
+    display: block;
+    text-align: center;
+    font-size: 36px;
+    color: #d14; }
+  #aside .article {
+    margin-bottom: 40px; }
+  #aside .back-home {
+    margin-bottom: 20px; }
+  #aside img {
+    padding: 4px;
+    border: 1px solid #ddd;
+    max-width: 680px; }
 
 @media only print {
   #comments-board {
