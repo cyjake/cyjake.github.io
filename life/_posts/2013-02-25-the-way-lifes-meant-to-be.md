@@ -20,7 +20,7 @@ caption: or IMHO, what is the right attitude to work
 它的英文名字叫做《The Pursuit of Happiness》，出处是美帝国主义的《独立宣言》。
 所以我的看法很简单，人应该去追求幸福，而程序员的幸福，群体上是被认同，自我实现上说，是搞定牛逼的产品。
 
-![追求](http://pic.yupoo.com/yicai-cyj_v/CFwJ8QRG/WaQSh.jpg)
+![追求](/assets/img/2011-recap-i/0207-sunrise.jpg)
 
 而于前端工程师而言，这两方面其实都不难达成。我们的代码最容易交流，它们天生就在网络上流窜，
 你的代码清楚、简洁，像 jQuery 般挠到了别人的痒处，你便功成名就，jQuery 的作者 John Resig，
@@ -86,7 +86,7 @@ CSS，需要知道如下知识点：
 [w3cfuns.com](http://w3cfuns.com)，刚好那儿有张图片，我借过来用一下，算是奉劝不想认真学
 JavaScript 的诸位，或许你们该重新考虑一下职业规划：
 
-![不会 JavaScript 能混前端么？](http://pic.yupoo.com/yicai-cyj_v/CFwKxp43/Qj6Tc.jpg)
+![不会 JavaScript 能混前端么？](/assets/img/2013/js-free.jpg)
 
 学习 JavaScript，如下几本非常值得推荐：
 

@@ -13,41 +13,40 @@ layout: post
 次日中午，一行人启程返杭，我从家里回来，比约定的时间早了些，彼时艳阳高照，便拿着相机，沿大沙堤往北，
 又从邮电路往南，扫了一圈。
 
-![](http://pic.yupoo.com/yicai-cyj_v/CYGdxuJy/RXJDg.jpg)
-![](http://pic.yupoo.com/yicai-cyj_v/CYGdy5jv/QhBT0.jpg)
+![](/assets/img/2013-ruian/1-grayscale.jpg)
+![](/assets/img/2013-ruian/1.jpg)
 
-![](http://pic.yupoo.com/yicai-cyj_v/CYGdyZki/vCARQ.jpg)
-![](http://pic.yupoo.com/yicai-cyj_v/CYGdBh8p/MoZY5.jpg)
+![](/assets/img/2013-ruian/2-grayscale.jpg)
+![](/assets/img/2013-ruian/2.jpg)
 
-![](http://pic.yupoo.com/yicai-cyj_v/CYGdCiX2/P0rhy.jpg)
-![](http://pic.yupoo.com/yicai-cyj_v/CYGdEFoZ/IpPTj.jpg)
+![](/assets/img/2013-ruian/3-grayscale.jpg)
+![](/assets/img/2013-ruian/3.jpg)
 
-![](http://pic.yupoo.com/yicai-cyj_v/CYGdGUjq/QryNW.jpg)
-![](http://pic.yupoo.com/yicai-cyj_v/CYGdK8O5/MGHZp.jpg)
+![](/assets/img/2013-ruian/4-grayscale.jpg)
+![](/assets/img/2013-ruian/4.jpg)
 
-![](http://pic.yupoo.com/yicai-cyj_v/CYGdKJed/XJWq3.jpg)
-![](http://pic.yupoo.com/yicai-cyj_v/CYGdMD0r/jsLty.jpg)
+![](/assets/img/2013-ruian/5-grayscale.jpg)
+![](/assets/img/2013-ruian/5.jpg)
 
-![](http://pic.yupoo.com/yicai-cyj_v/CYGdOiix/iRuXp.jpg)
-![](http://pic.yupoo.com/yicai-cyj_v/CYGdR7SG/4YVpp.jpg)
+![](/assets/img/2013-ruian/6-grayscale.jpg)
+![](/assets/img/2013-ruian/6.jpg)
 
-![](http://pic.yupoo.com/yicai-cyj_v/CYGdSA5m/lc7sA.jpg)
-![](http://pic.yupoo.com/yicai-cyj_v/CYGdUoIL/CCsM.jpg)
+![](/assets/img/2013-ruian/7-grayscale.jpg)
+![](/assets/img/2013-ruian/7.jpg)
 
-![](http://pic.yupoo.com/yicai-cyj_v/CYGdWJLf/KjO0H.jpg)
-![](http://pic.yupoo.com/yicai-cyj_v/CYGdY6Hw/Rjjzg.jpg)
+![](/assets/img/2013-ruian/8-grayscale.jpg)
+![](/assets/img/2013-ruian/8.jpg)
 
-![](http://pic.yupoo.com/yicai-cyj_v/CYGe0eSQ/Ahj6X.jpg)
-![](http://pic.yupoo.com/yicai-cyj_v/CYGe0XmL/TTwtN.jpg)
+![](/assets/img/2013-ruian/9-grayscale.jpg)
+![](/assets/img/2013-ruian/9.jpg)
 
-![](http://pic.yupoo.com/yicai-cyj_v/CYGe2HGI/14urhh.jpg)
-![](http://pic.yupoo.com/yicai-cyj_v/CYGe5zZ0/Lhrs7.jpg)
+![](/assets/img/2013-ruian/10-grayscale.jpg)
+![](/assets/img/2013-ruian/10.jpg)
 
-![](http://pic.yupoo.com/yicai-cyj_v/CYGe6hc7/Rnfcz.jpg)
-![](http://pic.yupoo.com/yicai-cyj_v/CYGe91bP/avlh1.jpg)
+![](/assets/img/2013-ruian/11-grayscale.jpg)
+![](/assets/img/2013-ruian/11.jpg)
 
-![](http://pic.yupoo.com/yicai-cyj_v/CYGe9Mkm/lPk7B.jpg)
-![](http://pic.yupoo.com/yicai-cyj_v/CYGebUSx/oO4w1.jpg)
+![](/assets/img/2013-ruian/12-grayscale.jpg)
+![](/assets/img/2013-ruian/12.jpg)
 
-![](http://pic.yupoo.com/yicai-cyj_v/CYGedssd/10Chml.jpg)
-![](http://pic.yupoo.com/yicai-cyj_v/CYGeg5Im/Bowx3.jpg)
+
