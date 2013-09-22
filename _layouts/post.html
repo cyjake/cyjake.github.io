@@ -13,6 +13,9 @@
     </div>
     <div class="article">
       <h1>{{ page.title }}</h1>
+      <address><a href="http://cyj.me">Jake</a>
+        <time datetime="{{ page.date }}">{{ page.date | date: "%y.%m.%d" }}</time>
+      </address>
       {{ content }}
     </div>
     <div bx-name="mosaics/stoc" bx-config="{essay: '.article'}" bx-tpl="./default"></div>

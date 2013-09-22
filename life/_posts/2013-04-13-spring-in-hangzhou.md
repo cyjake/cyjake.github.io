@@ -7,17 +7,17 @@ caption: 青芝坞、太子湾、浴鹄湾、紫金港
 3月尾，清明将至，连续几个周末却是阴雨绵绵，不免觉得气闷，窝在家里看去年的照片，
 告诉自己杭州的春天应该是这样的：
 
-![苏堤晴好](http://pic.yupoo.com/yicai-cyj_v/CMVvgNCn/pWNX2.jpg)
+![苏堤晴好](/assets/img/2013-hangzhou-spring/1.jpg)
 
 应该是看发了嫩芽儿的柳枝在和煦春日里自在摇摆，看游人如织，看波澜不惊。
 
 而非像这将将入夜时的小雨，和那拥堵不堪：
 
-![文二路小雨](http://pic.yupoo.com/yicai-cyj_v/CMVvgHRe/FxmNa.jpg)
+![文二路小雨](/assets/img/2013-hangzhou-spring/3.jpg)
 
 所幸，到了清明小长假，不再雨纷纷，于是起了个晚，去青芝坞的朴墅吃饭。
 
-![朴墅](http://pic.yupoo.com/yicai-cyj_v/CMVwJ5IH/SDq8J.jpg)
+![朴墅](/assets/img/2013-hangzhou-spring/2.jpg)
 
 朴墅是家餐厅，开在两幢连一块的小别墅里，亭台水榭，坐在二楼临水的位置，直觉心旷神怡。但很不美的是，
 杭州的餐厅，价格亲民但又做得好吃的多半需要等位，以外婆家、第二乐章、指福门、白鹿、绿茶、弄堂里为典型，
@@ -31,17 +31,17 @@ caption: 青芝坞、太子湾、浴鹄湾、紫金港
 这粉色郁金香，开在门口，就在南山路边上，向堵在南山路上的各色机动车招摇，官人，进来歇会吧。
 满头大汗的司机与交警们，则在暗骂，这尼玛风景倒是如画，且教洒家在哪儿停车下马哇。
 
-![粉色郁金香](http://pic.yupoo.com/yicai-cyj_v/CMVANKoN/kwewk.jpg)
+![粉色郁金香](/assets/img/2013-hangzhou-spring/4.jpg)
 
 太子湾公园里，比肩继踵，你在花前赏花，人在花前摆拍，到底是赏花人在赏花，还是花在赏游人自拍，
 不得而知。幸好，曲径通幽，越往里走，人群越分散，不经意间抬头，园里某处，看到一片郁金香，色彩斑斓。
 
-![五彩斑斓](http://pic.yupoo.com/yicai-cyj_v/CMVANSyx/S5C2g.jpg)
+![五彩斑斓](/assets/img/2013-hangzhou-spring/5.jpg)
 
 满眼都是人自然憋闷，出得园门，豁然开朗，南山路旁竟然各色郁金香与菊花交织。穿插了许多旁的，叫不出名字，
 老婆说这个叫长寿花。
 
-![长寿花](http://pic.yupoo.com/yicai-cyj_v/CMVAOmxW/Y1mUr.jpg)
+![长寿花](/assets/img/2013-hangzhou-spring/6.jpg)
 
 真想看看太子湾的美，理该请个小半天假，花一早上在里头徜徉吧。清明前那几周，全都是工作日晴好，周末下雨，
 老天爷暗示了这么久，只可惜凡夫俗子没这魄力哇。
@@ -49,18 +49,20 @@ caption: 青芝坞、太子湾、浴鹄湾、紫金港
 人浪领略完毕，从赤山埠停车场出发，沿三台山路往南走，到浴鹄湾看看，那边有个长廊，似乎《非诚勿扰》
 里头都出现过的。这一路可以领略的，便是各种恣意骄纵的绿了。
 
-![浴鹄湾的长廊](http://pic.yupoo.com/yicai-cyj_v/CMVHGyqr/X6iOr.jpg)
+![浴鹄湾的长廊](/assets/img/2013-hangzhou-spring/7.jpg)
 
-![新绿](http://pic.yupoo.com/yicai-cyj_v/CMVI827C/CJW6g.jpg)
+![新绿](/assets/img/2013-hangzhou-spring/8.jpg)
 
 穿过走廊，沿着三台山路，靠杨公堤侧走，可以经过江南会，这个贵死人的高级会所，对游人却是极客气的，
 随便进出。继续往北，可以到一处满是樱花的小径，满树银花，跟不要钱似的。
 
-![樱花](http://pic.yupoo.com/yicai-cyj_v/CMVI8dly/c09o5.jpg)
+![樱花](/assets/img/2013-hangzhou-spring/9.jpg)
 
-![樱花黑白](http://pic.yupoo.com/yicai-cyj_v/CMVI8Mv5/Pmxd4.jpg)
+![樱花黑白](/assets/img/2013-hangzhou-spring/10.jpg)
 
-![黑白](http://pic.yupoo.com/yicai-cyj_v/CMYsRbw9/FLXfe.jpg)
+![黑白](/assets/img/2013-hangzhou-spring/11.jpg)
+
+![黑白](/assets/img/2013-hangzhou-spring/12.jpg)
 
 一路上，有人拍婚纱，有人组团邀模特拍摄，人流终于不再密集，终于有了“好美呀”的闲暇。
 
@@ -68,10 +70,12 @@ caption: 青芝坞、太子湾、浴鹄湾、紫金港
 
 西区教学楼的黄昏：
 
-![西区教学楼的黄昏](http://pic.yupoo.com/yicai-cyj_v/CMVAOgnA/oolNf.jpg)
+![西区教学楼的黄昏](/assets/img/2013-hangzhou-spring/13.jpg)
 
 启真湖里的黑天鹅：
 
-![启真湖里的黑天鹅](http://pic.yupoo.com/yicai-cyj_v/CMVAOnVt/mC3Dj.jpg)
+![启真湖里的黑天鹅](/assets/img/2013-hangzhou-spring/14.jpg)
+
+![启真湖里的黑天鹅](/assets/img/2013-hangzhou-spring/15.jpg)
 
 以上，即清明小长假之游记，希望对诸位出行游玩有所帮助。

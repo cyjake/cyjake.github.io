@@ -3,7 +3,7 @@ title: 我所设想的 Brix
 layout: post
 ---
 
-![樱花](http://pic.yupoo.com/yicai-cyj_v/CMVI8Mv5/Pmxd4.jpg)
+![](/assets/img/2013-ruian/10.jpg)
 
 代码 + README，似乎不能很好地表达自己，之前弄了
 [Brix Core](https://github.com/dotnil/brix-core) 与
@@ -474,4 +474,4 @@ brick.json ，解析它们，如果它们所依赖的组件还有依赖，则继
 
 我设想的 Brix 组件，是应该有其依赖的。具体做法，思考 ing，容后谈。
 
-![杭州之春](http://pic.yupoo.com/yicai-cyj_v/CMVI827C/CJW6g.jpg)
+![](/assets/img/2013-ruian/12.jpg)
