@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Velocity China 2012 小记
+title: Velocity Beijing 2012 小记
 ---
 
-上周去参加了 [Velocity China 2012](http://velocity.oreilly.com.cn/2012/)。
+上周去参加了 [Velocity Beijing 2012](http://velocity.oreilly.com.cn/2012/)。
 上一次去参加这个大会是我刚入职淘宝的时候，2010年，也是在北京。
 两次的时间差不多，一样的冷，不一样的议题。但很遗憾，对前端工程师来说，今年的不如两年前的给力。
 
