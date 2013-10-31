@@ -3,6 +3,9 @@ title: attachStyle 代码评审
 layout: post
 ---
 
+小组内首次代码评审，解释 cc/templets/meta 模块中，`.attachStyle()` 方法的变迁，评审
+黄龙的最新版代码。
+
 ## heredoc
 
 {% highlight js %}

@@ -4,7 +4,7 @@ layout: post
 ---
 
 2013年10月11日，平生头一次踏出国门，目的地美帝国主义，纽约，参加 Velocity 纽约 2013。
-会议纪要另开一篇，[请猛击此处](/conf/velocity-new-york)。
+会议纪要另开一篇，[请猛击此处](/conf/velocity-new-york-2013)。
 
 ## 准备
 
