@@ -694,7 +694,7 @@ Brian 演示的是使用 PhoneGap 与 Topcoat 快速创建应用程序。
 
 ![Michael Mullany](/assets/img/2013-new-york/IMG_1595.jpg)
 
-五项迷思在早前 Sencha 的博客中就发过了，那会 Facebook 放弃了 HTML5，客户端改用原声方式
+五项迷思在早前 Sencha 的博客中就发过了，那会 Facebook 放弃了 HTML5，客户端改用原生方式
 编写，Mark Zuckerberg 认为 HTML5 还没有好，太慢了。
 
 Sencha [表示反对](http://www.sencha.com/blog/the-making-of-fastbook-an-html5-love-story)，
