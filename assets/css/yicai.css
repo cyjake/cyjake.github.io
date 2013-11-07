@@ -649,8 +649,7 @@ html {
   background: #efefef; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
-  font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", "SimSun", sans-serif; }
+  font-weight: 300; }
 
 a:link {
   text-decoration: none;
@@ -660,7 +659,7 @@ a:hover {
   text-decoration: underline; }
 
 html, body {
-  font: normal 16px/1.5 Georgia, "Xin Gothic", "Hiragino Sans GB", Tahoma, "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif; }
+  font: normal 14px/1.5 Georgia, "Xin Gothic", "Hiragino Sans GB", Tahoma, "WenQuanYi Micro Hei", sans-serif; }
 
 code, pre {
   font-family: Monaco, Consolas, monospace, serif;
@@ -684,7 +683,10 @@ p code {
   color: #d14; }
 
 .article {
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  font-size: 16px; }
+  .article h1, .article h2, .article h3, .article h4, .article h5, .article h6 {
+    font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "WenQuanYi Micro Hei", "SimSun", sans-serif; }
   .article img {
     max-width: 100%;
     border-radius: 2px;
@@ -912,7 +914,7 @@ p code {
     text-align: center; }
 
   #page {
-    margin: 42px auto 0;
+    margin: 40px auto 0;
     width: 680px;
     text-align: left; }
     #page .stoc {

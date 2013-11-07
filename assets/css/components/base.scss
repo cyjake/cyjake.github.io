@@ -6,18 +6,19 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
-  font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", "SimSun", sans-serif;
 }
+
 a:link {
   text-decoration: none;
   color: #0063DC;
 }
+
 a:hover {
   text-decoration: underline;
 }
 
 html, body {
-  font: normal 16px/1.5 Georgia, "Xin Gothic", "Hiragino Sans GB", Tahoma, "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
+  font: normal 14px/1.5 Georgia, "Xin Gothic", "Hiragino Sans GB", Tahoma, "WenQuanYi Micro Hei", sans-serif;
 }
 
 code, pre {
@@ -46,6 +47,11 @@ p {
 
 .article {
   margin-bottom: 40px;
+  font-size: 16px;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "WenQuanYi Micro Hei", "SimSun", sans-serif;
+  }
 
   img {
     max-width: 100%;
