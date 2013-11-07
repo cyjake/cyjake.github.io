@@ -648,8 +648,9 @@ table {
 html {
   background: #efefef; }
 
-h1, h2, h3, h4 {
-  font-weight: 300; }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", "SimSun", sans-serif; }
 
 a:link {
   text-decoration: none;
@@ -659,12 +660,12 @@ a:hover {
   text-decoration: underline; }
 
 html, body {
-  font: 14px/1.5 normal "Hiragino Sans GB", Tahoma, "Microsoft Yahei", Helvetica, Arial, sans-serif; }
+  font: normal 16px/1.5 Georgia, "Xin Gothic", "Hiragino Sans GB", Tahoma, "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif; }
 
 code, pre {
   font-family: Monaco, Consolas, monospace, serif;
   line-height: 1.4;
-  font-size: 12px; }
+  font-size: 14px; }
 
 p code {
   -webkit-border-radius: 2px;
@@ -865,9 +866,9 @@ p code {
       top: 10px;
       right: 0;
       height: 28px;
-      width: 70px;
+      width: 75px;
       overflow: hidden; }
-      #page .stoc:hover, #page .stoc:active {
+      #page .stoc:hover {
         overflow: visible;
         width: auto;
         height: auto; }
@@ -878,7 +879,7 @@ p code {
     #content .content-wrap {
       padding: 50px 10px 10px; }
     #content .article {
-      max-width: 690px; }
+      max-width: 680px; }
 
   #aside {
     position: absolute;
@@ -897,9 +898,13 @@ p code {
       #aside .label:link, #aside .label:visited {
         color: #000; }
     #aside .entry {
-      border-bottom: 1px dotted #4E6092; }
+      border-bottom: 1px dotted #4E6092;
+      background: #21212B;
+      transition: background-color 0.2s; }
       #aside .entry:link, #aside .entry:visited {
-        color: #4E6092; }
+        color: #efefef; }
+      #aside .entry:hover {
+        background: #4e6092; }
     #aside .entries {
       padding-top: 10px; } }
 @media (min-width: 1024px) {
@@ -908,7 +913,7 @@ p code {
 
   #page {
     margin: 42px auto 0;
-    width: 690px;
+    width: 680px;
     text-align: left; }
     #page .stoc {
       position: fixed;
