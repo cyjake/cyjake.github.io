@@ -4,8 +4,9 @@ html {
   background: #efefef;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
+  font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", "SimSun", sans-serif;
 }
 a:link {
   text-decoration: none;
@@ -16,13 +17,13 @@ a:hover {
 }
 
 html, body {
-  font: 14px/1.5 normal "Hiragino Sans GB", Tahoma, "Microsoft Yahei", Helvetica, Arial, sans-serif;
+  font: normal 16px/1.5 Georgia, "Xin Gothic", "Hiragino Sans GB", Tahoma, "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 }
 
 code, pre {
   font-family: Monaco, Consolas, monospace, serif;
   line-height: 1.4;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 p {
