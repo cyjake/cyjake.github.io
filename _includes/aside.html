@@ -1,45 +1,24 @@
 <div id="aside">
-  <div id="J_MenuWrap">
-    <div id="J_Menu" class="categories">
-      {% for category in site.categories %}
-      <a href="{{ site.baseurl }}/{{ category[0] }}" class="category">
-        <label>{{ category[0] | capitalize }}</label>
-        <i class="arrow"></i>
-      </a>
-      {% endfor %}
-      <a href="{{ site.baseurl }}/projects" class="category">
-        <label>Projects</label>
-        <i class="arrow"></i>
-      </a>
-      <a href="{{ site.baseurl }}/webpages" class="category">
-        <label>Webpages</label>
-        <i class="arrow"></i>
-      </a>
-    </div>
-    <div id="J_Cont" class="content">
-      {% for category in site.categories %}
-      <div class="entries">
-        {% for post in category[1] %}
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        {% endfor %}
-      </div>
-      {% endfor %}
-      <div class="entries">
-        <a href="http://cyj.me/ent">ent</a>
-        <a href="http://github.com/dotnil/ceaseless">ceaseless</a>
-        <a href="http://cyj.me/why-seajs/zh">Why SeaJS</a>
-      </div>
-      <div class="entries">
-        <a href="http://gitref.org/zh">Git Reference</a>
-        <a href="http://cyj.me/betrothal">Betrothal</a>
-      </div>
-    </div>
-  </div>
-  <div class="archive">
-    <a href="{{ site.baseurl }}/about">About</a>
-    <a href="{{ site.baseurl }}/archive">Archive</a>
-    <a href="http://octo.cyj.me">2012</a>
-    <a href="http://2011.cyj.me">2011</a>
-    <a href="http://2008.cyj.me">2008</a>
+  <a class="label" href="javascript:void(0);">
+    <i class="iconfont">&#271;</i>导航
+  </a>
+  <div class="entries">
+    {% for category in site.categories %}
+    <a href="{{ site.baseurl }}/{{ category[0] }}" class="category entry">
+      <i class="iconfont {{category[0]}}"></i>{{ category[0] | capitalize }}
+    </a>
+    {% endfor %}
+    <a href="{{ site.baseurl }}/projects" class="category entry">
+      <i class="iconfont">&#409;</i>Projects
+    </a>
+    <a href="{{ site.baseurl }}/webpages" class="category entry">
+      <i class="iconfont">&#41;</i>Webpages
+    </a>
+    <a href="{{ site.baseurl }}/about" class="entry">
+      <i class="iconfont">&#359;</i>About
+    </a>
+    <a href="{{ site.baseurl }}/archive" class="entry">
+      <i class="iconfont">&#37;</i>Archive
+    </a>
   </div>
 </div>

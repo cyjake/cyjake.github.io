@@ -1,154 +1,38 @@
-// Basic layout settings
-// we can override those settings later via media query
-html {
-  background: #efefef;
-}
+// for screen wider than 1024px
 
-body {
-  text-align: center;
-}
+@media (min-width: 1024px) {
+  body {
+    text-align: center;
+  }
 
-#page {
-  margin: 50px auto 0;
-  width: 690px;
-  text-align: left;
+  #page {
+    margin: 50px auto 0;
+    width: 690px;
+    text-align: left;
 
-  .stoc {
+    .stoc {
+      position: fixed;
+      _position: absolute;
+      top: 50px;
+      left: 50%;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.7);
+      margin-left: 375px;
+      min-width: 180px;
+
+      li a {
+        height: auto;
+      }
+    }
+  }
+
+  #aside {
+    width: 130px;
+    margin-left: -(690px / 2 + 150px);
     position: fixed;
     _position: absolute;
-    top: 50px;
+    top: 102px;
     left: 50%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.7);
-    margin-left: 375px;
-    min-width: 180px;
-
-    li a {
-      height: auto;
-    }
   }
 }
-
-#aside {
-  width: 130px;
-  margin-left: -(690px / 2 + 150px);
-  position: fixed;
-  _position: absolute;
-  top: 102px;
-  left: 50%;
-  z-index: 1000;
-
-  a {
-    height: 24px;
-    line-height: 24px;
-    display: block;
-
-    &:hover {
-      text-decoration: none;
-    }
-  }
-
-  .category {
-    display: block;
-    height: 28px;
-    line-height: 28px;
-    padding-left: 10px;
-    text-transform: uppercase;
-
-    &:link, &:visited {
-      text-decoration: none;
-      colror: #0063DC;
-    }
-  }
-
-  .arrow {
-    position: absolute;
-    right: 10px;
-    top: 8px;
-    width: 0;
-    height: 0;
-    border-width: 4px 4px;
-    border-style: solid;
-    border-color: transparent;
-    border-left-color: #666;
-    font-size: 0;
-    line-height: 0;
-    -moz-transition: -moz-transform .2s ease-in;
-      -o-transition:   -o-transform .2s ease-in;
-         transition:      transform .2s ease-in;
-  }
-
-  .content {
-    display: none;
-    position: absolute;
-    left: 130px;
-    top: -2px;
-    min-height: 190px;
-    background: #fff;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 5px 10px;
-  }
-
-  .entries {
-    width: 380px;
-    height: auto;
-    display: none;
-    z-index: 1000;
-
-    a {
-      color: #333;
-    }
-    li {
-      display: block;
-      padding-top: 5px;
-    }
-  }
-
-  .category {
-    height: 28px;
-    display: block;
-    position: relative;
-    z-index: 100;
-  }
-
-  .current {
-    background: #fff;
-    background: rgba(255, 255, 255, 0.9);
-
-    &:link, &:visited {
-      color: #333;
-    }
-
-    .arrow {
-      border-left-color: #333;
-    }
-  }
-
-  .archive {
-    padding: 10px 0 0 10px;
-    text-transform: uppercase;
-  }
-
-  .article:after {
-    content: "❦";
-    display: block;
-    text-align: center;
-    font-size: 36px;
-    color: #d14;
-  }
-
-  .article {
-    margin-bottom: 40px;
-  }
-
-  .back-home {
-    margin-bottom: 20px;
-  }
-
-  img {
-    padding: 4px;
-    border: 1px solid #ddd;
-    max-width: 680px;
-  }
-}
-
