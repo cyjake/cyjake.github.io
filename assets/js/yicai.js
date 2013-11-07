@@ -1,4 +1,4 @@
-var duoshuoQuery = { short_name:"dotnil" };
+var duoshuoQuery = { short_name: "dotnil" }
 
 
 KISSY.config('packages', {
