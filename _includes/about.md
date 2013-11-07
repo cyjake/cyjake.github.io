@@ -19,3 +19,11 @@
 - 我做的视频：[优酷](http://i.youku.com/u/UODA5NzU2MjQ=/videos)
 - 我拍的照片：[又拍](http://yicai-cyj.yupoo.com/)、[Flickr](http://www.flickr.com/photos/dotnil/)
 - 我写的代码：[Github](https://github.com/dotnil)
+
+## 故纸堆
+
+我自己的比特海。
+
+- [2012](http://octo.cyj.me)
+- [2011](http://2011.cyj.me)
+- [2008](http://2008.cyj.me)

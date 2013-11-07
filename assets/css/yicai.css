@@ -645,6 +645,9 @@ table {
 .highlight .il {
   color: #40a070; }
 
+html {
+  background: #efefef; }
+
 h1, h2, h3, h4 {
   font-weight: 300; }
 
@@ -657,19 +660,6 @@ a:hover {
 
 html, body {
   font: 14px/1.5 normal "Hiragino Sans GB", Tahoma, "Microsoft Yahei", Helvetica, Arial, sans-serif; }
-
-#aside {
-  text-align: left; }
-  #aside ul {
-    padding: 0;
-    margin: 0; }
-    #aside ul li {
-      list-style: none; }
-
-#footer {
-  margin: 40px 0 20px;
-  height: 17px;
-  line-height: 17px; }
 
 code, pre {
   font-family: Monaco, Consolas, monospace, serif;
@@ -684,6 +674,33 @@ p code {
   background: #eee;
   white-space: nowrap;
   padding: 0 3px; }
+
+.article:after {
+  content: "❦";
+  display: block;
+  text-align: center;
+  font-size: 36px;
+  color: #d14; }
+
+.article {
+  margin-bottom: 40px; }
+  .article img {
+    max-width: 100%;
+    border-radius: 2px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); }
+  .article address {
+    font-style: normal;
+    font-family: Georgia, serif; }
+
+.back-home {
+  margin-bottom: 20px; }
+
+#footer {
+  margin: 40px 0 20px;
+  height: 17px;
+  line-height: 17px; }
+  #footer .rss {
+    float: right; }
 
 .branding {
   text-transform: uppercase;
@@ -805,115 +822,117 @@ p code {
     -moz-border-radius: 12px;
     border-radius: 12px; }
 
-html {
-  background: #efefef; }
-
-body {
-  text-align: center; }
-
-#page {
-  margin: 50px auto 0;
-  width: 690px;
-  text-align: left; }
-  #page .stoc {
-    position: fixed;
-    _position: absolute;
-    top: 50px;
-    left: 50%;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.7);
-    margin-left: 375px;
-    min-width: 180px; }
-    #page .stoc li a {
-      height: auto; }
-
 #aside {
-  width: 130px;
-  margin-left: -495px;
-  position: fixed;
-  _position: absolute;
-  top: 102px;
-  left: 50%;
-  z-index: 1000; }
-  #aside a {
-    height: 24px;
-    line-height: 24px;
-    display: block; }
-    #aside a:hover {
-      text-decoration: none; }
-  #aside .category {
+  text-align: left; }
+  #aside ul {
+    padding: 0;
+    margin: 0; }
+    #aside ul li {
+      list-style: none; }
+  #aside a:hover {
+    text-decoration: none; }
+  #aside .entry {
     display: block;
     height: 28px;
     line-height: 28px;
-    padding-left: 10px;
+    padding: 5px 10px;
     text-transform: uppercase; }
-    #aside .category:link, #aside .category:visited {
-      text-decoration: none;
-      colror: #0063DC; }
-  #aside .arrow {
-    position: absolute;
-    right: 10px;
-    top: 8px;
-    width: 0;
-    height: 0;
-    border-width: 4px 4px;
-    border-style: solid;
-    border-color: transparent;
-    border-left-color: #666;
-    font-size: 0;
-    line-height: 0;
-    -moz-transition: -moz-transform .2s ease-in;
-    -o-transition: -o-transform .2s ease-in;
-    transition: transform .2s ease-in; }
-  #aside .content {
-    display: none;
-    position: absolute;
-    left: 130px;
-    top: -2px;
-    min-height: 190px;
-    background: #fff;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 5px 10px; }
-  #aside .entries {
-    width: 380px;
-    height: auto;
-    display: none;
-    z-index: 1000; }
-    #aside .entries a {
-      color: #333; }
-    #aside .entries li {
-      display: block;
-      padding-top: 5px; }
-  #aside .category {
-    height: 28px;
+    #aside .entry:link, #aside .entry:visited {
+      text-decoration: none; }
+  #aside .label {
     display: block;
-    position: relative;
-    z-index: 100; }
-  #aside .current {
-    background: #fff;
-    background: rgba(255, 255, 255, 0.9); }
-    #aside .current:link, #aside .current:visited {
-      color: #333; }
-    #aside .current .arrow {
-      border-left-color: #333; }
-  #aside .archive {
-    padding: 10px 0 0 10px;
-    text-transform: uppercase; }
-  #aside .article:after {
-    content: "❦";
-    display: block;
-    text-align: center;
-    font-size: 36px;
-    color: #d14; }
-  #aside .article {
-    margin-bottom: 40px; }
-  #aside .back-home {
-    margin-bottom: 20px; }
-  #aside img {
-    padding: 4px;
-    border: 1px solid #ddd;
-    max-width: 680px; }
+    padding: 3px 10px; }
+  #aside .iconfont {
+    margin-right: 5px; }
+  #aside .iconfont.binary:before {
+    content: '\133'; }
+  #aside .iconfont.life:before {
+    content: '\f072'; }
+  #aside .iconfont.f2e:before {
+    content: '\231'; }
+  #aside .iconfont.rails:before {
+    content: '\234'; }
+  #aside .iconfont.conf:before {
+    content: '\103'; }
 
+@media (max-width: 1023px) {
+  html, body {
+    height: 100%;
+    overflow-x: hidden; }
+
+  #page {
+    position: relative;
+    height: 100%;
+    transition: left 0.2s; }
+    #page .stoc {
+      top: 10px;
+      right: 0;
+      height: 28px;
+      width: 70px;
+      overflow: hidden; }
+      #page .stoc:hover, #page .stoc:active {
+        overflow: visible;
+        width: auto;
+        height: auto; }
+
+  #content {
+    overflow: auto;
+    height: 100%; }
+    #content .content-wrap {
+      padding: 50px 10px 10px; }
+    #content .article {
+      max-width: 690px; }
+
+  #aside {
+    position: absolute;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    background: #21212B; }
+    #aside .label {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: -80px;
+      width: 60px;
+      background: rgba(255, 255, 255, 0.7); }
+      #aside .label:link, #aside .label:visited {
+        color: #000; }
+    #aside .entry {
+      border-bottom: 1px dotted #4E6092; }
+      #aside .entry:link, #aside .entry:visited {
+        color: #4E6092; }
+    #aside .entries {
+      padding-top: 10px; } }
+@media (min-width: 1024px) {
+  body {
+    text-align: center; }
+
+  #page {
+    margin: 50px auto 0;
+    width: 690px;
+    text-align: left; }
+    #page .stoc {
+      position: fixed;
+      _position: absolute;
+      top: 50px;
+      left: 50%;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.7);
+      margin-left: 375px;
+      min-width: 180px; }
+      #page .stoc li a {
+        height: auto; }
+
+  #aside {
+    width: 130px;
+    margin-left: -495px;
+    position: fixed;
+    _position: absolute;
+    top: 102px;
+    left: 50%;
+    z-index: 1000; } }
 @media only print {
   #comments-board {
     display: none; }
