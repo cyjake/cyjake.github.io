@@ -4,5 +4,5 @@ pygments: true
 markdown: rdiscount
 lsi: false
 permalink: /:categories/:title
-exclude: [Gemfile, Gemfile.lock, Guardfile, README.md, CNAME, *.scss]
+exclude: [Gemfile, Gemfile.lock, Guardfile, README.md, CNAME, '*.scss']
 excerpt_separator: "\n\n"
