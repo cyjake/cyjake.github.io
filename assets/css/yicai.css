@@ -929,7 +929,9 @@ p code {
     _position: absolute;
     top: 102px;
     left: 50%;
-    z-index: 1000; } }
+    z-index: 1000; }
+    #aside .label {
+      display: none; } }
 @media only print {
   #comments-board {
     display: none; }

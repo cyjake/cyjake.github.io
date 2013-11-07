@@ -34,5 +34,9 @@
     top: 102px;
     left: 50%;
     z-index: 1000;
+
+    .label {
+      display: none;
+    }
   }
 }
