@@ -1,6 +1,3 @@
-var duoshuoQuery = { short_name: "dotnil" }
-
-
 KISSY.config('packages', {
     mosaics: {
         base: 'http://g.tbcdn.cn/thx/m',
@@ -11,10 +8,6 @@ KISSY.config('packages', {
 })
 
 KISSY.use('node,event', function(S) {
-    if (S.one('#comments-board')) {
-        S.getScript('http://static.duoshuo.com/embed.js')
-    }
-
     S.one('#aside .label').on('click', function(e) {
         var page = S.one('#page')
         page.css('left', parseInt(page.css('left'), 10) > 0 ? 0 : S.one('#aside').outerWidth())
@@ -33,4 +26,9 @@ KISSY.use('brix/app', function(S, app) {
     app.bootStyle(function() {
         app.boot()
     })
+})
+
+KISSY.ready(function(S) {
+    var duoshuoQuery = { short_name: "dotnil" }
+    S.getScript('http://static.duoshuo.com/embed.js')
 })

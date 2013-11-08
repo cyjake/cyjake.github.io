@@ -5,6 +5,7 @@
   {% if page.style %}
   <link rel="stylesheet" type="text/css" href="/assets/css/posts/{{ page.style }}.css">
   {% endif %}
+  {% include ga.html %}
 </head>
 <body id="post-body" bx-app>
   <div id="page">
@@ -24,10 +25,10 @@
       </div>
     </div>
     {% include aside.html %}
+    {% include scripts.html %}
     {% if page.script %}
     <script src="/assets/js/posts/{{ page.script }}.js"></script>
     {% endif %}
   </div>
-  {% include ga.html %}
 </body>
 </html>
