@@ -28,7 +28,7 @@ KISSY.use('brix/app', function(S, app) {
     })
 })
 
+var duoshuoQuery = { short_name: "dotnil" }
 KISSY.ready(function(S) {
-    var duoshuoQuery = { short_name: "dotnil" }
     S.getScript('http://static.duoshuo.com/embed.js')
 })
