@@ -5,11 +5,9 @@ body_id: front-body
 ---
 
 <h1 style="font-size:1em">{% include branding.html %}</h1>
-<div id="dashboard">
-  <div class="latest article board">
-    {% for post in site.posts limit:10 %}
-      <h2><a href="{{ post.url }}">{{ post.title}}</a></h2>
-      {{ post.excerpt }}
-    {% endfor %}
-  </div>
+<div class="latest article">
+  {% for post in site.posts limit:10 %}
+    <h2><a href="{{ post.url }}">{{ post.title}}</a></h2>
+    {{ post.excerpt }}
+  {% endfor %}
 </div>
