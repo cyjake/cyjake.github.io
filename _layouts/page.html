@@ -4,11 +4,12 @@
   {% include header.html %}
   {% include ga.html %}
 </head>
-<body id="{{ page.body_id }}" bx-app>
+<body id="{{ page.body_id }}" class="type" bx-app>
   <div id="page">
     <div id="content">
       <div class="content-wrap">
         {{ content }}
+        {% include card.html %}
         {% include duoshuo.html %}
         {% include footer.html %}
       </div>
