@@ -1,13 +1,11 @@
-@import "../brix/normalize";
-@import "../brix/variable";
 @import "../brix/mixin";
-@import "../brix/icon";
 @import "syntax/pygments";
 
 @import 'components/base';
 @import 'components/branding';
 @import 'components/rss';
 @import 'components/aside';
+@import 'components/card';
 
 @import 'devices/handheld';
 @import 'devices/screen';
