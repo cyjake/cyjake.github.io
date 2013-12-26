@@ -20,10 +20,15 @@
     line-height: 28px;
     padding: 5px 10px;
     text-transform: uppercase;
+    border-bottom: 1px solid #ccc;
 
     &:link, &:visited {
       text-decoration: none;
     }
+  }
+
+  .entry:last-child {
+    border-bottom-color: transparent;
   }
 
   .label {

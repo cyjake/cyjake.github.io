@@ -434,9 +434,12 @@ p code {
     height: 28px;
     line-height: 28px;
     padding: 5px 10px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc; }
     #aside .entry:link, #aside .entry:visited {
       text-decoration: none; }
+  #aside .entry:last-child {
+    border-bottom-color: transparent; }
   #aside .label {
     display: block;
     padding: 3px 10px; }
