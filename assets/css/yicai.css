@@ -297,7 +297,7 @@ p code {
   #footer .rss {
     float: right; }
 
-.type .branding {
+.type .branding, .type .branding:hover {
   border-bottom: none; }
 
 .branding {
@@ -365,7 +365,7 @@ p code {
   .branding:hover {
     color: #71E9F4;
     text-shadow: none;
-    border: none;
+    border-bottom: none;
     border-radius: 2px; }
     .branding:hover .roll {
       background: rgba(0, 0, 0, 0.5);

@@ -1,5 +1,8 @@
 .type .branding {
-  border-bottom: none;
+
+  &, &:hover {
+    border-bottom: none;
+  }
 }
 
 .branding {
@@ -47,7 +50,7 @@
   &:hover {
     color: #71E9F4;
     text-shadow: none;
-    border: none;
+    border-bottom: none;
     border-radius: 2px;
 
     .roll {
