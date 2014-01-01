@@ -1,15 +1,17 @@
-#page p {
-  position: relative; }
-  #page p img:last-child {
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-    z-index: 100;
-    -webkit-transition: opacity 0.2s;
-    -moz-transition: opacity 0.2s;
-    -ms-transition: opacity 0.2s;
-    -o-transition: opacity 0.2s;
-    transition: opacity 0.2s; }
-  #page p:hover img:last-child {
-    opacity: 1.0; }
+/* http://demosthenes.info/blog/540/Animating-CSS3-Image-Filters */
+
+#page p img {
+  transition: 0.5s all ease-in;
+
+  -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+     -moz-filter: grayscale(100%);
+  filter: gray; /* IE6-9 */
+  filter: grayscale(100);
+}
+
+#page p img:hover {
+  -webkit-filter: grayscale(0); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+     -moz-filter: grayscale(0);
+  filter: none;
+  filter: grayscale(0);
+}
