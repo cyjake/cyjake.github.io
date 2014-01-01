@@ -13,40 +13,27 @@ layout: post
 次日中午，一行人启程返杭，我从家里回来，比约定的时间早了些，彼时艳阳高照，便拿着相机，沿大沙堤往北，
 又从邮电路往南，扫了一圈。
 
-![](/assets/img/2013-ruian/1-grayscale.jpg)
 ![](/assets/img/2013-ruian/1.jpg)
 
-![](/assets/img/2013-ruian/2-grayscale.jpg)
 ![](/assets/img/2013-ruian/2.jpg)
 
-![](/assets/img/2013-ruian/3-grayscale.jpg)
 ![](/assets/img/2013-ruian/3.jpg)
 
-![](/assets/img/2013-ruian/4-grayscale.jpg)
 ![](/assets/img/2013-ruian/4.jpg)
 
-![](/assets/img/2013-ruian/5-grayscale.jpg)
 ![](/assets/img/2013-ruian/5.jpg)
 
-![](/assets/img/2013-ruian/6-grayscale.jpg)
 ![](/assets/img/2013-ruian/6.jpg)
 
-![](/assets/img/2013-ruian/7-grayscale.jpg)
 ![](/assets/img/2013-ruian/7.jpg)
 
-![](/assets/img/2013-ruian/8-grayscale.jpg)
 ![](/assets/img/2013-ruian/8.jpg)
 
-![](/assets/img/2013-ruian/9-grayscale.jpg)
 ![](/assets/img/2013-ruian/9.jpg)
 
-![](/assets/img/2013-ruian/10-grayscale.jpg)
 ![](/assets/img/2013-ruian/10.jpg)
 
-![](/assets/img/2013-ruian/11-grayscale.jpg)
 ![](/assets/img/2013-ruian/11.jpg)
 
-![](/assets/img/2013-ruian/12-grayscale.jpg)
 ![](/assets/img/2013-ruian/12.jpg)
-
 
