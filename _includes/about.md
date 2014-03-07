@@ -3,8 +3,8 @@
 发现自己在网络上身份纷繁，刚开始的时候叫 ajian、irabbit、篮筐比球大、leto，后来叫 nil、dotnil，再后来叫做 逸才。
 但我的英文名一直是 Jake，虽然离开外企很久，这名字也不再有人叫。
 
-个人网站也是如此，最早练手的 [2008.cyj.me](http://2008.cyj.me)，后来的 [2011.cyj.me](http://2011.cyj.me)。
-年初还练手 Octopress，弄了个 [octo.cyj.me](http://octo.cyj.me)，想把主页与博客合二为一。
+个人网站也是如此，最早练手的 [cyj.me/2008](http://cyj.me/2008)，后来的 [cyj.me/2011](http://cyj.me/2011)。
+年初还练手 Octopress，弄了个 [cyj.me/2012](http://cyj.me/2012)，想把主页与博客合二为一。
 结果因为每次更新都要重新生成网站太麻烦，直接博客都不写了。这样不好。
 
 所以有了这个，[Everything Jake](http://cyj.me)，准备听领导的话，多积累，秀成果，
