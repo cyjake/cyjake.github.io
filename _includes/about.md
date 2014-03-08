@@ -24,6 +24,6 @@
 
 我自己的比特海。
 
-- [2012](http://octo.cyj.me)
-- [2011](http://2011.cyj.me)
-- [2008](http://2008.cyj.me)
+- [2012](http://cyj.me/2012)
+- [2011](http://cyj.me/2011)
+- [2008](http://cyj.me/2008)
