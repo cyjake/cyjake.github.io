@@ -1,3 +1,7 @@
+.type .rss:hover {
+  border-bottom-width: 2px;
+}
+
 .rss {
   display: inline-block;
   width: 13px;
@@ -15,10 +19,12 @@
     display: block;
     position: absolute;
   }
+
   .ring {
     background: #0063DC;
     border: 3px solid #fff;
   }
+  
   .dot {
     width: 3px;
     height: 3px;
@@ -27,6 +33,7 @@
     background: #fff;
     @include border-radius(1.5px)
   }
+
   .inside {
     width: 10px;
     height: 10px;
@@ -34,6 +41,7 @@
     top: 5px;
     @include border-radius(7px);
   }
+
   .outside {
     width: 20px;
     height: 20px;

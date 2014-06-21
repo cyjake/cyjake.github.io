@@ -11,6 +11,7 @@
   display: inline-block;
   overflow: hidden;
   vertical-align: top;
+  font-weight: bold;
   font-family: Chango, Helvetica, Arial, sans-serif;
   @include transition(color .15s ease);
   @include perspective(400px);
@@ -19,10 +20,12 @@
   &:link, &:visited {
     text-decoration: none;
   }
+  
   .name {
     color: #DA4701;
     font-weight: 800;
   }
+
   .roll {
     display: inline-block;
     position: relative;
@@ -32,21 +35,24 @@
     @include transform-origin(50% 0%);
     @include transform-style(preserve-3d);
   }
+
   .roll:after {
     content: attr(data-title);
     display: block;
     position: absolute;
     left: 0;
     top: 0;
-    padding: 0 2px;
+    padding: 2px;
     color: white;
     background: #0063DC;
     @include transform-origin(50% 0%);
     @include transform(translate3d( 0px, 105%, 0px ) rotateX( -90deg ));
   }
+
   .name:after {
     background: #DA4701;
   }
+
   &:hover {
     color: #71E9F4;
     text-shadow: none;
