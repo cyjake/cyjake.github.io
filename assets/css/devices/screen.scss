@@ -12,7 +12,6 @@
 
     .stoc {
       position: fixed;
-      _position: absolute;
       top: 50px;
       left: 50%;
       z-index: 1000;
@@ -30,8 +29,7 @@
     width: 130px;
     margin-left: -(690px / 2 + 150px);
     position: fixed;
-    _position: absolute;
-    top: 102px;
+    top: 80px;
     left: 50%;
     z-index: 1000;
 

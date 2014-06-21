@@ -292,9 +292,11 @@ p code {
 
 #footer {
   margin: 40px 0 20px;
-  height: 17px;
-  line-height: 17px; }
+  height: 18px;
+  line-height: 18px; }
   #footer .rss {
+    margin-left: 0.5em; }
+  #footer .cnzz {
     float: right; }
 
 .type .branding, .type .branding:hover {
@@ -306,6 +308,7 @@ p code {
   display: inline-block;
   overflow: hidden;
   vertical-align: top;
+  font-weight: bold;
   font-family: Chango, Helvetica, Arial, sans-serif;
   -webkit-transition: color 0.15s ease;
   -moz-transition: color 0.15s ease;
@@ -349,7 +352,7 @@ p code {
     position: absolute;
     left: 0;
     top: 0;
-    padding: 0 2px;
+    padding: 2px;
     color: white;
     background: #0063DC;
     -webkit-transform-origin: 50% 0%;
@@ -373,6 +376,9 @@ p code {
       -mox-transform: translate3d(0px, -1px, -45px) rotateX(90deg);
       -ms-transform: translate3d(0px, -1px, -45px) rotateX(90deg);
       transform: translate3d(0px, -1px, -45px) rotateX(90deg); }
+
+.type .rss:hover {
+  border-bottom-width: 2px; }
 
 .rss {
   display: inline-block;
@@ -526,7 +532,6 @@ p code {
     text-align: left; }
     #page .stoc {
       position: fixed;
-      _position: absolute;
       top: 50px;
       left: 50%;
       z-index: 1000;
@@ -540,8 +545,7 @@ p code {
     width: 130px;
     margin-left: -495px;
     position: fixed;
-    _position: absolute;
-    top: 102px;
+    top: 80px;
     left: 50%;
     z-index: 1000; }
     #aside .label {
