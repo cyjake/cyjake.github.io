@@ -4,7 +4,7 @@
 但我的英文名一直是 Jake，虽然离开外企很久，这名字也不再有人叫。
 
 个人网站也是如此，最早练手的 [cyj.me/2008](http://cyj.me/2008/html)，后来的 [cyj.me/2011](http://cyj.me/2011)。
-年初还练手 Octopress，弄了个 [cyj.me/2012](http://cyj.me/2012)，想把主页与博客合二为一。
+年初还练手 Octopress，弄了个 [cyj.me/octo](http://cyj.me/octo)，想把主页与博客合二为一。
 结果因为每次更新都要重新生成网站太麻烦，直接博客都不写了。这样不好。
 
 所以有了这个，[Everything Jake](http://cyj.me)，准备听领导的话，多积累，秀成果，
@@ -24,6 +24,6 @@
 
 我自己的比特海。
 
-- [2012](http://cyj.me/2012)
+- [octo](http://cyj.me/octo)
 - [2011](http://cyj.me/2011)
 - [2008](http://cyj.me/2008)
