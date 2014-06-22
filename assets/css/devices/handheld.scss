@@ -9,6 +9,7 @@
     position: relative;
     height: 100%;
     transition: left 0.2s;
+    left: 0;
 
     // wrap .stoc into #page to override default style
     .stoc {
