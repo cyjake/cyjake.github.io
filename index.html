@@ -4,8 +4,9 @@ title: Everything Jake
 body_id: front-body
 ---
 
-<h1 style="font-size:1em">{% include branding.html %}</h1>
 <div class="latest article">
+  <address>{% include branding.html %}</address>
+  <h1>Everything Jake</h1>
   {% for post in site.posts limit:10 %}
     <h2><a href="{{ post.url }}">{{ post.title}}</a></h2>
     {{ post.excerpt }}

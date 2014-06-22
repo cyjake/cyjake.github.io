@@ -545,7 +545,7 @@ p code {
     width: 130px;
     margin-left: -495px;
     position: fixed;
-    top: 80px;
+    top: 32px;
     left: 50%;
     z-index: 1000; }
     #aside .label {
