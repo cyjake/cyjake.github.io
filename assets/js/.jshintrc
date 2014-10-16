@@ -3,6 +3,7 @@
     "jquery": true,
 
     "asi": true,
+    "strict": false,
 
     "predef": [
         "define",
