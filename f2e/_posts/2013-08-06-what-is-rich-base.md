@@ -77,7 +77,7 @@ function Dog(attrs) {
 }
 
 // 将 Dog 的原型指为 Pet 实例，即变相将 Dog.prototype.prototype 设为 Pet.prototype
-Dog.prototype = new Pet()
+Dog.prototype = new Pet({})
 
 Dog.prototype.bark = function() {
     console.log('Woof! Woof!')
@@ -692,7 +692,7 @@ var Man = RichBase.extend({
 以上即 RichBase 的简单说明，和个中来由，有些是我个人演绎，如有谬误，一定要指出来喔。
 
 最后，要知道从 util.inherits 到 Base，直到 RichBase，这一系列全都不是 JavaScript
-原生的东西，而是诸位开疆拓土的仁人志士们，利用 JavaScript 的灵活特性构造出来凭空架构，
+原生的东西，而是诸位在前端领域开疆拓土的仁人志士们，利用 JavaScript 的灵活特性构造出来的，
 用得好，它们是天空之城，画出一片美丽世界，用不好，它们成了海市蜃楼，迷失自己。
 
 所以，感谢承玉给 KISSY 添加了如此之多的模块与功能；在 JavaScript 的世界里，与诸君共勉。
