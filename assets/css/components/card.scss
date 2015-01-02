@@ -1,8 +1,18 @@
 .card {
-  width: 160px;
-  margin: 50px auto 30px;
+  text-align: center;
+  margin-top: 4em;
 
   ul {
     list-style: none;
+  }
+
+  li {
+    display: inline-block;
+    *display: inline;
+    margin-right: 1em;
+  }
+
+  li:last-child {
+    margin-right: 0;
   }
 }
