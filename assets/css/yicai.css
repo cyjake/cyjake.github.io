@@ -463,10 +463,16 @@ p code {
     content: '\103'; }
 
 .card {
-  width: 160px;
-  margin: 50px auto 30px; }
+  text-align: center;
+  margin-top: 4em; }
   .card ul {
     list-style: none; }
+  .card li {
+    display: inline-block;
+    *display: inline;
+    margin-right: 1em; }
+  .card li:last-child {
+    margin-right: 0; }
 
 @media (max-width: 1023px) {
   html, body {
@@ -520,7 +526,7 @@ p code {
       #aside .entry:link, #aside .entry:visited {
         color: #efefef; }
       #aside .entry:hover {
-        background: #4e6092; }
+        background: #4E6092; }
     #aside .entries {
       padding-top: 10px; } }
 @media (min-width: 1024px) {
@@ -557,3 +563,5 @@ p code {
 
   #aside {
     display: none; } }
+
+/*# sourceMappingURL=yicai.css.map */

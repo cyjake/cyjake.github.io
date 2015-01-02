@@ -1,6 +1,6 @@
 # jekyll settings
 baseurl:
-pygments: true
+highlighter: pygments
 markdown: rdiscount
 lsi: false
 permalink: /:categories/:title
