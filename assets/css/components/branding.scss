@@ -11,7 +11,7 @@
   display: inline-block;
   overflow: hidden;
   vertical-align: top;
-  font-weight: bold;
+  font-weight: normal;
   font-family: Chango, Helvetica, Arial, sans-serif;
   @include transition(color .15s ease);
   @include perspective(400px);
@@ -20,8 +20,8 @@
   &:link, &:visited {
     text-decoration: none;
   }
-  
-  .name {
+
+  .last-name {
     color: #DA4701;
     font-weight: 800;
   }
@@ -49,7 +49,7 @@
     @include transform(translate3d( 0px, 105%, 0px ) rotateX( -90deg ));
   }
 
-  .name:after {
+  .last-name:after {
     background: #DA4701;
   }
 
