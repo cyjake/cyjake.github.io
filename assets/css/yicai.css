@@ -308,7 +308,7 @@ p code {
   display: inline-block;
   overflow: hidden;
   vertical-align: top;
-  font-weight: bold;
+  font-weight: normal;
   font-family: Chango, Helvetica, Arial, sans-serif;
   -webkit-transition: color 0.15s ease;
   -moz-transition: color 0.15s ease;
@@ -325,7 +325,7 @@ p code {
   perspective-origin: 50% 50%; }
   .branding:link, .branding:visited {
     text-decoration: none; }
-  .branding .name {
+  .branding .last-name {
     color: #DA4701;
     font-weight: 800; }
   .branding .roll {
@@ -363,7 +363,7 @@ p code {
     -mox-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
     -ms-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
     transform: translate3d(0px, 105%, 0px) rotateX(-90deg); }
-  .branding .name:after {
+  .branding .last-name:after {
     background: #DA4701; }
   .branding:hover {
     color: #71E9F4;
@@ -499,9 +499,10 @@ p code {
     overflow: auto;
     height: 100%; }
     #content .content-wrap {
-      padding: 50px 10px 10px; }
-    #content .article {
-      max-width: 680px; }
+      max-width: 680px;
+      padding: 50px 20px 40px;
+      margin-right: auto;
+      margin-left: auto; }
 
   #aside {
     position: absolute;
@@ -552,7 +553,7 @@ p code {
     width: 130px;
     margin-left: -495px;
     position: fixed;
-    top: 32px;
+    top: 50px;
     left: 50%;
     z-index: 1000; }
     #aside .label {
