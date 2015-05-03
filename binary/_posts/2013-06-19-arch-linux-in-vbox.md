@@ -9,7 +9,7 @@ Dell 760 主机，装着 Windows XP，平日里用来测 IE6 的，继续日常�
 
 然而基于 Rails 的项目开发自然是没辙了。
 
-恰好前些日子，有个新同事来，申请的 rMBP 还没来得及采购，也是让他用虚拟机装 
+恰好前些日子，有个新同事来，申请的 rMBP 还没来得及采购，也是让他用虚拟机装
 Linux 跑项目，但是中间过程有些语焉不详，也缺乏记录。于是自己动手丰衣足食，
 实践之，并记录本文。
 
@@ -23,12 +23,12 @@ Linux 跑项目，但是中间过程有些语焉不详，也缺乏记录。于�
 
 ### Why X?
 
-解释一下选择 VirtualBox 和 Arch Linux 的理由。在 Sun 还没被 Oracle 
+解释一下选择 VirtualBox 和 Arch Linux 的理由。在 Sun 还没被 Oracle
 吞掉前我就在用前者，因为开源且免费，虽然未必有 VMware 强大，但想要的都有，
 比 qemu 神马的，看起来不吓人很多，故而一直在用。
 
 在 Mac 平台里需要测试 IE 各个版本时，我也是通过多个版本的 Windows 系统虚拟机来搞的。
-当然有更好的方式，大公司里，会有团队致力于前端工程的自动化，自然会有又快又方便的 
+当然有更好的方式，大公司里，会有团队致力于前端工程的自动化，自然会有又快又方便的
 Windows 2003，Windows 7 之类的服务，用远程桌面连接一下即可。利用这些服务，
 还可以快速跑前端代码的测试用例，参考 @ejohn 大神的 TestSwarm 。
 
@@ -41,7 +41,7 @@ Windows 2003，Windows 7 之类的服务，用远程桌面连接一下即可。�
 - Arch Linux
 
 Arch Linux 是我单凭个人喜好选择的最近一款 Linux 发行版，滚动发布，永远最新，
-Wiki 建设的非常好，社区反馈也一直很快。我的 [VPS](/binary/when-arch-linux-met-linode/) 
+Wiki 建设的非常好，社区反馈也一直很快。我的 [VPS](/binary/when-arch-linux-met-linode/)
 装的也是它，跑了一年多，中间只因我的个人疏忽强制更新而出了一次篓子，其余顺滑如丝。
 
 ### Arch Linux 安装步骤
@@ -62,8 +62,8 @@ Wiki 建设的非常好，社区反馈也一直很快。我的 [VPS](/binary/whe
 
 选择 Boot Arch Linux ，等它启动完，就能动手开始安装了。
 
-启动好的界面可能有点吓人，啥也木有，进入的是 root 帐号，/root/ 下只有一个 
-install.txt 文件，其实是 
+启动好的界面可能有点吓人，啥也木有，进入的是 root 帐号，/root/ 下只有一个
+install.txt 文件，其实是
 [Install Guide](https://wiki.archlinux.org/index.php/Installation_Guide)
 的 Wiki 源码，所以直接看该页面就好啦。
 
@@ -91,7 +91,7 @@ install.txt 文件，其实是
 
 ### 准备磁盘
 
-没有操作过分区软件的同学，在这一步可能会手足无措，所以 Wiki 中建议使用图形化工具 
+没有操作过分区软件的同学，在这一步可能会手足无措，所以 Wiki 中建议使用图形化工具
 [GParted](http://sourceforge.net/projects/gparted/files/gparted-live-stable/0.16.1-1/) 。
 后者直接以 Live CD 形式提供，可以直接在虚拟机里挂载，启动，打开 GParted 工具，
 鼠标点点，把分区工作做好。后面还会提到它。
@@ -99,14 +99,14 @@ install.txt 文件，其实是
 ![GParted 启动]({{ site.baseurl }}/assets/img/2013-arch-linux-install-guide/gparted-boot.png)
 
 选择第一项（GParted Live），回车即可。在启动的过程中，它会探测硬盘中安装的系统，
-并询问是否要根据系统中的配置调整从 Live CD 启动的系统。Live CD 中采用的系统是 
+并询问是否要根据系统中的配置调整从 Live CD 启动的系统。Live CD 中采用的系统是
 [Debian](http://2008.cyj.me/debian.html) 。
 
 根据它提供的选项，貌似还提供中文界面，为了保险起见，我没有选择。启动好界面：
 
 ![GParted 界面]({{ site.baseurl }}/assets/img/2013-arch-linux-install-guide/gparted-live-cd.png)
 
-如果嫌麻烦，用 cfdisk 之类的工具，按照 
+如果嫌麻烦，用 cfdisk 之类的工具，按照
 [新手指南 - 分区示例](https://wiki.archlinux.org/index.php/Beginners%27_Guide#Example)
 操作即可。
 
@@ -130,7 +130,7 @@ install.txt 文件，其实是
 
 ### 配置网络
 
-如果是物理安装，而且刚好没法连有线网络（例如正在用 MacBook Air 而且没有 USB 
+如果是物理安装，而且刚好没法连有线网络（例如正在用 MacBook Air 而且没有 USB
 转以太网口），那这里会稍微麻烦点。幸好这里只是在虚拟机中安装，网络设置的又是桥接，
 只要你的网络环境支持 dhcp ，这一步应该就不用愁。
 
@@ -147,7 +147,7 @@ install.txt 文件，其实是
     3 packets transmitted, 3 received, 0% packet loss, time 2003ms
     rtt min/avg/max/mdev = 16.660/17.320/18.254/0.678 ms
 
-然后，记得要做的是，从 /etc/pacman.d/mirrorlist 中选择一个地理位置最接近的 Arch 
+然后，记得要做的是，从 /etc/pacman.d/mirrorlist 中选择一个地理位置最接近的 Arch
 镜像服务器，一般地理位置越近，网络越快。
 
 文件有点长，搜一下 China 即可，国内 Arch 镜像很不少了。把其余的都注释掉，剩这一个。
@@ -175,7 +175,7 @@ install.txt 文件，其实是
 - 时区
 - hostname
 
-按 [新手指南 - 配置](https://wiki.archlinux.org/index.php/Beginners%27_Guide#Chroot_and_configure_the_base_system) 
+按 [新手指南 - 配置](https://wiki.archlinux.org/index.php/Beginners%27_Guide#Chroot_and_configure_the_base_system)
 章节介绍的操作即可。
 
 记得执行 passwd 命令，给 root 帐号设置个密码。
@@ -218,9 +218,9 @@ install.txt 文件，其实是
 
 然后 exit ，切换到刚创建的 john 帐号：
 
-1. 安装 RVM 
+1. 安装 RVM
 2. 用 RVM 安装 Ruby
-3. 安装 bundler 
+3. 安装 bundler
 4. 用 bundler 安装项目依赖
 
 至此，基本的 Arch Linux 系统安装完毕。但一些增强可用性的软件还没装：
@@ -269,7 +269,7 @@ install.txt 文件，其实是
 
 ### Windows 下开发，Linux 下提交
 
-在两种不同系统下共享文件，文件权限控制（filemode）的问题比较讨厌。Git 
+在两种不同系统下共享文件，文件权限控制（filemode）的问题比较讨厌。Git
 默认会记录文件的权限设置，普通文本文件的权限应该是 0644 ，但在 Linux
 里挂载 Windows 目录，这些文件会的权限是 0777 。爽快点的办法，让 Git 别记录了：
 
