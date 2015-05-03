@@ -1,0 +1,68 @@
+@media (max-width: 1023px)
+
+  html, body
+    height: 100%
+    overflow-x: hidden
+
+  #page
+    position: relative
+    height: 100%
+    transition: left 0.2s
+    left: 0
+
+    // wrap .stoc into #page to override default style
+    .stoc
+      top: 10px
+      right: 0
+      height: 28px
+      width: 75px
+      overflow: hidden
+
+      &:hover
+        overflow: visible
+        width: auto
+        height: auto
+
+  #content
+    overflow: auto
+    height: 100%
+
+    .content-wrap
+      max-width: 680px
+      padding: 50px 20px 40px
+      margin-right: auto
+      margin-left: auto
+
+  #aside
+    position: absolute
+    top: 0
+    left: -200px
+    width: 200px
+    height: 100%
+    background: #21212B
+
+    .label
+      display: block
+      position: absolute
+      top: 10px
+      right: -80px
+      width: 60px
+      background: rgba(255, 255, 255, .7)
+
+      &:link, &:visited
+        color: #000
+
+    .entry
+      border-bottom: 1px dotted #4E6092
+      background: #21212B
+      transition: background-color 0.2s
+
+      &:link, &:visited
+        color: #efefef
+
+      &:hover
+        background: #4E6092
+
+    .entries
+      padding-top: 10px
+

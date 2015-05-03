@@ -1,8 +1,10 @@
 # jekyll settings
 baseurl:
 highlighter: pygments
-markdown: rdiscount
 lsi: false
 permalink: /:categories/:title
 exclude: [Gemfile, Gemfile.lock, Guardfile, README.md, CNAME, '*.scss']
 excerpt_separator: "\n\n"
+gems:
+- jekyll-sitemap
+- jekyll-redirect-from

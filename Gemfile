@@ -1,5 +1,5 @@
-source 'http://rubygems.org'
+source 'http://ruby.taobao.org'
 
 gem 'github-pages'
-gem 'sass'
-gem 'rb-fsevent', '~> 0.9'
+gem 'jekyll-sitemap'
+gem 'jekyll-redirect-from'
