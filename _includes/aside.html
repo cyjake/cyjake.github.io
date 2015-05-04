@@ -1,24 +1,24 @@
 <div id="aside">
   <a class="label" href="javascript:void(0);">
-    <i class="iconfont">&#271;</i>导航
+    <i class="iconfont icon-nav"></i>导航
   </a>
   <div class="entries">
     {% for category in site.categories %}
     <a href="{{ site.baseurl }}/{{ category[0] }}" class="category entry">
-      <i class="iconfont {{category[0]}}"></i>{{ category[0] | capitalize }}
+      <i class="iconfont icon-{{category[0]}}"></i>{{ category[0] | capitalize }}
     </a>
     {% endfor %}
     <a href="{{ site.baseurl }}/projects" class="category entry">
-      <i class="iconfont">&#409;</i>Projects
+      <i class="iconfont icon-projects"></i>Projects
     </a>
     <a href="{{ site.baseurl }}/webpages" class="category entry">
-      <i class="iconfont">&#41;</i>Webpages
+      <i class="iconfont icon-webpages"></i>Webpages
     </a>
     <a href="{{ site.baseurl }}/about" class="entry">
-      <i class="iconfont">&#359;</i>About
+      <i class="iconfont icon-about"></i>About
     </a>
     <a href="{{ site.baseurl }}/archive" class="entry">
-      <i class="iconfont">&#37;</i>Archive
+      <i class="iconfont icon-archive"></i>Archive
     </a>
   </div>
 </div>

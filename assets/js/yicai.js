@@ -1,3 +1,4 @@
+/* globals KISSY: false */
 KISSY.config('packages', {
     mosaics: {
         base: 'http://g.tbcdn.cn/thx/m',
