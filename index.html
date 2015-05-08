@@ -5,7 +5,7 @@ body_id: front-body
 ---
 
 <div class="latest article">
-  <h1>{% include branding.html %}<h1>
+  <h1>{% include branding.html %}</h1>
   {% for post in site.posts limit:10 %}
     <h2><a href="{{ post.url }}">{{ post.title}}</a></h2>
     {{ post.excerpt }}
