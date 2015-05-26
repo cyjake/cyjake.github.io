@@ -2,9 +2,10 @@
 baseurl:
 highlighter: pygments
 lsi: false
-permalink: /:categories/:title
+permalink: pretty
 exclude: [Gemfile, Gemfile.lock, Guardfile, README.md, CNAME, '*.scss']
 excerpt_separator: "\n\n"
+markdown: redcarpet
 gems:
 - jekyll-sitemap
 - jekyll-redirect-from

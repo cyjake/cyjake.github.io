@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,6 +32,17 @@
       </div>
     </div>
   </div>
+  <script>
+  var posts = [{% for post in site.posts %}
+    {
+      categories: {{ post.categories | jsonify }},
+      slug: {{ post.slug | jsonify }},
+      title: {{ post.title | jsonify }},
+      date: {{ post.date | date: '%Y/%m/%d' | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+  ]
+  </script>
   <script src="/assets/js/404.js"></script>
 </body>
 </html>
