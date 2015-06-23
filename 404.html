@@ -37,7 +37,7 @@ permalink: /404.html
   var posts = [{% for post in site.posts %}
     {
       categories: {{ post.categories | jsonify }},
-      slug: {{ post.slug | jsonify }},
+      path: {{ post.path | jsonify }},
       title: {{ post.title | jsonify }},
       date: {{ post.date | date: '%Y/%m/%d' | jsonify }}
     }{% unless forloop.last %},{% endunless %}

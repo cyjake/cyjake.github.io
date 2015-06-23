@@ -1,6 +1,8 @@
-;(function(undefined) {
+/* eslint strict: 0 */
+;(function() {
 
   window.posts.some(function(post) {
+    post.slug = post.path.replace(/^\w+\/\w+\/\d+-\d+-\d+-/, '').replace(/\.\w+$/, '')
     var pathWas = [].concat(post.categories, post.slug).join('/')
     var path = [].concat(
       post.categories,
@@ -9,7 +11,9 @@
     ).join('/')
 
     if (location.href.indexOf(pathWas) > 0) {
-      location.replace(location.href.split('/').slice(0, 3).concat(path).join('/'))
+      setTimeout(function() {
+        location.replace(location.href.split('/').slice(0, 3).concat(path).join('/'))
+      }, 1000)
       return true
     }
   })
