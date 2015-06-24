@@ -1,5 +1,5 @@
 /* eslint strict: 0 */
-;(function() {
+(function() {
 
   window.posts.some(function(post) {
     post.slug = post.path.replace(/^\w+\/\w+\/\d+-\d+-\d+-/, '').replace(/\.\w+$/, '')
@@ -11,31 +11,22 @@
     ).join('/')
 
     if (location.href.indexOf(pathWas) > 0) {
-      setTimeout(function() {
-        location.replace(location.href.split('/').slice(0, 3).concat(path).join('/'))
-      }, 1000)
+      checkPath(path)
       return true
     }
   })
 
-  var doc = document
-  var referer = doc.referer || location.href
-  var dispatcher = doc.getElementById('dispatcher')
-  var candidates = dispatcher.getElementsByTagName('a')
+  function checkPath(path) {
+    var xhr = new XMLHttpRequest()
 
-  if (referer && /cyj.me/.test(referer)) {
-    var path = referer.replace(/http:\/\/([^.]+\.)?cyj.me\//, '')
-
-    if (path) {
-      for (var i = 0, len = candidates.length; i < len; i++) {
-        var a = candidates[i]
-
-        a.href += path
-        a.innerHTML += '/' + path
-      }
+    xhr.onload = function() {
+      if (this.status === 200) redirectTo(path)
     }
+    xhr.open('get', '/' + path)
+    xhr.send()
   }
-  else {
-    dispatcher.style.display = 'none'
+
+  function redirectTo(path) {
+    location.replace(location.href.split('/').slice(0, 3).concat(path).join('/'))
   }
 })()
