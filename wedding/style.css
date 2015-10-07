@@ -120,9 +120,17 @@ img {
 
 
 #portraits {
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border-radius: 2px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 375px) {
+  #portraits {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 
