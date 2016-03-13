@@ -1,9 +1,11 @@
 ---
 layout: post
-title: To Life
+title: To Life / 过日子
 ---
 
-拍下一些照片，记下一点心情，追逐一些玩乐，生活不能只是眼前这点苟且。
+Carpe diem.
+
+生活不能只是眼前这点苟且。
 
 {% for category in site.categories %}
   {% if category[0] == 'life' %}

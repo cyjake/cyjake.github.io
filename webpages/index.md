@@ -1,6 +1,6 @@
 ---
 layout: post
-title: This is A Webpage
+title: This is A Webpage / 这是一张网页
 ---
 
 A quote from [Typographic Web Design](http://www.typographicwebdesign.com/)
@@ -21,7 +21,8 @@ A quote from [Typographic Web Design](http://www.typographicwebdesign.com/)
 
     This is a webpage
 
-- [Planet Alibaba](http://planet.alibaba-inc.com)
-- [Why SeaJS](http://cyj.me/why-seajs/zh)
+
+- [Why SeaJS]({{ site.baseurl }}/why-seajs/zh)
 - [Git Reference](http://gitref.org/zh)
-- [Betrothal](http://cyj.me/betrothal)
+- [Betrothal]({{ site.baseurl }}/betrothal)
+- [Wedding]({{ site.baseurl }}/wedding)

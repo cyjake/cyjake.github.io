@@ -1,14 +1,25 @@
 ---
-layout: page
-title:
-body_id: front-body
 ---
 
-<div class="latest article">
-  <h1>{% include branding.html %}</h1>
-  <p>一个按快门的，一个敲代码的，一个码字的，一个在杭州城西奔波着的人。</p>
-  {% for post in site.posts limit:10 %}
-    <h2><a href="{{ post.url }}">{{ post.title}}</a></h2>
-    {{ post.excerpt }}
-  {% endfor %}
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  {% include header.html %}
+</head>
+<body class="frontpage">
+  <section class="bg">
+    <img src="{{ site.baseurl }}/assets/img/shangping.jpg">
+  </section>
+  <section class="nav">
+    {% include branding.html %}
+    <p>
+      <a href="{{ site.baseurl }}/about"><i class="iconfont icon-about"></i> About</a>
+      <a href="{{ site.baseurl }}/archive"><i class="iconfont icon-archive"></i> Archive</a>
+      <a href="https://github.com/dotnil"><i class="iconfont icon-github"></i> Code</a>
+      <a href="https://500px.com/dotnil"><i class="iconfont icon-camera"></i> Photography</a>
+    </p>
+  </section>
+  <script src="{{ site.baseurl }}/assets/js/frontpage.js"></script>
+  {% include scripts.html %}
+</body>
+</html>
