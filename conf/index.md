@@ -1,7 +1,9 @@
 ---
 layout: post
-title: Conferences I Attended
+title: Conferences I Attended / 会议记录
 ---
+
+Maybe someday I'll be at the other side of the conference.
 
 参加技术大会的收益随着个人的技术长进直线下降。
 

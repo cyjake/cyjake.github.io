@@ -1,6 +1,6 @@
 ---
 layout: post
-title: To Craftsmanship
+title: To Craftsmanship / 项目
 ---
 
 - [ent](http://cyj.me/ent)

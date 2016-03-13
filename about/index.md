@@ -1,35 +1,62 @@
 ---
 layout: post
-title: About
+title: About / 关于
 ---
 
-## 我是谁
 
-我叫陈养剑，是一名不太优秀的浙江大学软件工程学生，一名不太出色的道富信息科技公司软件工程师，
-一名还算可以的 [阿里妈妈用户体验部门][1] 前端工程师。
+A photographer, programmer, and dreamer. Currently I'm a frontend engineer at
+[alimama.com][alimama], which is the advertising business unit of Alibaba Group.
 
-## Avatars
+摄影师、程序员、以及白日梦想家，目前在 [阿里妈妈用户体验部门][1] 担任前端工程师。
+
+
+## Work / 我的作品
+
+All of my public code is available at [Github][github]. I've got side projects
+such as [ssh-config][ssh-config], [oceanify][oceanify], and [yen][yen] listed
+there.
+
+Besides programming, I'd like to take photographies of Hangzhou or any other
+places that I've got a chance to travel to. You may find them at [500px][500px]
+for serious work and [VSCO][vsco] for casual shooting with iPhone.
+
+Feel free to contact me via twitter, [@dotnil][twitter].
 
 作为一个全面发展，全面平庸的人，我有许多爱好。相应的，这些爱好都跑到了相应的网站上：
 
+- 我写的代码：[Github][github]
+- 我拍的照片：[500px][500px]·[VSCO][vsco]
 - 我做的视频：[优酷][2]
-- 我拍的照片：[VSCO][7]、[又拍][3]、[Flickr][4]
-- 我写的代码：[Github][5]
-- 我也有微博：[@逸才很茫然][6]
+- 我也有微博：[@逸才很茫然][weibo]
 
-## 故纸堆
+
+## History / 故纸堆
+
+Besides current version, I've done a few versions of [cyj.me]({{ site.baseurl }})
+before. You may find these contents boring if you don't understand any Chinese.
+
+- [2012][2012]
+- [2011][2011]
+- [2008][2008]
 
 在这个主页之前，我还曾有过如下几个小网站，用来介绍我自己：
 
-- [2012](http://cyj.me/2012) 是我曾经的博客；
-- [2011](http://cyj.me/2011) 是我曾经的主页；
-- [2008](http://cyj.me/2008) 是我初入计算机世界的主页。
+- [2012][2012] 是我曾经的博客；
+- [2011][2011] 是我曾经的主页；
+- [2008][2008] 是我初入计算机世界的主页。
 
 
 [1]: http://mux.alimama.com
 [2]: http://i.youku.com/u/UODA5NzU2MjQ=/videos
-[3]: http://yicai-cyj.yupoo.com/
-[4]: http://www.flickr.com/photos/dotnil/
-[5]: https://github.com/dotnil
-[6]: http://weibo.com/dotnil
-[7]: http://dotnil.vsco.co/
+[2008]: http://cyj.me/2008
+[2011]: http://cyj.me/2011
+[2012]: http://cyj.me/2012
+[500px]: https://500px.com/dotnil
+[alimama]: http://www.alimama.com
+[github]: https://github.com/dotnil
+[oceanify]: https://github.com/dotnil/oceanify
+[ssh-config]: https://github.com/dotnil/ssh-config
+[vsco]: http://dotnil.vsco.co/
+[weibo]: http://weibo.com/dotnil
+[twitter]: https://twitter.com/dotnil
+[yen]: https://github.com/dotnil/yen
