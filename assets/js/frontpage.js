@@ -12,11 +12,13 @@ function elastic() {
     offsetTop = (img.offsetWidth / ratio - img.offsetHeight) / 2
     if (offsetTop < 0) {
       img.style.marginTop = offsetTop + 'px'
+      img.style.marginLeft = 0
     }
   } else {
     offsetLeft = (img.offsetHeight * ratio - img.offsetWidth) / 2  - 100
     if (offsetLeft < 0) {
       img.style.marginLeft = offsetLeft + 'px'
+      img.style.marginTop = 0
     }
   }
 }
@@ -34,7 +36,22 @@ function throttle(fn, wait) {
   }
 }
 
-elastic()
-window.onresize = throttle(elastic, 100)
+function main() {
+  var img = document.querySelector('.bg img')
+
+
+  function onload() {
+    elastic()
+    window.onresize = throttle(elastic, 100)
+    setTimeout(function() {
+      img.style.opacity = 1
+    }, 1)
+  }
+
+  img.onload = onload
+  img.src = img.getAttribute('data-src')
+}
+
+main()
 
 })()

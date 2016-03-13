@@ -59,6 +59,10 @@ html, body
 a:link
   text-decoration: none
   color: #394B61
+  transition: 0.2s color
+
+a:hover
+  color: #DA4701
 
 .type code,
 .type pre
@@ -112,20 +116,20 @@ p
 
     a:link,
     a:visited
-      color: #fff
-
-    .branding
-      font-size: 180%
+      color: #f0f0f0
+      line-height: 1
       background: rgba(0, 0, 0, 0.5)
 
-    p
-      line-height: 1
+    a:hover
+      color: #DA4701
 
-      a
-        background: rgba(0, 0, 0, 0.5)
-        display: inline-block
-        padding: 2px 5px
-        margin: 0 0.5em 0.5em 0
+    .branding:link
+      font-size: 180%
+
+    p a
+      display: inline-block
+      padding: 1px 2px
+      margin: 0 0.5em 0.5em 0
 
   .bg
     position: absolute
@@ -140,7 +144,8 @@ p
     img
       display: inline-block
       margin: 0
-      transition: 0.2s margin
+      transition: 0.2s margin, 0.2s opacity
+      opacity: 0
 
 @media (min-aspect-ratio: 3/2)
   .frontpage .bg img
