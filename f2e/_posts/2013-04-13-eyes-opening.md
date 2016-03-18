@@ -37,7 +37,7 @@ caption: 该与 HTML5 小组的同仁们分享些啥
 
 我们有这么多用法：
 
-{% highlight js %}
+```js
 // SeaJS
 define(function(require, exports, module) {
     var a = require('./a')
@@ -67,7 +67,7 @@ KISSY.add('my-module', function(S, a, b) {
 }, {
     requires: ['./a', 'b']
 })
-{% endhighlight %}
+```
 
 一时间百花齐放，只引得列位同僚眼花缭乱，良莠莫辨。所以大牛们的思想碰撞又成一话题，例如 @玉伯也叫射雕
 说 “RequireJS 没有明显 bug，而 SeaJS 明显没有 bug”，区区写代码时日尚短，但断言代码一点 bug
@@ -84,14 +84,14 @@ KISSY.add('my-module', function(S, a, b) {
 大神的 [component.io](http://component.io/)。它们做的事情也简单，让你开发时仍然采用
 NodeJS 才支持的 CJS 写法，直接代码即模块：
 
-{% highlight js %}
+```js
 var a = require('./a')
 var b = require('b')
 
 module.exports = {
     // exports
 }
-{% endhighlight %}
+```
 
 在发布时使用相应工具，将其中的 require、exports、module 等包装起来，使其能运行在浏览器中。
 许多开源 webapp 采用这种方式开发，例如前一阵很出名的

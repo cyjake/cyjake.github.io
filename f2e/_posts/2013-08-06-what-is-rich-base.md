@@ -13,7 +13,7 @@ Base 继承。但在我们挖 RichBase 的身份是红是黑之前，先有些�
 
 ### 原型
 
-{% highlight js %}
+```js
 function Pet(attrs) {
     this.name = attrs.name
     this.age = attrs.age
@@ -23,20 +23,20 @@ function Pet(attrs) {
 Pet.prototype.greeting = function() {
     console.log('Hi there. I am ' + this.name + '.')
 }
-{% endhighlight %}
+```
 
 然后在实例化时，我们这么用：
 
-{% highlight js %}
+```js
 var pet = new Pet({ name: 'Ghibli', age: 28, gender: 'male' })
 
 pet.greeting()      // ==> Hi there. I am Ghibli.
-{% endhighlight %}
+```
 
 将类方法定义在原型上，可以节省内存空间，不需要所有实例上都重新定义方法，以上定义方式，和如下写法，
 自然是不同的：
 
-{% highlight js %}
+```js
 function Pet(attrs) {
     var pet = {}
 
@@ -48,7 +48,7 @@ function Pet(attrs) {
 
     return pet
 }
-{% endhighlight %}
+```
 
 这种写法，唯一的好处是可以不用写 `new`，然而每个实例都有自己的 `.greeting()` 方法，当实例变多时，
 是极大的内存浪费。
@@ -70,7 +70,7 @@ function Pet(attrs) {
 现在假设我们现在要从 Pet 派生出子类 Dog，然而 JavaScript 木有提供 extends 之类的语法，而按照
 原型链设计，我们需要做的事情如下：
 
-{% highlight js %}
+```js
 function Dog(attrs) {
     Pet.call(this, attrs)
     this.breed = attrs.breed
@@ -82,11 +82,11 @@ Dog.prototype = new Pet({})
 Dog.prototype.bark = function() {
     console.log('Woof! Woof!')
 }
-{% endhighlight %}
+```
 
 这样，Dog 能够继承到 Pet 的方法，也能够继续扩展自己的。
 
-{% highlight js %}
+```js
 var dog = new Dog({
     name: 'Klinsmann',
     age: 49,
@@ -96,7 +96,7 @@ var dog = new Dog({
 
 dog.greeting()      // ==> Hi there. I am Klinsmann.
 dog.bark()          // ==> Woof! Woof!
-{% endhighlight %}
+```
 
 这样的继承实现有许多问题：
 
@@ -105,12 +105,12 @@ dog.bark()          // ==> Woof! Woof!
 
 第一个问题，暂时按下不表。第二个问题，意思是这样的：
 
-{% highlight js %}
+```js
 function Dummy() {}
 
 Dummy.prototype = Pet.prototype
 Dog.prototype = new Dummy()
-{% endhighlight %}
+```
 
 
 为何不直接 `Dog.prototype = Pet.prototype`？
@@ -120,7 +120,7 @@ Dog.prototype = new Dummy()
 不管这么样，这种继承方式当真是不直观，所以 Node.js 的官方 API 里，直接在 util 模块中提供了
 inherits 方法：
 
-{% highlight js %}
+```js
 var util = require('util')
 
 // 仍然需要在子类中调用父类的构造函数
@@ -130,7 +130,7 @@ function Dog(attrs) {
 
 // 使用 util.inherits 处理原型链
 util.inherits(Dog, Pet)
-{% endhighlight %}
+```
 
 于是，inherit 关键字，算是实现了。
 
@@ -138,16 +138,16 @@ util.inherits(Dog, Pet)
 
 在上述例子中，pet 或者 dog 的属性全部都是外部可以直接访问的，例如：
 
-{% highlight js %}
+```js
 var dog = new Dog({ name: 'Christiano' })
 
 dog.name = 'Ronaldo'
-{% endhighlight %}
+```
 
 假如我们需要进行变量验证，使用类似 Java Bean 中 getter、setter 这种写法，以确保获取与设置变量
 的正确性：
 
-{% highlight js %}
+```js
 Dog.prototype.getAge = function() {
     return this.age
 }
@@ -167,7 +167,7 @@ dog.getAge()        // ==> 10
 
 // 但是挡不住这一招必杀
 dog.age = NaN       // 囧
-{% endhighlight %}
+```
 
 在编程范式一书中，谈论了许多对象继承、接口约束、私有变量保护之类的事情，感兴趣的同学可以找来看，
 本文不往下讨论。
@@ -185,7 +185,7 @@ dog.age = NaN       // 囧
 
 当我们需要往对象上混入（mix）属性或者方法时，可以使用 S.mix：
 
-{% highlight js %}
+```js
 var Singleton = {
     data: { ... }
 }
@@ -200,7 +200,7 @@ S.mix(Singleton, {
         }
     }
 })
-{% endhighlight %}
+```
 
 在此例中，我们实现了一个单体，它有 get、set 方法，同时持有 data 数据。
 
@@ -214,7 +214,7 @@ S.mix(Singleton, {
 
 S.augment 其实就是混入，只不过混入的对象是第一个参数的 prototype 属性，它的用法如下：
 
-{% highlight js %}
+```js
 var Furry = {
     shave: function() {
         this.shaved = true
@@ -237,7 +237,7 @@ var cat = new Cat()
 
 dog.shave()
 cat.shave()
-{% endhighlight %}
+```
 
 同样的，[S.augment](http://docs.kissyui.com/docs/html/api/seed/kissy/augment.html)
 所支持的用法比这里的示例要强大很多，此处不深入。
@@ -247,7 +247,7 @@ cat.shave()
 S.extend 像 Node.js 里的 util.inherits，就是用于声明两个类的继承关系，与 util.inherits
 相比，它更为贴心，还会维护 superclass 和 superclass.constructor。
 
-{% highlight js %}
+```js
 function Dog(attrs) {
     Dog.superclass.constructor.call(this, attrs)
 }
@@ -258,7 +258,7 @@ S.extend(Dog, Pet, {
         console.log('Woof!')
     }
 })
-{% endhighlight %}
+```
 
 详细用法请看 [S.extend 的官方文档](http://docs.kissyui.com/docs/html/api/seed/kissy/extend.html)。
 
@@ -290,7 +290,7 @@ Base 的属性配置来自 Attribute 模块，它提供如下方法：
 
 通过 get() 与 set() 这一层包装，Base 允许类在定义自己时，配置 getter、setter 方法：
 
-{% highlight js %}
+```js
 function Dog(attrs) {
     Dog.superclass.call(this, attrs)
 }
@@ -308,19 +308,19 @@ Dog.ATTRS = {
         }
     }
 }
-{% endhighlight %}
+```
 
 在此，我们定义了 Dog 的属性 breed，即狗狗的种类，默认值是“中华田园犬”，同时，在设置种类时，
 我们限制种类只能是金毛猎犬、拉布拉多、萨摩、或者中华田园犬。而在获取种类时，我们恶意卖萌，给返回值加上
 汪星人后缀。
 
-{% highlight js %}
+```js
 var dog = new Dog()
 
 dog.get('breed')                // ==> 中华田园犬，汪星人
 dog.set('breed', '金毛猎犬')
 dog.get('breed')                // ==> 金毛猎犬，汪星人
-{% endhighlight %}
+```
 
 ### 属性变更事件
 
@@ -335,11 +335,11 @@ dog.get('breed')                // ==> 金毛猎犬，汪星人
 - beforeBreedChange
 - afterBreedChange
 
-{% highlight js %}
+```js
 dog.on('afterBreedChange', function(e) {
     console.log('我要从' + e.prevVal + '变成' + e.newVal + '啦！')
 })
-{% endhighlight %}
+```
 
 ### 从 Base 继承
 
@@ -347,18 +347,18 @@ dog.on('afterBreedChange', function(e) {
 了解 Base、Attribute、EventTarget 之前，这是个危险的想法，所以对于普通模块开发者，我的建议
 是直接从 Base 继承：
 
-{% highlight js %}
+```js
 function Dog(attrs) {
     Dog.superclass.call(this, attrs)
 }
 
 S.extend(Dog, Base)
-{% endhighlight %}
+```
 
 从 Base 继承，我们就有了封装属性、自定义事件的能力。在从 Base 继承的模块中，我们还可以向外部抛出
 自定义事件：
 
-{% highlight js %}
+```js
 S.extend(Dog, Base, {
     bark: function() {
         this.fire('bark', {
@@ -372,7 +372,7 @@ var dog = new Dog()
 dog.on('bark', function(e) {
     console.log(e.message)      // ==> 'Woof! I just barked!'
 })
-{% endhighlight %}
+```
 
 ## RichBase
 
@@ -389,7 +389,7 @@ dog.on('bark', function(e) {
 
 于是有了 RichBase，先来看写法：
 
-{% highlight js %}
+```js
 var Student = RichBase.extend({
     learn: function(lesson) {
         console.log('Yeah, yeah. I am learning ' + lesson + '...')
@@ -399,11 +399,11 @@ var Student = RichBase.extend({
         college: { value: '' }
     }
 }, 'Student')
-{% endhighlight %}
+```
 
 咦，怎么和 Base 一个样？跟底下这写法有啥区别？
 
-{% highlight js %}
+```js
 function Student() {
     Student.superclass.constructor.apply(this, arguments)
 }
@@ -417,7 +417,7 @@ S.extend(Student, Base, {
         college: { value: '' }
     }
 })
-{% endhighlight %}
+```
 
 答案是如果你的类就如 Student 这么简单，那就仍然用 Base 即可，这两种定义方式没有本质区别。
 对于简单用法，`RichBase.extend` 只是个语法糖。
@@ -437,19 +437,19 @@ S.extend(Student, Base, {
 constructor 用于替换 RichBase 默认自动生成的构造函数，当调用 `RichBase.extend` 而没指定
 constructor 时，RichBase 将创建一个匿名函数：
 
-{% highlight js %}
+```js
 function () {
     C.superclass.constructor.apply(this, arguments)
 }
-{% endhighlight %}
+```
 
 如果指定了构造函数名，而且在 KISSY 开发模式下，则会 eval 如下匿名函数：
 
-{% highlight js %}
+```js
 "function " + CamelCase(name) + "{\n" +
     "C.superclass.constructor.apply(this, arguments)\n" +
 "}"
-{% endhighlight %}
+```
 
 所以，如果你要干预默认的构造函数行为，记得加上 `.superclass.constructor.apply(this, arguments)`。
 
@@ -459,7 +459,7 @@ function () {
 然后是析构函数，或者说销毁函数，当调用 `.destroy()` 方法时，将执行类定义时声明的 desctructor
 方法，整个 `.destroy()` 逻辑如下：
 
-{% highlight js %}
+```js
 destroy: function() {
     var self = this;
     if (!self.get('destroyed')) {
@@ -470,7 +470,7 @@ destroy: function() {
         self.fire('destroy');
     }
 }
-{% endhighlight %}
+```
 
 会先调用插件上的 destructor，然后自身按依赖层级调 destructor，然后解除自身绑定的所有事件，
 再将 `destroyed` 属性设为 `true`，最终触发 `destroy` 事件。
@@ -479,7 +479,7 @@ destroy: function() {
 
 ### 复杂例子
 
-{% highlight js %}
+```js
 // Extensions definition
 function Man() {
     Man.superclass.constructor.apply(this, arguments)
@@ -573,7 +573,7 @@ michelangelo.plug([
     new Painter({ paints: ['Ceiling of Sistine Chapel'] }),
     new Sculptor({ sculpts: ['Pieta', 'David'] })
 ])
-{% endhighlight %}
+```
 
 这是个比较详细的例子，展示了 RichBase 为应对 Base 的不足，所提供的几大特性：
 
@@ -602,49 +602,49 @@ RichBase 继承 Man 与 Italian 即可。
 
 extensions 这个参数是可以省略的，如果你只是想用 RichBase 定义一个类的话，可以这么写：
 
-{% highlight js %}
+```js
 var MyClass = RichBase.exnted(
     { ...methods... },
     { ...static methods... },
     'MyClass'
 )
-{% endhighlight %}
+```
 
 ### 插件
 
 每个文艺复兴男的技能点都加得不一样，为了简单写，达芬奇是个画家：
 
-{% highlight js %}
+```js
 leonardo.plug(
     new Painter({ paints: ['Mona Lisa', 'The Last Supper'] })
 )
-{% endhighlight %}
+```
 
 米开朗基罗是个画家、雕塑家：
 
-{% highlight js %}
+```js
 michelangelo.plug([
     new Painter({ paints: ['Ceiling of Sistine Chapel'] }),
     new Sculptor({ sculpts: ['Pieta', 'David'] })
 ])
-{% endhighlight %}
+```
 
 其实达芬奇也是雕塑家，只是他的雕塑作品没有画作那么有名。他曾经有过一个巨型战马雕塑的设计，后来因为金主
 变故而流产，还因此被米开朗基罗嘲讽了很多次。
 
 言归正传，还可以在实例化的时候传入 plugs 属性：
 
-{% highlight js %}
+```js
 var leonardo = new ItalianRenaissanceMan({
     plugs: [ ... ]
 })
-{% endhighlight %}
+```
 
 ### listeners
 
 在实例化 RichBase 子类时，还可以传入 listeners 属性，在其中定义事件监听：
 
-{% highlight js %}
+```js
 var leonardo = new ItalianRenaissanceMan({
     listeners: {
         'paint': function() {
@@ -652,12 +652,12 @@ var leonardo = new ItalianRenaissanceMan({
         }
     }
 })
-{% endhighlight %}
+```
 
 RichBase 将在实例化的时候帮你绑定，所以通过参数传入的事件监听，会在你自己拿到实例再绑定的事件监听
 之前：
 
-{% highlight js %}
+```js
 leonardo.on('paint', function() {
     console.log('Dude, too late. The paint is finished already.')
 })
@@ -666,20 +666,20 @@ leonardo.on('paint', function() {
 //
 //     I am painting something awesome. It is gonna be legendary!
 //     Dude, too late. The paint is finished already.
-{% endhighlight %}
+```
 
 ### _onSet*
 
 在定义类的时候，还可以给 RichBase.extend 传 `_onSet*` 方法，使得在外部绑定的 `after*Change`
 之前，类本身可以先行处理：
 
-{% highlight js %}
+```js
 var Man = RichBase.extend({
     _onSetSexualOrientation: function(e) {
         console.log('was: ' + e.prevValue + '; now: ' + e.nextValue)
     }
 })
-{% endhighlight %}
+```
 
 当属性值发生变更时，顺序依次是：
 

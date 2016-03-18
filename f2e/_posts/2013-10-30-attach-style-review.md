@@ -8,14 +8,14 @@ layout: post
 
 ## heredoc
 
-{% highlight js %}
+```js
 var css = heredoc(function(){/*
     .frames {
         width: 200px;
         height: 80px;
     }
 */})
-{% endhighlight %}
+```
 
 用法如上，好处是声明长字符串时非常方便，不需要考虑引号的转义和字符串拼接。
 
@@ -23,7 +23,7 @@ var css = heredoc(function(){/*
 
 在 JavaScript 里我们可以将 function 体变成字符串：
 
-{% highlight js %}
+```js
 function foo(name) {
     console.log(name)
     /* comments remains */
@@ -36,7 +36,7 @@ console.log(foo + '')
 //     console.log(name)
 //     /* comments remains */
 // }"
-{% endhighlight %}
+```
 
 所以对于文首的 function，我们可以将其转为字符串，并使用字符串替换去掉多余的
 `function(){/*` 和 `*/}`。
@@ -46,31 +46,31 @@ console.log(foo + '')
 heredoc 名字来源于 Bash 中的长文本声明方式，叫做
 [here document](http://en.wikipedia.org/wiki/Here_document)，
 
-{% highlight bash %}
+```bash
 COMMAND <<InputComesFromHERE
 ...
 ...
 ...
 InputComesFromHERE
-{% endhighlight %}
+```
 
 ### strip
 
 这个时候拿到的字符串，将是：
 
-{% highlight js %}
+```js
     .frames {
         width: 200px;
         height: 80px;
     }
-{% endhighlight %}
+```
 
 行首的空格很讨厌，但是如何拿捏到底有多少个空格是不必要的会很微妙。在 Ruby 世界里，Rails
 中的 ActiveSupport 中包含了一个
 [.strip_heredoc](http://guides.rubyonrails.org/active_support_core_extensions.html#strip-heredoc)
 方法，使用这个方法定义的字符串：
 
-{% highlight ruby %}
+```ruby
 if options[:usage]
   puts <<-USAGE.strip_heredoc
     This command does such and such.
@@ -80,7 +80,7 @@ if options[:usage]
       ...
   USAGE
 end
-{% endhighlight %}
+```
 
 输出的字符串将是：
 
@@ -103,7 +103,7 @@ end
 
 ### scoped
 
-{% highlight html %}
+```html
 <div class="democontain">
     <style scoped>
         div { border: 1px solid green; margin-bottom: 20px; min-height: 40px; }
@@ -118,7 +118,7 @@ end
     </div>
     <div></div>
 </div>
-{% endhighlight %}
+```
 
 `<style scoped>` 中的样式将仅在父节点内生效，不过，它并不能保证区块不受外部样式干扰。
 

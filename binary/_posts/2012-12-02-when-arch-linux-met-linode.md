@@ -19,12 +19,12 @@ testing, stable 等区分。拿到 Arch 光盘安装的话，基本的东东装�
 于是在今年8月份，我一拍脑袋，哎呀，好久没更新 Arch 了，我得更新一下。
 呃，`pacman -Syu` 一下就好，对吧？[这位哥哥](https://bbs.archlinux.org/viewtopic.php?id=145795) 也是这么想的：
 
-{% highlight bash %}
+```bash
 error: failed to commit transaction (conflicting files)
 glibc: /lib exists in filesystem
 glibc: /usr/lib/ld-linux-x86-64.so.2 exists in filesystem
 ...
-{% endhighlight %}
+```
 
 咦？这是什么错误？当即去 Google，结果我选择了最坑爹的方式：`pacman -S --force glibc`。
 命令执行得很顺利，结束之后我习惯性的 `ll` 一下，嗯？说找不到 `ls` 命令。这不科学啊，我重启一下吧……
@@ -35,10 +35,10 @@ glibc: /usr/lib/ld-linux-x86-64.so.2 exists in filesystem
 把 `/lib` 下的文件丢到 `/usr/lib` 下，`/lib` 只是个指向 `/usr/lib` 的软连接了。
 正确的更新方式是：
 
-{% highlight bash %}
+```bash
 pacman -Syu --ignore glibc
 pacman -Su
-{% endhighlight %}
+```
 
 该文还指出，千万不要用 `--force` 哦亲~
 
