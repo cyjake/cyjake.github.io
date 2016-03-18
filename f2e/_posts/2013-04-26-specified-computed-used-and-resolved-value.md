@@ -20,11 +20,11 @@ layout: post
 如果没找到样式设定，则从父节点上继承
 （[inheritance](https://developer.mozilla.org/en-US/docs/CSS/inheritance)）。例如：
 
-{% highlight html %}
+```html
 <div style="font:helvetica;">
   <p></p>
 </div>
-{% endhighlight %}
+```
 
 p 标签没有指定 font 样式，则从父节点 div 上继承，也就是 helvetica
 
@@ -39,7 +39,7 @@ p 标签没有指定 font 样式，则从父节点 div 上继承，也就是 hel
 
 将所设定值中为相对值的，转换为绝对值（例如 em 单位、百分比、或者 url() 中的相对路径）。
 
-{% highlight css %}
+```css
 div {
   font-size: 12px;
   padding-top: 1.5em;
@@ -50,7 +50,7 @@ div {
   font-size: 12px;
   padding-top: 18px
 }
-{% endhighlight %}
+```
 
 有些值，单从 CSS 是推不出的，例如 width、margin-right、text-indent、top 等，这些值的
 Computed Value ，仍然保留为相对值，直到 Used Value 被推导出来。

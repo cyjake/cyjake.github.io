@@ -46,12 +46,12 @@ tl;dr 请直接跳到末尾。
 
     curl http://127.0.0.1:5984/
 
-{% highlight javascript %}
+```javascript
 {
     "couchdb": "Welcome",
     "version": "1.2.1"
 }
-{% endhighlight %}
+```
 
 但是，不要以为已经搞定，苦难才刚刚开始。这枚 CouchDB 是私有 npm 仓库，当然不能只限本机访问，
 我们需要修改一下 `bind_address`：
@@ -71,12 +71,12 @@ tl;dr 请直接跳到末尾。
 
 但我就没这么顺利了，创建用户 500，返回的错误信息如下（curl 方式结果相同）：
 
-{% highlight javascript %}
+```javascript
 {
     "error": "error",
     "reason": "eacces"
 }
-{% endhighlight %}
+```
 
 Google 一番，这个错误的信息意思是木有权限，不对瓦，既然所有人都是管理员，为啥会木有权限。
 结果是配置文件的权限作怪，一定是前面执行相关命令的时候姿势不对，重新搞一遍：

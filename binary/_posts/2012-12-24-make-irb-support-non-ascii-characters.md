@@ -7,20 +7,20 @@ For non-English speaking programmers, it's a bless that we can input some non-AS
 into ruby console directly for mocking data or something similar. But sometimes this might not
 work:
 
-{% highlight bash %}
+```bash
 $ rvm install 1.9.3
-{% endhighlight %}
+```
 
 In `irb`, the characters you input might turn out to be something like
 `\U+FFD1\U+FFD0\U+FFB5\U+FFD1\U+FFD1`. That's because of your installed ruby is not
 compiled with readline support. Thanks to gists like this, the
 [solution](https://gist.github.com/1968562) is easy to google:
 
-{% highlight bash %}
+```bash
 $ rvm get latest
 $ rvm pkg install readline
 $ rvm install 1.9.3 --with-readline-dir=$rvm_path/usr
-{% endhighlight %}
+```
 
 This solution is available on [rvm.io](https://rvm.io/packages/readline/) also.
 
@@ -29,7 +29,7 @@ But yesterday I encountered an issue a little bit different than this.
 After two hours of googling and recompilation, no solution works.
 Then I checked the `locale` of my console (a little bit too late, I know):
 
-{% highlight bash %}
+```bash
 $ locale
 LANG="C"
 LC_COLLATE="C"
@@ -39,7 +39,7 @@ LC_MONETARY="C"
 LC_NUMERIC="C"
 LC_TIME="C"
 LC_ALL=
-{% endhighlight %}
+```
 
 Gotcha! Then I did two things
 

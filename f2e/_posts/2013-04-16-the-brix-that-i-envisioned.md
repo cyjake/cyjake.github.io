@@ -45,7 +45,7 @@ Manager ，依赖于 Loader 形成的配置规范。Style 则提供组件的基�
 那 Bootstrap 里的弹窗、提示浮层又在哪里？你只要加上 `KISSY.use('brix/app')`，并在你的 HTML
 里像 Bootstrap 要求的那样标记出你的组件；
 
-{% highlight html %}
+```html
 <div bx-app>
   <div bx-name="brix/dialog">
     <h2>Congrats!</h2>
@@ -53,11 +53,11 @@ Manager ，依赖于 Loader 形成的配置规范。Style 则提供组件的基�
     <span class="btn btn-blue">Yay!</span>
   </div>
 </div>
-{% endhighlight %}
+```
 
 想要利用 Brix 提供的组件封装自己的？你只需要：
 
-{% highlight js %}
+```js
 KISSY.add('myapp/dropdown/index', function(S, Dropdown) {
 
     function MyDropdown(opts) {
@@ -70,11 +70,11 @@ KISSY.add('myapp/dropdown/index', function(S, Dropdown) {
 }, {
     requires: ['brix/dropdown']
 })
-{% endhighlight %}
+```
 
 然后在你的页面中与默认组件一样使用自己的组件：
 
-{% highlight html %}
+```html
 <div bx-name="myapp/dropdown">
   <ul>
     <li>Please select...</li>
@@ -83,7 +83,7 @@ KISSY.add('myapp/dropdown/index', function(S, Dropdown) {
     <li>睡！</li>
   </ul>
 </div>
-{% endhighlight %}
+```
 
 想要分享自己的组件，或者安装别人的组件？ `npm install bpm -g`，让 BPM 来帮你做剩下的事情吧亲。
 
@@ -202,12 +202,12 @@ ux.brix-test：
 
 名字统一掉之后，在页面中，我们只需要统一用 @bx-name 来引用：
 
-{% highlight html %}
+```html
 <div bx-name="ux.tanx/ceiling">
   <p>你好，逸才</p>
   <span>已买到的宝贝</span>
 </div>
-{% endhighlight %}
+```
 
 不再像现有 Brix 实现那样，还需要额外指定一下 @bx-path，说明一下这个组件是从哪儿来的。
 
@@ -219,17 +219,17 @@ ux.brix-test：
 
 Brix 将暴露出一个叫做 brix/app 的入口模块，项目开发者只需要像平常 KISSY 模块一般使用它：
 
-{% highlight js %}
+```js
 KISSY.use('brix/app', function(S, app) {
     // config and boot your app
 })
-{% endhighlight %}
+```
 
 以下代码示例，为求简单，只讲包装其中的部分，省略外层的
 
-{% highlight js %}
+```js
 KISSY.use('brix/app', function(S, app) { ... })
-{% endhighlight %}
+```
 
 app 提供暴露出一些常用方法，例如：
 
@@ -242,7 +242,7 @@ app 提供暴露出一些常用方法，例如：
 config 用来配置你的 app，不管是单页应用还是传统页面，我们更能接受的都是一个页面一次配置，
 即页面初始化，加载 brix/app，配置 app，这些事情，只需要做一次。通常项目需要配置的内容如下：
 
-{% highlight js %}
+```js
 app.config({
     namespace: 'ux.brix-test',      // 项目自己的 namespace
     imports: {                      // 引入的组件
@@ -253,7 +253,7 @@ app.config({
     components: ['footer'],         // 项目自身组件，app.bootStyle 需要用到
     timestamp: 130416               // 时间戳，项目发布时写入
 })
-{% endhighlight %}
+```
 
 在这其中，必配项为：
 
@@ -264,7 +264,7 @@ app.config({
 timestamp 在开发时不需配置，在项目资源文件发布之后，再另行配置即可。实际页面里的初始化，
 可能类似这样：
 
-{% highlight html %}
+```html
 <script src="http://a.tbcdn.cn/s/kissy/1.3.0/seed.js"></script>
 <script>
 KISSY.config('packages', {
@@ -285,14 +285,14 @@ KISSY.use('brix/app', function(S, app) {
     })
 })
 </script>
-{% endhighlight %}
+```
 
 这样，即可在开发时忘掉时间戳这茬，上线时又可以先发布资源文件，再更新 vm 或者 TMS 中的 timestamp
 来完成发布流程。
 
 配置的部分讲完了，接下来就是启动页面，方式如下：
 
-{% highlight js %}
+```js
 // 如果只需要初始化页面中所有组件，其他啥也不用做：
 app.boot()              // 等同于 app.boot('[bx-app]')
                         // 即如果选择器参数忽略，会自动找有自定义属性 bx-app 标记的节点
@@ -318,7 +318,7 @@ app.boot('#J_myView', { ... }).on('bx:ready', function() {
     // 按照组件所在节点 ID 查找组件，返回结果唯一
     this.bxFind('#J_ceiling')
 })
-{% endhighlight %}
+```
 
 那个 page 参数是神马？ page 即 Brix Core 暴露出来的另一个模块，brix/page，它只在 app.boot
 触发的 bx:ready 事件回调中返回，用处是持有当前被初始化的节点，以及该节点下直属的组件。
@@ -333,30 +333,30 @@ app.boot('#J_myView', { ... }).on('bx:ready', function() {
 app.bootStyle 做的事情是，获取 app.config 中配置掉的所有 imports 与 components，
 将它们的 index.css 一并 KISSY.use 一下，类似：
 
-{% highlight js %}
+```js
 KISSY.use('ux.brix-test/ceiling/index.css, ux.tanx/table/index.css')
-{% endhighlight %}
+```
 
 这里的问题在于，CSS 文件的优化空间很小，优化不到两个不同组件引入了相同 CSS 模块的情况，
 例如可能有类似以下情况：
 
-{% highlight scss %}
+```scss
 // ux.brix-test/ceiling/index.scss
 @import "brix/mixins.scss";
 
 .yangqi {
     @include border-radius(2px);
 }
-{% endhighlight %}
+```
 
-{% highlight scss %}
+```scss
 // ux.tanx/table/index.scss
 @import "brix/mixins.scss";
 
 .shangdangci {
     @include border-radius(5px);
 }
-{% endhighlight %}
+```
 
 在这俩组件生成的 index.css 里，可能都会有份 brix/mixins 的编译结果，但在项目级别上看，
 很容易就发现这 mixins.scss ，不应该存在多份。
@@ -368,7 +368,7 @@ KISSY.use('ux.brix-test/ceiling/index.css, ux.tanx/table/index.css')
 
 `app.config('imports', { ... })` 参数里，所需要传入的对象是这种结构：
 
-{% highlight js %}
+```js
 {
     'ux.tanx': {
         breadcrumb: '0.1.0',
@@ -382,15 +382,15 @@ KISSY.use('ux.brix-test/ceiling/index.css, ux.tanx/table/index.css')
         kwicks: '0.3.1'
     }
 }
-{% endhighlight %}
+```
 
 假如项目使用到的外部与标准组件十分多，这个对象会变得非常大，难以维护。所以在设计上，这个文件理应提出来，
 作为一个单独的 JS 或者 JSON 文件，放在项目根部，在实际页面中只需要引用这份 JS 即可。我想，应该有个
 Brixlock.js 文件，它的内容类似：
 
-{% highlight js %}
+```js
 var Brixlock = { ... }          // imports 对象的实际内容
-{% endhighlight %}
+```
 
 注意，imports 对象需要描述当前项目 **所有** 引入的组件的版本，这样才能保证 brix/app 在根据
 bx-name 初始化页面时可以顺利进行。但在实际应用中这么做肯定是不现实的，所以完整的解决方案，
@@ -399,7 +399,7 @@ bx-name 初始化页面时可以顺利进行。但在实际应用中这么做肯
 项目根目录下，会有个 brix.json 文件，这个文件描述了这个项目中直接使用到的组件版本，描述格式类似
 Rails 项目的 Gemfile，或者 NPM 的 package.json ：
 
-{% highlight js %}
+```js
 {
     "imports": {
         "ux.tanx": {
@@ -411,13 +411,13 @@ Rails 项目的 Gemfile，或者 NPM 的 package.json ：
         "sidenav"
     ]
 }
-{% endhighlight %}
+```
 
 然后，在 components/ux.brix-test/nav 和 components/ux.brix-test/sidenav 目录中，
 则有 brick.json 文件，结构同样类似 package.json ，用于描述当前组件所依赖的父组件，
 以 components/ux.brix-test/nav 为例：
 
-{% highlight js %}
+```js
 {
     "name": "ux.brix-test/nav",
     "version": "0.1.0",          // 因为是项目组件，此处版本写不写无所谓，只在发布时需要
@@ -426,11 +426,11 @@ Rails 项目的 Gemfile，或者 NPM 的 package.json ：
         "brix/checkbox": "~ 0.1.0"
     }
 }
-{% endhighlight %}
+```
 
 imports/ux.tanx/ceiling/0.1.0 目录下，自然也会有这么一份 brick.json ，内容类似：
 
-{% highlight js %}
+```js
 {
     "name": "ux.tanx/ceiling",
     "version": "0.1.0",
@@ -438,7 +438,7 @@ imports/ux.tanx/ceiling/0.1.0 目录下，自然也会有这么一份 brick.json
         "brix/dropdown": "~ 0.1.0"
     }
 }
-{% endhighlight %}
+```
 
 但这份文件不需要使用者关心，我们可以拜托 Brix Manager 来帮忙做这件事情。
 

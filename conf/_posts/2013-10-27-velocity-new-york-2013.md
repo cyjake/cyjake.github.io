@@ -33,9 +33,9 @@ layout: post
 
 第一道题目都很有欺骗性：
 
-{% highlight html %}
+```html
 <div src="foo.jpg"></div>
-{% endhighlight %}
+```
 
 这段 HTML 会不会导致浏览器下载 foo.jpg？
 
@@ -82,18 +82,18 @@ layout: post
 都不能算成熟。他只好吐槽，三年过去了，我们仍然停留着几乎什么都没有的阶段，最好的解决方案，
 仍然是自行用 `<span>` 配合 JS 解决。
 
-{% highlight html %}
+```html
 <picture width="500" height="500">
   <source media="(min-width: 45em)" src="large.jpg">
   <source media="(min-width: 18em)" src="med.jpg">
   <source src="small.jpg">
   <img src="small.jpg">
 </picture>
-{% endhighlight %}
+```
 
 有没有觉得和 `<video>` 标签很像？但因为标准支持很慢，这段标记被展开成 `<span>`：
 
-{% highlight html %}
+```html
 <span data-picture data-alt="A giant stone face at The Bayon Temple in Angkor
     Thom, Cambodia">
   <span data-src="small.jpg"></span>
@@ -104,15 +104,15 @@ layout: post
     <img src="small.jpg" alt="A giant stone face at The Bayon Temple">
   </noscript>
 </span>
-{% endhighlight %}
+```
 
 相比之下，@srcset 的语法则要干练很多：
 
-{% highlight html %}
+```html
 <img src="fallback.jpg"
      alt=""
      srcset="small.jpg 640w 1x, small-hd.jpg 640w 2x, med.jpg 1x, med-hd.jpg 2x">
-{% endhighlight %}
+```
 
 除了人肉提供多个尺寸的图片以供不同设备展示之外，Tim 还提到一个近似黑魔法的东西，叫做
 [Compressive Image](http://filamentgroup.com/lab/rwd_img_compression/)，
@@ -133,14 +133,14 @@ layout: post
 另外 Tim 还分享了一些移动设备上的特殊做法，有些在其他演讲者那儿也有提及，比如将不重要的内容
 异步化：
 
-{% highlight html %}
+```html
 <!-- 原先 -->
 <h2>Reviews</h2>
 <div class="reviews"><!-- 很多内容 --></div>
 
 <!-- 现在 -->
 <h2><a href="reviews.html" data-target="reviews">Reviews</a></h2>
-{% endhighlight %}
+```
 
 在桌面电脑、iPad 等强力些的设备上，可以在页面加载完毕之后加入异步请求，载入 Reviews 部分。
 
@@ -280,26 +280,26 @@ Web 性能工作组给大家带来：
 
 在今后，还将带来 prerender：
 
-{% highlight html %}
+```html
 <a href="..." rel="prerender"></a>
 <!-- 浏览器将在加载完当前页面之后开始加载注明 prerender 的链接并渲染之 -->
-{% endhighlight %}
+```
 
 同时还可以设置资源优先级：
 
-{% highlight html %}
+```html
 <img src="foo.jpg" lazyload>
 <img src="bar.jpg" postpone>
-{% endhighlight %}
+```
 
 lazyload 与网络有关，会等到网络空闲时再加载；postpone 则与元素是否可视有关，会等到元素可见
 时才加载资源。这俩还有对应的 CSS 声明：
 
-{% highlight css %}
+```css
 video {
     resource-priorities: postpone;
 }
-{% endhighlight %}
+```
 
 如果是在 script 标签上，算上已有的 defer 与 async，去掉无关的 postpone（等可见时再加载
 某段 script？），script 一共有三个控制加载顺序的属性：
@@ -314,11 +314,11 @@ video {
 接下来这个或许会更有意义一点，叫做 beacon，即在页面 unload 时有个叫做 beacon 的函数，
 用来发起请求，确保等请求发送完毕后才销毁页面。
 
-{% highlight js %}
+```js
 function unload() {
     beacon('POST', '/log', analyticsData)
 }
-{% endhighlight %}
+```
 
 因为如果在 unload 里发起 XMLHttpRequest，会被取消掉。而浏览器会保证 beacon 的请求。
 
@@ -416,9 +416,9 @@ pointerup 支持还不算好，着急优化这个点击的同学，还可以尝�
 
 还有个办法是，索性禁用掉放大：
 
-{% highlight html %}
+```html
 <meta name="viewport" content="width=device-width, initial-scale=1, max-sacle=1
-">{% endhighlight %}
+">```
 
 这样，在 Chrome 中将不响应 double tap 放大的效果，不过并不是所有浏览器都这么聪明，而且
 禁用掉放大有点太狠了。
@@ -731,13 +731,13 @@ O(n) 变成了 O(1)。耶，算法拯救世界。
 用过 `<video>` 标签的同学可能觉得是老生常谈了，要在页面中放视频，准备好 .mp4 和 .ogv
 文件，在页面里丢这么一段 HTML：
 
-{% highlight html %}
+```html
 <video>
   <source src="velocity.mp4">
   <source src="velocity.ogv">
   <object ...><!-- 不支持 <video> 的浏览器 --></object>
 </video>
-{% endhighlight %}
+```
 
 就行了。不过，没那么简单，魔鬼都在细节里。来自 Akamai 的 Will Law 分享 Optimizing the
 Black Box of HTML `<video>`。

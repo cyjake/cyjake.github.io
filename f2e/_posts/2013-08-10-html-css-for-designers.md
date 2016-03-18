@@ -91,7 +91,7 @@ Github Gist，正是其中两个编写代码演示的好去处。
 
 所有的 HTML 页面都大概长这个样子：
 
-{% highlight html %}
+```html
 <!doctype html>
 <html>
   <head>
@@ -102,14 +102,14 @@ Github Gist，正是其中两个编写代码演示的好去处。
     <p>人在江湖飘，能够多一技傍身，何乐而不为？</p>
   </body>
 </html>
-{% endhighlight %}
+```
 
 每个 HTML 文档都有个头部声明，叫做 DOCTYPE，声明方式多年前曾经百花齐放，这么写会如何如何，那么写
 又你想怎样，等等。在我们这个示例里头，正是 HTML5 运动起始时变得风靡的写法：
 
-{% highlight html %}
+```html
 <!doctype html>
-{% endhighlight %}
+```
 
 然后，就是超文本概念的真实演绎了。超文本其实就是标记文本，利用一系列规则，给普通的文本嵌入标记，
 这里强调，那里链接到别处，这里有个图片，那里有个引用，诸如此类。HTML自然不能算是只此一家，真正把这
@@ -235,21 +235,21 @@ Unix + X）上[均有支持的字体](http://web.mit.edu/jmorzins/www/fonts.html
 
 然后回到微软雅黑，假如要设置标题字体成雅黑，那么正确的 CSS 应该这么写：
 
-{% highlight css %}
+```css
 h1 {
     font-family: Microsoft Yahei, sans-serif;
 }
-{% endhighlight %}
+```
 
 我们设置了最佳字体为微软雅黑，但对于没有雅黑的用户，我们告诉它这里用用户浏览器里设置的无衬线字体即可。
 但是要注意的是，浏览器里的设置是会坑人的，浏览器并不阻止用户给等宽字族设置非等宽字体，所以，为了取得
 更好的设计体验，假如必须设置字体，则越详细越好：
 
-{% highlight css %}
+```css
 h1 {
     font-family: Microsoft Yahei, Hiragino Sans GB, Helvetica, Arial, sans-serif;
 }
-{% endhighlight %}
+```
 
 在这里我告诉用户，你的电脑如果有微软雅黑，那就用雅黑；如果没有雅黑，那有[冬青黑](http://www.typeisbeautiful.com/2010/01/1894/)
 （Mac 下新增的中文字体，显示效果极佳）没？还没有啊，那就用 Helvetica，不行就 Arial。再不行，就
@@ -289,14 +289,14 @@ h1 {
 在我的示例中，按区域颜色从浅至深的顺序设置。点 CSS 标签，可以看到 `.box` 区块的三个属性设置，为了
 显示效果，我还设置了背景色：
 
-{% highlight css %}
+```css
 .box {
     margin: 20px;
     border: 5px solid #ccc;
     padding: 30px;
     background: #999;
 }
-{% endhighlight %}
+```
 
 修改 margin 的效果：
 

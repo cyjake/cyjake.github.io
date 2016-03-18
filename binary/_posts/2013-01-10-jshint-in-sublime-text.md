@@ -28,7 +28,7 @@ JSLint 就如当年 C 语言初风靡之时的
 有多严苛。我们自然也容易理解，它不能完全服众。于是后来有人做了 [JSHint](http://jshint.com/)，
 因为受不了这种写法都要被警告：
 
-{% highlight javascript %}
+```javascript
 function foo() {
     var arr = 'abcdefg'.split('')
 
@@ -36,7 +36,7 @@ function foo() {
         console.log(arr[i])
     }
 }
-{% endhighlight %}
+```
 
 单从实践中说，这种写法更好地避免了 `i` 忘了声明的情况。
 
@@ -51,9 +51,9 @@ Sublime 也有管理扩展的扩展（Everything gets meta），叫做
 
 首先你需要安装 JSHint：
 
-{% highlight bash %}
+```bash
 $ npm install jshint -g
-{% endhighlight %}
+```
 
 然后，在 Sublime 中，`Command + Shift + P`，Windows 用户应该是 `Control + Shift + P`，
 呼出 Package Control，选择 Install Package，安装 JSHint。
@@ -66,7 +66,7 @@ JSHint 支持 .jshintrc，即 Runtime Control 文件，方便用户配置。它�
 
 所以，可以在你的项目根目录丢个 .jshintrc，以保证代码风格的一致性。文件的格式是 JSON，示例如下：
 
-{% highlight javascript %}
+```javascript
 {
     // 设置 JS 执行环境为浏览器
     "browser": true,
@@ -84,7 +84,7 @@ JSHint 支持 .jshintrc，即 Runtime Control 文件，方便用户配置。它�
         "console"
     ]
 }
-{% endhighlight %}
+```
 
 详细的配置，可以看 [JSHint 之文档](http://jshint.com/docs/)。
 

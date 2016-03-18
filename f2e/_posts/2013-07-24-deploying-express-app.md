@@ -27,13 +27,13 @@ layout: post
 NODE_ENV 环境变量用来告诉 express，把它的 env 配置项设为 production，即加了这个前缀之后，
 app.js 中的环境变量判断，会变到 production 分支：
 
-{% highlight js %}
+```js
 app.get('env') === 'production'             // ==> true
 
 app.configure('production', function() {
     // production env configurations
 })
-{% endhighlight %}
+```
 
 ### nohup 与 &
 
@@ -127,7 +127,7 @@ kirua 以 NPM 包形式发布，通过 npm 命令安装即可：
 
 会初始化一份文件，在 config/deploy.rb，在这个文件里配置好相关项，以我的为例：
 
-{% highlight ruby %}
+```ruby
 require 'mina/git'
 
 
@@ -200,7 +200,7 @@ end
 #  - http://nadarei.co/mina/tasks
 #  - http://nadarei.co/mina/settings
 #  - http://nadarei.co/mina/helpers
-{% endhighlight %}
+```
 
 ### 准备线上环境
 
