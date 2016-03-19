@@ -9,5 +9,14 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 gems:
-- jekyll-feed
-- jekyll-sitemap
+  - jekyll-feed
+  - jekyll-sitemap
+
+title: Chen Yangjian
+description: Everything about Chen Yangjian.
+url: http://cyj.me
+author:
+  name: Chen Yangjian
+  uri: http://cyj.me
+feed:
+  path: feed/atom.xml
