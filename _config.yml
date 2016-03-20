@@ -1,6 +1,4 @@
 # jekyll settings
-baseurl:
-highlighter: pygments
 lsi: false
 permalink: pretty
 exclude: [Gemfile, Gemfile.lock, Guardfile, README.md, CNAME, '*.scss']
