@@ -12,7 +12,7 @@
       <div class="content-wrap" itemscope itemtype="http://schema.org/Article">
         <div class="article">
           <h1 itemprop="name">{{ page.title }}</h1>
-          {% if page.date %}<time>{{ page.date | date: '%b %d, %Y' }}</time>{% endif %}
+          {% if page.date %}<address><time datetime="{{ page.date }}">{{ page.date | date: '%b %d, %Y' }}</time></address>{% endif %}
           <div itemprop="articleBody">{{ content }}</div>
         </div>
         <div bx-name="mosaics/stoc" bx-config="{essay: '.article'}" bx-tpl="./default"></div>
