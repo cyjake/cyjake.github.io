@@ -1,10 +1,8 @@
 # jekyll settings
-lsi: false
 permalink: pretty
 exclude: [Gemfile, Gemfile.lock, Guardfile, README.md, CNAME, '*.scss']
 excerpt_separator: "\n\n"
 kramdown:
-  input: GFM
   syntax_highlighter: rouge
 gems:
   - jekyll-feed
