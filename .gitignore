@@ -1,9 +1,10 @@
-.DS_Store
-.*.swp
-*~
 .sass-cache
 _site
 
+.DS_Store
+.*.swp
+*~
+.jekyll-metadata
 *.sublime-workspace
 
 Thumbs.db

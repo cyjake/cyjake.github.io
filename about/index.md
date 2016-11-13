@@ -3,11 +3,10 @@ layout: post
 title: About / 关于
 ---
 
+A programmer, a photographer, and a daydreamer. Currently a frontend engineer at
+[alimama.com][alimama].
 
-A photographer, programmer, and dreamer. Currently I'm a frontend engineer at
-[alimama.com][alimama], which is the advertising business unit of Alibaba Group.
-
-摄影师、程序员、以及白日梦想家，目前在 [阿里妈妈用户体验部门][1] 担任前端工程师。
+摄影师、程序员、以及白日造梦者，目前在 [阿里妈妈前端技术部][1] 担任前端工程师。
 
 
 ## Work / 我的作品
@@ -27,7 +26,7 @@ Feel free to contact me via twitter, [@dotnil][twitter].
 - 我写的代码：[Github][github]
 - 我拍的照片：[500px][500px]·[VSCO][vsco]
 - 我做的视频：[优酷][2]
-- 我也有微博：[@逸才很茫然][weibo]
+- 我也有微博：[@陈木野][weibo]
 
 
 ## History / 故纸堆
@@ -46,7 +45,7 @@ before. You may find these contents boring if you don't understand any Chinese.
 - [2008][2008] 是我初入计算机世界的主页。
 
 
-[1]: http://mux.alimama.com
+[1]: https://thx.github.io
 [2]: http://i.youku.com/u/UODA5NzU2MjQ=/videos
 [2008]: http://cyj.me/2008
 [2011]: http://cyj.me/2011

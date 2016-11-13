@@ -1,0 +1,42 @@
+@media (min-width: 1200px) {
+  body {
+    text-align: center;
+  }
+
+  #page {
+    margin: 40px auto 0;
+    width: 680px;
+    text-align: left;
+  }
+
+  #toc {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.7);
+    margin-left: 375px;
+    min-width: 180px;
+
+    ol {
+      margin-bottom: 0;
+    }
+
+    li a {
+      height: auto;
+    }
+  }
+
+  nav {
+    width: 140px;
+    margin-left: -(690px / 2 + 150px);
+    position: fixed;
+    top: 92px;
+    left: 50%;
+    z-index: 1000;
+
+    label {
+      display: none;
+    }
+  }
+}
