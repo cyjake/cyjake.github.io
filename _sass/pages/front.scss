@@ -3,7 +3,7 @@
   margin: 0;
   height: 100%;
 
-  .nav {
+  section {
     position: fixed;
     top: 30%;
     left: 50%;
@@ -16,11 +16,7 @@
     a:link,
     a:visited {
       line-height: 1;
-      background: rgba(255, 255, 255, 0.5);
-    }
-
-    .branding:link {
-      font-size: 180%;
+      background: rgba(255, 255, 255, 0.75);
     }
 
     p a {
@@ -30,7 +26,7 @@
     }
   }
 
-  .bg {
+  figure {
     position: absolute;
     top: 0;
     left: 0;
@@ -39,6 +35,7 @@
     text-align: center;
     vertical-align: middle;
     overflow: hidden;
+    margin: 0;
 
     img {
       display: inline-block;
@@ -46,6 +43,16 @@
       transition: 0.2s margin, 0.2s opacity;
       opacity: 0;
     }
+  }
+
+  figcaption {
+    position: absolute;
+    bottom: 2.5em;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.75);
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
   }
 }
 

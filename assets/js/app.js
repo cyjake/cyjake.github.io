@@ -1,5 +1,7 @@
 ;(function() {
 
+  'use strict'
+
   /**
    * breed generations of descendants to complete the tree
    */
@@ -92,10 +94,12 @@
   }
 
   function onClickToC(e) {
-    if (e.target.matches('#toc label')) {
+    if (e.target.closest('#toc label')) {
       toggleToC(e)
-    } else if (e.target.matches('#toc a[href]') && document.body.offsetWidth < 1000) {
-      var headingId = e.target.href.split('#').pop()
+    }
+    else if (e.target.closest('#toc a[href]') && document.body.offsetWidth < 1200) {
+      var entry = e.target.closest('#toc a[href]')
+      var headingId = entry.href.split('#').pop()
       document.querySelector('#toc').classList.add('folded')
       setTimeout(function() {
         var heading = document.getElementById(headingId)
@@ -104,7 +108,7 @@
           : heading.currentStyle.marginTop
         var delta = heading.offsetHeight + parseInt(marginTop, 10)
         // adjust scrollTop to reveal the target heading
-        document.querySelector('#content').scrollTop -= delta
+        document.querySelector('#page').scrollTop -= delta
       }, 1)
     }
   }
@@ -194,12 +198,10 @@
   }
 
   function toggleNav() {
-    var page = document.querySelector('#page')
-
-    if (page.classList.contains('nav-active')) {
-      page.classList.remove('nav-active')
+    if (document.body.classList.contains('nav-active')) {
+      document.body.classList.remove('nav-active')
     } else {
-      page.classList.add('nav-active')
+      document.body.classList.add('nav-active')
     }
   }
 
@@ -211,7 +213,7 @@
       document.querySelector('#toc').addEventListener('click', onClickToC, false)
     }
 
-    if (document.body.offsetWidth > 1200) {
+    if (document.body.offsetWidth >= 1200) {
       document.querySelector('#toc').classList.remove('folded')
       window.addEventListener('scroll', debounce(onScroll, 50), false)
     } else {

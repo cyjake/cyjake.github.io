@@ -1,4 +1,7 @@
 ;(function() {
+
+  'use strict'
+
   window.posts.some(function(post) {
     post.slug = post.path.replace(/^\w+\/\w+\/\d+-\d+-\d+-/, '').replace(/\.\w+$/, '')
     var pathWas = [].concat(post.categories, post.slug).join('/')

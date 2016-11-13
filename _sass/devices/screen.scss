@@ -18,12 +18,30 @@
     margin-left: 375px;
     min-width: 180px;
 
-    ol {
-      margin-bottom: 0;
-    }
-
     li a {
       height: auto;
+    }
+
+    &.sticky {
+      opacity: 0.25;
+      position: fixed;
+      top: 30px;
+      z-index: 0;
+      background: #fefefe;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      top: 14px;  /* 30px - 1em */
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.folded {
+        left: auto;
+        right: 30px;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+      }
     }
   }
 
