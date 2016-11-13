@@ -1,0 +1,86 @@
+@media (max-width: 1200px) {
+
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  #page {
+    position: relative;
+    height: 100%;
+    transform: translateX(0);
+    transition: transform 0.2s;
+    overflow: auto;
+
+    &.nav-active {
+      transform: translateX(200px);
+      overflow: visible;
+    }
+  }
+
+  #content {
+    max-width: 680px;
+    padding: 3em 1em 1em;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #toc {
+    position: fixed;
+    top: 10px;
+    right: 0;
+    min-width: 60px;
+    padding: 3px 10px;
+    background: rgba(255, 255, 255, 0.7);
+
+    &.folded {
+      height: 29px;
+      width: 60px;
+
+      ol {
+        display: none;
+      }
+    }
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    background: #21212B;
+
+    label {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: -80px;
+      width: 60px;
+      background: rgba(255, 255, 255, .7);
+
+      &:link, &:visited {
+        color: #000;
+      }
+    }
+
+    .entry {
+      border-bottom: 1px dotted #4E6092;
+      background: #21212B;
+      transition: background-color 0.2s;
+
+      &:link, &:visited {
+        color: #efefef;
+      }
+
+      &:hover {
+        background: #4E6092;
+      }
+    }
+
+    .entries {
+      padding-top: 10px;
+    }
+  }
+}

@@ -1,0 +1,248 @@
+/*
+ * Resets
+ */
+body {
+  margin: 0;
+}
+
+html {
+  background: #f0f0f0;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+
+/*
+ * Shamelessly copied from https://github.com/lepture/yue.css/blob/master/yue.css
+ */
+.type h1,
+.type h2,
+.type h3,
+.type h4,
+.type h5,
+.type h6 {
+  color: #222223;
+}
+
+.type h1 {
+  font-size: 1.8em;
+  margin: 0.67em 0 0.32em;
+}
+
+.type > h1 {
+  margin-top: 0;
+  font-size: 2em;
+}
+
+.type h2 {
+  font-size: 1.4em;
+  margin: 0.83em 0 0.33em;
+}
+
+.type h3 {
+  font-size: 1.17em;
+  margin: 1em 0 0.5em;
+}
+
+.type h4,
+.type h5,
+.type h6 {
+  font-size: 1em;
+  margin: 1.6em 0 1em 0;
+}
+
+.type h6 {
+  font-weight: 500;
+}
+
+.type p {
+  color: #222;
+}
+
+
+html, body {
+  -webkit-font-smoothing: antialiased;
+  font-family: Georgia, "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft Yahei", serif;
+  line-height: 1.5;
+}
+
+a:link {
+  text-decoration: none;
+  color: #394B61;
+  transition: 0.2s color;
+}
+
+.type code,
+.type pre {
+  font-family: Monaco, Consolas, monospace, serif;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+address {
+  font-style: normal;
+}
+
+p code {
+  border-radius: 2px;
+  border: 1px solid #ddd;
+  background: #eee;
+  white-space: nowrap;
+  padding: 0 3px;
+}
+
+article {
+  font-size: 16px;
+
+  address {
+    display: block;
+    margin-top: 1em;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 2px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  }
+}
+
+
+/**
+ * Branding
+ */
+.type .branding {
+  &,
+  &:hover {
+    border-bottom: none;
+  }
+}
+
+.branding {
+  font-weight: 400;
+  display: inline-block;
+  font-weight: normal;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+
+  .last-name {
+    color: #DA4701;
+    font-weight: 800;
+  }
+}
+
+
+.hidden {
+  display: none;
+}
+
+
+nav {
+  text-align: left;
+
+  label {
+    display: block;
+    padding: 3px 10px;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .entry {
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc;
+
+    &:link, &:visited {
+      text-decoration: none;
+    }
+  }
+
+  .entry:last-child {
+    border-bottom-color: transparent;
+  }
+}
+
+
+#toc {
+  padding: 1em;
+  transition: top 0.5s, opacity 0.5s;
+
+  label {
+    margin-top: 0;
+    font-size: 1em;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  ol {
+    list-style-type: decimal;
+    padding-left: 1em;
+  }
+
+  &.sticky {
+    position: fixed;
+    top: 30px;
+    opacity: 0.25;
+    z-index: 0;
+    background: #fefefe;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    top: 14px;  /* 30px - 1em */
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &.folded {
+    h2 {
+      margin-bottom: 0;
+    }
+
+    &.sticky {
+      left: auto;
+      right: 30px;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+
+      h2 {
+        line-height: 1;
+      }
+    }
+
+    ol {
+      display: none;
+    }
+  }
+
+  .heading.folded ol {
+    display: none;
+  }
+}
+
+
+#footer {
+  margin-top: 2em;
+  text-align: center;
+}

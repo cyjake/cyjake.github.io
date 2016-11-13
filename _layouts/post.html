@@ -1,29 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-  {% include header.html %}
+  {% include head.html %}
   {% if page.style %}
   <link rel="stylesheet" type="text/css" href="/assets/css/posts/{{ page.style }}.css">
   {% endif %}
 </head>
-<body id="post-body" class="type" bx-app>
+<body class="type">
   <div id="page">
-    <div id="content">
-      <div class="content-wrap" itemscope itemtype="http://schema.org/Article">
-        <div class="article">
-          <h1 itemprop="name">{{ page.title }}</h1>
-          {% if page.date %}<address><time datetime="{{ page.date }}">{{ page.date | date: '%b %d, %Y' }}</time></address>{% endif %}
-          <div itemprop="articleBody">{{ content }}</div>
-        </div>
-        <div bx-name="mosaics/stoc" bx-config="{essay: '.article'}" bx-tpl="./default"></div>
-        {% include footer.html %}
+    <div id="content" itemscope itemtype="http://schema.org/Article">
+      <article>
+        <h1 itemprop="name">{{ page.title }}</h1>
+        {% if page.date %}<address><time datetime="{{ page.date }}">{{ page.date | date: '%b %d, %Y' }}</time></address>{% endif %}
+        <div itemprop="articleBody">{{ content }}</div>
+      </article>
+      <div id="footer">
+        {% include branding.html %}
       </div>
     </div>
-    {% include aside.html %}
-    {% include scripts.html %}
-    {% if page.script %}
-    <script src="/assets/js/posts/{{ page.script }}.js"></script>
-    {% endif %}
+    <div id="toc" class="folded">
+      <label>
+        <i class="iconfont icon-cab"></i> 目录
+      </label>
+    </div>
+    <nav>
+      <label>
+        <i class="iconfont icon-nav"></i> 导航
+      </label>
+      <div class="entries">
+        <a href="{{ site.baseurl }}/" class="entry">
+          <i class="iconfont icon-home"></i> Home
+        </a>
+        {% for category in site.categories %}
+        <a href="{{ site.baseurl }}/{{ category[0] }}" class="category entry">
+          <i class="iconfont icon-{{category[0]}}"></i> {{ category[0] | capitalize }}
+        </a>
+        {% endfor %}
+        <a href="{{ site.baseurl }}/projects" class="category entry">
+          <i class="iconfont icon-projects"></i> Projects
+        </a>
+        <a href="{{ site.baseurl }}/about" class="entry">
+          <i class="iconfont icon-about"></i> About
+        </a>
+        <a href="{{ site.baseurl }}/archive" class="entry">
+          <i class="iconfont icon-archive"></i> Archive
+        </a>
+      </div>
+    </nav>
   </div>
+  <script src="/assets/js/app.js"></script>
+  {% if page.script %}
+  <script src="/assets/js/posts/{{ page.script }}.js"></script>
+  {% endif %}
+  {% include ga.html %}
 </body>
 </html>

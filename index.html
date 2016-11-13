@@ -4,22 +4,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  {% include header.html %}
+  {% include head.html %}
 </head>
-<body class="frontpage">
-  <section class="bg">
+<body id="front">
+  <div class="bg">
     <img data-src="{{ site.baseurl }}/assets/img/shangping.jpg">
-  </section>
-  <section class="nav">
+  </div>
+  <div class="nav">
     {% include branding.html %}
     <p>
       <a href="{{ site.baseurl }}/about"><i class="iconfont icon-about"></i> About</a>
-      <a href="{{ site.baseurl }}/archive"><i class="iconfont icon-archive"></i> Archive</a>
+      <a href="{{ site.baseurl }}/archive"><i class="iconfont icon-archive"></i> Blog</a>
       <a href="https://github.com/dotnil"><i class="iconfont icon-github"></i> Code</a>
       <a href="https://500px.com/dotnil"><i class="iconfont icon-camera"></i> Photography</a>
     </p>
-  </section>
-  <script src="{{ site.baseurl }}/assets/js/frontpage.js"></script>
-  {% include scripts.html %}
+  </div>
+  <script src="{{ site.baseurl }}/assets/js/front.js"></script>
+  {% include ga.html %}
 </body>
 </html>
