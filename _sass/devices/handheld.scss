@@ -1,22 +1,28 @@
 @media (max-width: 1200px) {
 
+  html {
+    overflow: hidden;
+  }
+
   html,
   body {
     height: 100%;
-    overflow: hidden;
+  }
+
+  body {
+    transform: translateX(0);
+    transition: transform 0.2s;
+
+    &.nav-active {
+      transform: translateX(200px)
+    }
   }
 
   #page {
     position: relative;
     height: 100%;
-    transform: translateX(0);
-    transition: transform 0.2s;
     overflow: auto;
-
-    &.nav-active {
-      transform: translateX(200px);
-      overflow: visible;
-    }
+    -webkit-overflow-scrolling: touch;
   }
 
   #content {

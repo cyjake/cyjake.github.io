@@ -18,36 +18,36 @@
         {% include branding.html %}
       </div>
     </div>
-    <div id="toc" class="folded">
-      <label>
-        <i class="iconfont icon-cab"></i> 目录
-      </label>
-    </div>
-    <nav>
-      <label>
-        <i class="iconfont icon-nav"></i> 导航
-      </label>
-      <div class="entries">
-        <a href="{{ site.baseurl }}/" class="entry">
-          <i class="iconfont icon-home"></i> Home
-        </a>
-        {% for category in site.categories %}
-        <a href="{{ site.baseurl }}/{{ category[0] }}" class="category entry">
-          <i class="iconfont icon-{{category[0]}}"></i> {{ category[0] | capitalize }}
-        </a>
-        {% endfor %}
-        <a href="{{ site.baseurl }}/projects" class="category entry">
-          <i class="iconfont icon-projects"></i> Projects
-        </a>
-        <a href="{{ site.baseurl }}/about" class="entry">
-          <i class="iconfont icon-about"></i> About
-        </a>
-        <a href="{{ site.baseurl }}/archive" class="entry">
-          <i class="iconfont icon-archive"></i> Archive
-        </a>
-      </div>
-    </nav>
   </div>
+  <div id="toc" class="folded">
+    <label>
+      <i class="iconfont icon-cab"></i> 目录
+    </label>
+  </div>
+  <nav>
+    <label>
+      <i class="iconfont icon-nav"></i> 导航
+    </label>
+    <div class="entries">
+      <a href="{{ site.baseurl }}/" class="entry">
+        <i class="iconfont icon-home"></i> Home
+      </a>
+      {% for category in site.categories %}
+      <a href="{{ site.baseurl }}/{{ category[0] }}" class="category entry">
+        <i class="iconfont icon-{{category[0]}}"></i> {{ category[0] | capitalize }}
+      </a>
+      {% endfor %}
+      <a href="{{ site.baseurl }}/projects" class="category entry">
+        <i class="iconfont icon-projects"></i> Projects
+      </a>
+      <a href="{{ site.baseurl }}/about" class="entry">
+        <i class="iconfont icon-about"></i> About
+      </a>
+      <a href="{{ site.baseurl }}/archive" class="entry">
+        <i class="iconfont icon-archive"></i> Archive
+      </a>
+    </div>
+  </nav>
   <script src="/assets/js/app.js"></script>
   {% if page.script %}
   <script src="/assets/js/posts/{{ page.script }}.js"></script>
