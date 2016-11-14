@@ -17,7 +17,7 @@
   /**
    * the interval of the gallery slide show.
    */
-  var GALLERY_INTERVAL = 5000
+  var GALLERY_INTERVAL = 10000
 
 
   function elastic() {
@@ -78,7 +78,7 @@
       }, 0)
     }
     loader.src = data.url
-    img.opacity = 0
+    img.style.opacity = 0
   }
 
   var galleryIndex = 0
