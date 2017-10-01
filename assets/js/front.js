@@ -5,13 +5,7 @@
   var gallery = [
     { title: '上平宫',
       asset: '/assets/gallery/shangping.jpg',
-      url: 'https://ossgw.alicdn.com/creatives-assets/image/2016/11/13/51dd02e3-806b-4e6b-9670-564ed230544c.jpg' },
-    { title: '灯火通明',
-      asset: '/assets/gallery/alibaba.jpg',
-      url: 'https://ossgw.alicdn.com/creatives-assets/image/2016/11/13/60038278-fa46-4b0a-b59e-0578bd8f8913.jpg' },
-    { title: '划水',
-      asset: '/assets/gallery/row.jpg',
-      url: 'https://ossgw.alicdn.com/creatives-assets/image/2016/11/13/b7fc9777-faad-4c17-9344-d3c550187908.jpg' }
+      url: 'https://ossgw.alicdn.com/creatives-assets/image/2016/11/13/51dd02e3-806b-4e6b-9670-564ed230544c.jpg' }
   ]
 
   /**
