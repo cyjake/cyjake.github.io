@@ -4,7 +4,7 @@ exclude: [Gemfile, Gemfile.lock, Guardfile, README.md, CNAME, '*.scss']
 excerpt_separator: "\n\n"
 kramdown:
   syntax_highlighter: rouge
-gems:
+plugins:
   - jekyll-feed
   - jekyll-sitemap
 
