@@ -13,7 +13,6 @@
    */
   var GALLERY_INTERVAL = 10000
 
-
   function elastic() {
     var bg = document.querySelector('figure')
     var img = document.querySelector('figure img')
@@ -80,7 +79,7 @@
   function next() {
     if (++galleryIndex >= gallery.length) galleryIndex = 0
     load(galleryIndex, function() {
-      setTimeout(next, GALLERY_INTERVAL)
+      if (gallery.length > 1) setTimeout(next, GALLERY_INTERVAL)
     })
   }
 

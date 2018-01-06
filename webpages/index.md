@@ -22,7 +22,5 @@ A quote from [Typographic Web Design](http://www.typographicwebdesign.com/)
     This is a webpage
 
 
+- [jQuery KISSY Rosetta Stone]({{ site.baseurl }}/jquery-kissy-rosetta)
 - [Why SeaJS]({{ site.baseurl }}/why-seajs/zh)
-- [Git Reference](http://gitref.org/zh)
-- [Betrothal]({{ site.baseurl }}/betrothal)
-- [Wedding]({{ site.baseurl }}/wedding)
