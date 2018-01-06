@@ -129,7 +129,7 @@
     })
 
     Array.from(el.querySelectorAll('.heading')).reverse().some(function(el) {
-      var headingId = el.querySelector('a').href.split('#').pop()
+      var headingId = decodeURIComponent(el.querySelector('a').href.split('#').pop())
       var heading = document.getElementById(headingId)
       var scrollTop = window.scrollY + parseInt(getComputedStyle(heading).marginTop, 10)
 

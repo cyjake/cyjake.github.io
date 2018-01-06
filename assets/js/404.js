@@ -2,7 +2,7 @@
 
   'use strict'
 
-  function checkPath(path) {
+  function tryRedirectTo(path) {
     var xhr = new XMLHttpRequest()
 
     xhr.onload = function() {
@@ -26,16 +26,13 @@
   }
 
   function checkPost(post) {
-    post.slug = post.path.replace(/^\w+\/\w+\/\d+-\d+-\d+-/, '').replace(/\.\w+$/, '')
-    var pathWas = [].concat(post.categories, post.slug).join('/')
-    var path = [].concat(
-      post.categories,
-      post.date,
-      post.slug
-    ).join('/')
+    var slug = post.path.replace(/^\w+\/\w+\/\d+-\d+-\d+-/, '').replace(/\.\w+$/, '')
+    var pathWas = [].concat(post.categories, slug).join('/')
+    var path = [].concat(post.categories, post.date, slug).join('/')
 
-    if (location.href.indexOf(pathWas) > 0) {
-      checkPath(path)
+    if (location.href.indexOf(pathWas) > 0 ||
+        location.href.indexOf(post.path.replace(/^\w+\//, '')) > 0) {
+      tryRedirectTo(path)
       return true
     }
   }

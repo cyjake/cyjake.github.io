@@ -418,7 +418,8 @@ pointerup 支持还不算好，着急优化这个点击的同学，还可以尝�
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1, max-sacle=1
-">```
+">
+```
 
 这样，在 Chrome 中将不响应 double tap 放大的效果，不过并不是所有浏览器都这么聪明，而且
 禁用掉放大有点太狠了。
