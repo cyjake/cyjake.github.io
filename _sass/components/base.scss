@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .type p {
-  color: #222;
+  color: #222223;
 }
 
 
@@ -78,8 +78,8 @@ a:link {
 .type code,
 .type pre {
   font-family: Monaco, Consolas, monospace, serif;
-  line-height: 1.4;
-  font-size: 14px;
+  line-height: 1.5;
+  font-size: 90%;
 }
 
 .type pre {
@@ -90,12 +90,13 @@ address {
   font-style: normal;
 }
 
-p code {
+.type p code {
   border-radius: 2px;
   border: 1px solid #ddd;
   background: #eee;
   white-space: nowrap;
   padding: 0 3px;
+  font-size: 85%;
 }
 
 article {
@@ -111,6 +112,37 @@ article {
     border-radius: 2px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   }
+}
+
+.type table {
+  font-size: 14px;
+  display: table;
+  table-layout: fixed;
+  position: relative;
+  width: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  word-break: keep-all;
+  overflow: auto;
+  white-space: normal;
+}
+
+.type table td,
+.type table th {
+  padding: 6px 8px;
+  border: 1px solid #e8e8e8;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.type table th {
+  font-weight: 600;
+  color: #222223;
+}
+
+.type table tr:nth-child(odd) {
+  background-color: #fafafa;
 }
 
 

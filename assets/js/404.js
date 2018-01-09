@@ -27,12 +27,10 @@
 
   function checkPost(post) {
     var slug = post.path.replace(/^\w+\/\w+\/\d+-\d+-\d+-/, '').replace(/\.\w+$/, '')
-    var pathWas = [].concat(post.categories, slug).join('/')
-    var path = [].concat(post.categories, post.date, slug).join('/')
 
-    if (location.href.indexOf(pathWas) > 0 ||
-        location.href.indexOf(post.path.replace(/^\w+\//, '')) > 0) {
-      tryRedirectTo(path)
+    if (location.href.indexOf([post.categories, slug].join('/')) > 0 ||
+        location.href.indexOf([post.date, slug].join('/')) > 0) {
+      tryRedirectTo([post.categories, post.date, slug].join('/'))
       return true
     }
   }
