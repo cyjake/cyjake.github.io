@@ -64,7 +64,7 @@ Table.where(function() {
 Table.find('(foo = null or foo = ?) and deletedAt is null', 1)
 ```
 
-其实 Sequelize 这种查询方式 Jorma 也支持，但作为一个曾经的 Ruby on Rails 小粉丝，我还是认为 SQL-lie 的表达方式是最合适的。注意这里传入的字符串并不会直接被放到 `WHERE`，而是会被解析、过滤，最后再拼到 SQL 中去。
+其实 Sequelize 这种查询方式 Jorma 也支持，但作为一个曾经的 Ruby on Rails 小粉丝，我还是认为 SQL-like 的表达方式是最合适的。注意这里传入的字符串并不会直接被放到 `WHERE`，而是会被解析、过滤，最后再拼到 SQL 中去。
 
 如果认为 placeholder 形式不够直观，也可以用 [tagged template literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)：
 
