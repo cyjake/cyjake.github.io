@@ -109,7 +109,8 @@ article {
   }
 
   img[src$=".gif"],
-  img[src$=".png"] {
+  img[src$=".png"],
+  img[src$=".svg"] {
     box-shadow: none;
   }
 }
