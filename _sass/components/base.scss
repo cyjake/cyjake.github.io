@@ -3,6 +3,10 @@
  */
 body {
   margin: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  line-height: 24px;
 }
 
 html {
@@ -16,8 +20,12 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /*
- * Shamelessly copied from https://github.com/lepture/yue.css/blob/master/yue.css
+ * based on https://github.com/lepture/yue.css/blob/master/yue.css
  */
+.type {
+  color: #222223;
+}
+
 .type h1,
 .type h2,
 .type h3,
@@ -58,17 +66,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
-.type p {
-  color: #222223;
-}
-
-
-html, body {
-  -webkit-font-smoothing: antialiased;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  line-height: 1.5;
-}
-
 a:link {
   text-decoration: none;
   color: #394B61;
@@ -79,7 +76,7 @@ a:link {
 .type pre {
   font-family: Monaco, Consolas, monospace, serif;
   line-height: 1.5;
-  font-size: 90%;
+  font-size: 95%;
 }
 
 .type pre {
@@ -96,12 +93,10 @@ address {
   background: #eee;
   white-space: nowrap;
   padding: 0 3px;
-  font-size: 85%;
+  font-size: 90%;
 }
 
 article {
-  font-size: 16px;
-
   address {
     display: block;
     margin-top: 1em;
@@ -111,6 +106,11 @@ article {
     max-width: 100%;
     border-radius: 2px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  }
+
+  img[src$=".gif"],
+  img[src$=".png"] {
+    box-shadow: none;
   }
 }
 
@@ -145,6 +145,11 @@ article {
   background-color: #fafafa;
 }
 
+.type blockquote {
+  color: #8c8c8c;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
 
 /**
  * Branding
