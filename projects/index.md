@@ -3,15 +3,15 @@ layout: post
 title: To Craftsmanship / 项目
 ---
 
-## Jorma
+## Leoric
 
-[Jorma](https://github.com/dotnil/jorma) is an object-relational mapping library for morden JavaScript. It borrows a lot from Active Record of Ruby on Rails. With Jorma we can:
+[Leoric](https://github.com/dotnil/Leoric) is an object-relational mapping library for morden JavaScript. It borrows a lot from Active Record of Ruby on Rails. With Leoric we can:
 
 - have `snake_case` columns mapped to `camelCase` attributes automatically,
 - set up associations with `belongsTo()`, `hasOne()`, `hasMany()`, or `hasMany({ through })`,
 - query tables either including predefined associations or joining abitrary models.
 
-Jorma has a SQL expression parser built-in, hence make following queries possible:
+Leoric has a SQL expression parser built-in, hence make following queries possible:
 
 ```js
 Post.group('MONTH(createdAt) as month').count().having('count > 0')
