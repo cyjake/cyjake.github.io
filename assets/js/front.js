@@ -3,9 +3,9 @@
   'use strict'
 
   var gallery = [
-    { title: '上平宫',
-      asset: '/assets/gallery/shangping.jpg',
-      url: 'https://ossgw.alicdn.com/creatives-assets/image/2016/11/13/51dd02e3-806b-4e6b-9670-564ed230544c.jpg' }
+    { title: '',
+      asset: '/assets/gallery/village.jpg',
+      url: 'https://img.alicdn.com/tfscom/TB1xDG5lQvoK1RjSZFDXXXY3pXa.jpg' }
   ]
 
   /**
@@ -63,7 +63,7 @@
 
     loader.onload = function onload() {
       img.src = data.url
-      caption.innerHTML = data.title
+      caption.innerHTML = data.title || 'Untitled'
       elastic()
       fn()
       setTimeout(function() {

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Programming Jorma II
+title: Programming Leoric II
 ---
 
-上周末花了两天时间给 Jorma 增加 SQLite 支持。SQLite 是个极轻量的数据库，在轻应用架构中[非常流行](https://www.sqlite.org/mostdeployed.html)，常见于浏览器、移动设备的操作系统、以及一些较为大型的客户端软件（比如 Skeype、iTunes、微信）。它本身非常简单，数据库实体可以是一个文件，也可以待在内存：
+上周末花了两天时间给 Leoric 增加 SQLite 支持。SQLite 是个极轻量的数据库，在轻应用架构中[非常流行](https://www.sqlite.org/mostdeployed.html)，常见于浏览器、移动设备的操作系统、以及一些较为大型的客户端软件（比如 Skeype、iTunes、微信）。它本身非常简单，数据库实体可以是一个文件，也可以待在内存：
 
 ```js
 new Database('foo.sqlite3')
 new Database(':memory:')
 ```
 
-所以在考虑给 Jorma 支持 MySQL 之外哪些数据库的时候，我想着接起来会非常容易，第一个考虑的是它。但事实上，SQLite 的 Node.js 支持很弱。在 npmjs.com 里能搜到的客户端，比较成熟的大概是如下几个：
+所以在考虑给 Leoric 支持 MySQL 之外哪些数据库的时候，我想着接起来会非常容易，第一个考虑的是它。但事实上，SQLite 的 Node.js 支持很弱。在 npmjs.com 里能搜到的客户端，比较成熟的大概是如下几个：
 
 - better-sqlite3
 - dblite
@@ -44,7 +44,7 @@ db.run(sql, [...param], callback)   // queries other than SELECT
   { id, foo, bar } ]
 ```
 
-这种结构在查询单表的时候非常方便，但是在遇到 JOIN 的时候，比如 Jorma 里常用的示例 `Post.include('comments')`，上面这种结构会导致 `posts` 表中的字段被 `comments` 表中的同名字段覆盖：
+这种结构在查询单表的时候非常方便，但是在遇到 JOIN 的时候，比如 Leoric 里常用的示例 `Post.include('comments')`，上面这种结构会导致 `posts` 表中的字段被 `comments` 表中的同名字段覆盖：
 
 ```js
 [ { id: 1, content, post_id, ... } ]
@@ -72,7 +72,7 @@ client.query({ sql, nestTables: true }, (err, rows) => {
 })
 ```
 
-还有一个委曲求全的解决办法，就是用 identifier alias 把 `SELECT foo.*` 改成 `SELECT foo.id AS "foo:id"` 之类的，但开倒车不是维护 Jorma 的正确思路，我并没有考虑。
+还有一个委曲求全的解决办法，就是用 identifier alias 把 `SELECT foo.*` 改成 `SELECT foo.id AS "foo:id"` 之类的，但开倒车不是维护 Leoric 的正确思路，我并没有考虑。
 
 我最终选择的方式是[给 sqlite3 提 pr](https://github.com/mapbox/node-sqlite3/pull/932)，增加 `.all({ sql, rowMode }, [...param], callback)` 这种调用形式，同时把底层接口改为默认带上 `fields`：
 
@@ -90,7 +90,7 @@ db.all({ sql, rowMode: 'nest' }, (err, rows) {
 })
 ```
 
-但从 sqlite3 的历史 pr 处理情况来看，我非常担心这个 pr 要到此为止。sqlite3 模块的维护者并不十分热衷响应社区的反馈。我觉得，如果实在等不到，又实在想给 Jorma 支持 SQLite，我还是直接 fork 一个比较好。
+但从 sqlite3 的历史 pr 处理情况来看，我非常担心这个 pr 要到此为止。sqlite3 模块的维护者并不十分热衷响应社区的反馈。我觉得，如果实在等不到，又实在想给 Leoric 支持 SQLite，我还是直接 fork 一个比较好。
 
 哦对了，我好像还一直没说 dblite，这个客户端倒是提供了一个比较通用的 [`db.query()`](https://github.com/WebReflection/dblite#bootstrap) 方法，不需要我再判断应该用 `db.run()` 还是 `db.all()`。但它其实只是一个 `sqlite3` 命令的浅包装，与其他客户端直接接口调用比起来，它还得 spawn 一个进程来完成查询，不推荐使用。
 
@@ -116,4 +116,4 @@ CREATE TABLE foo (id INTEGER PRIMARY KEY AUTOINCREMENT);
 
 真是一些无聊的区别……
 
-总之，给 Jorma 增加 SQLite 支持所耗费的工作远超我的预计，希望我的 pr 能最终被合并吧。
+总之，给 Leoric 增加 SQLite 支持所耗费的工作远超我的预计，希望我的 pr 能最终被合并吧。

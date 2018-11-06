@@ -35,8 +35,11 @@
     }
   }
 
-  if (/^\/leoric/.test(location.pathname)) {
-    redirectTo('jorma')
+  if (/^\/jorma/.test(location.pathname)) {
+    redirectTo('leoric')
+  }
+  else if (/-jorma(-ii?\/?)$/.test(location.pathname)) {
+    redirectTo(location.pathname.slice(1).replace(/-jorma(-ii?\/?)$/, '-leoric$1'))
   }
   else if (checkPosts(window.posts)) {
     // nothing to do
