@@ -11,7 +11,7 @@
     z-index: 10;
     width: 320px;
     text-align: center;
-    color: #fff;
+    color: #f2f3f4;
 
     a:link,
     a:visited {
@@ -23,6 +23,18 @@
       display: inline-block;
       padding: 1px 2px;
       margin: 0 0.5em 0.5em 0;
+    }
+
+    a.branding {
+      background: none;
+
+      .last-name {
+        font-weight: bold;
+      }
+
+      .first-name {
+        color: rgba(255, 255, 255, 0.75);
+      }
     }
   }
 
