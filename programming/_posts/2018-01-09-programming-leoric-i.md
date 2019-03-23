@@ -3,16 +3,16 @@ layout: post
 title: Programming Leoric I
 ---
 
-2016 年初由于工作所需，我开发了一个比较粗浅的模块，用来映射 MySQL 表到 JavaScript 类，取名 xx-orm。两年后，Node.js 社区的 ORM 方案仍然是五花八门，在 npmjs.com 搜 orm 能让人挑花眼。我把 xx-orm 从应用代码中剥离出来，取名 ~~Leoric~~ [Leoric](https://github.com/dotnil/Leoric)，为这场混战添一把柴火。
+2016 年初由于工作所需，我开发了一个比较粗浅的模块，用来映射 MySQL 表到 JavaScript 类，取名 xx-orm。两年后，Node.js 社区的 ORM 方案仍然是五花八门，在 npmjs.com 搜 orm 能让人挑花眼。我把 xx-orm 从应用代码中剥离出来，取名 [Leoric](https://github.com/dotnil/Leoric)，为这场混战添一把柴火。
 
-Leoric 最朴素的需求其实很简单，是为了做字段名 `column name` 到属性名 `attribute name` 的映射。因为 DBA 通常使用 `snake_case` 来表达数据库名、表名、字段名，但是 JavaScript 默认的代码风格又是 `camelCase` 的。所以 Leoric 做的第一件事情就是映射字段名和属性名：
+Leoric 最朴素的需求是为了做字段名 `column_name` 到属性名 `attributeName` 的映射。因为 DBA 通常使用 `snake_case` 来表达数据库名、表名、字段名，但是 JavaScript 默认的代码风格又是 `camelCase` 的：
 
 | column name | attribute name |
 |-------------|----------------|
 | foo         | foo            |
 | foo_bar     | fooBar         |
 
-另一件事情，则是 Leoric 目前的一个 feature 或者 bug，无需 Model 属性定义以及 Migration。在开发 xx-orm 时，我们的表结构设计都是通过数据库服务所提供的设计工具进行。待设计完成后，只需继承 `Bone` 然后 `connect` 数据模型和数据库：
+另一件事情是 Leoric 目前的一个 feature 或者 bug，无需 Model 属性定义以及 Migration。在开发 xx-orm 时，我们的表结构设计都是通过数据库服务所提供的设计工具进行。待设计完成后，只需继承 `Bone` 然后 `connect` 数据模型和数据库：
 
 ```js
 const { Bone, connect } = require('Leoric')
@@ -31,7 +31,7 @@ User.attribtes
 
 `User` 的使用者只需要关心映射后的属性名 `attribute name`。可以阅读《[Leoric 基础](http://cyj.me/Leoric/zh/basics#%E5%91%BD%E5%90%8D%E7%BA%A6%E5%AE%9A)》一文了解更多相关内容。
 
-在这个朴素需求之上，Leoric 的绝大多数特性都是借鉴 Active Record 的，包括但不限于查询、关联关系的 API 设计。但对于熟悉 Node.js 但不了解 Ruby on Rails 的程序员来说，前面这句不会给人直观印象，所以下文将 Leoric 与 Node.js 流行的 ORM 库做个比较。
+在这个朴素需求之上，Leoric 的绝大多数特性都是借鉴 Active Record 的，比如查询、关联关系的 API 设计。但对于熟悉 Node.js 但不了解 Ruby on Rails 的程序员来说，前面这句不会给人直观印象，所以下文将 Leoric 与 Node.js 流行的 ORM 库做个比较。
 
 目前社区中最成熟的方案大致是 Sequelize、Bookshelf（大多数会直接用它底层的 Knex） 、还有 sails 框架所包含的 Waterline。Waterline 是一个志在兼收并蓄的模块，不仅能够映射关系型数据库，还可以把底层存储换成文件系统、Redis 等等。功能太过强大，惹不起惹不起，这里就不深入讨论了。
 
