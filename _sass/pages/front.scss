@@ -1,7 +1,14 @@
 #front {
-  background: #233333;
+  --gallery-tone: #333640;
+  --front-ink: #f2f3f4;
+  --front-panel: rgba(18, 25, 32, 0.28);
+  --front-panel-hover: rgba(18, 25, 32, 0.46);
+  --front-panel-border: rgba(255, 255, 255, 0.18);
+
+  background: var(--gallery-tone);
   margin: 0;
   height: 100%;
+  transition: background-color 0.5s ease;
 
   section {
     position: fixed;
@@ -11,36 +18,58 @@
     z-index: 10;
     width: 320px;
     text-align: center;
-    color: #f2f3f4;
-
-    a:link,
-    a:visited {
-      line-height: 1;
-      background: rgba(255, 255, 255, 0.75);
-    }
-
-    p a {
-      display: inline-block;
-      padding: 1px 2px;
-      margin: 0 0.5em 0.5em 0;
-    }
+    color: var(--front-ink);
+    transition: color 0.35s ease;
 
     a.branding {
       background: none;
-      opacity: 0.55;
-      transition: opacity 0.2s;
-
-      &:hover {
-        opacity: 0.75;
-      }
+      color: inherit;
 
       .last-name {
+        color: inherit;
         font-weight: bold;
       }
 
       .first-name {
-        color: rgba(255, 255, 255, 0.75);
+        color: inherit;
       }
+    }
+  }
+
+  .front-nav {
+    position: static;
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 4px;
+    border: 1px solid var(--front-panel-border);
+    border-radius: 999px;
+    background: var(--front-panel);
+    box-shadow: 0 8px 28px rgba(16, 24, 32, 0.12);
+    backdrop-filter: blur(14px) saturate(0.8);
+    -webkit-backdrop-filter: blur(14px) saturate(0.8);
+    transition: background-color 0.35s ease, border-color 0.35s ease;
+
+    a:link,
+    a:visited {
+      padding: 4px 10px;
+      border-radius: 999px;
+      color: inherit;
+      line-height: 20px;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+    }
+
+    a:hover,
+    a:focus-visible {
+      background: var(--front-panel-hover);
+    }
+
+    a:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 1px;
     }
   }
 
@@ -56,9 +85,12 @@
     margin: 0;
 
     img {
-      display: inline-block;
+      display: block;
+      width: 100%;
+      height: 100%;
       margin: 0;
-      transition: 0.2s margin, 0.5s opacity;
+      object-fit: cover;
+      transition: 0.5s opacity;
       opacity: 0;
     }
   }
@@ -74,14 +106,27 @@
   }
 }
 
-@media (min-aspect-ratio: 3/2) {
-  .frontpage .bg img {
-    width: 100%;
-  }
+#front[data-theme='dark'] {
+  --front-ink: #172532;
+  --front-panel: rgba(248, 250, 251, 0.42);
+  --front-panel-hover: rgba(248, 250, 251, 0.62);
+  --front-panel-border: rgba(255, 255, 255, 0.5);
 }
 
-@media(max-aspect-ratio: 3/2) {
-  .frontpage .bg img {
-    height: 100%;
+@media (max-width: 520px) {
+  #front {
+    section {
+      width: calc(100% - 32px);
+      margin-left: 0;
+      transform: translateX(-50%);
+    }
+
+    .front-nav {
+      a:link,
+      a:visited {
+        padding-right: 7px;
+        padding-left: 7px;
+      }
+    }
   }
 }
