@@ -26,6 +26,8 @@
   }
 
   #content {
+    box-sizing: border-box;
+    min-height: 100%;
     max-width: 680px;
     padding: 3em 1em 1em;
     margin-right: auto;

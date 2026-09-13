@@ -1,36 +1,22 @@
 ---
 layout: post
-title: To Craftsmanship / 项目
+title: Things I've Built / 我做的项目
 ---
 
 ## Leoric
 
-[Leoric](https://github.com/dotnil/Leoric) is an object-relational mapping library for morden JavaScript. It borrows a lot from Active Record of Ruby on Rails. With Leoric we can:
+[Leoric](https://github.com/cyjake/leoric) is a JavaScript ORM for MySQL, PostgreSQL, and SQLite. Its Active Record-inspired API keeps models, associations, and SQL-like queries expressive. Give it a try when you want an ORM that stays close to SQL.
 
-- have `snake_case` columns mapped to `camelCase` attributes automatically,
-- set up associations with `belongsTo()`, `hasOne()`, `hasMany()`, or `hasMany({ through })`,
-- query tables either including predefined associations or joining abitrary models.
+Leoric 是一个支持 MySQL、PostgreSQL 和 SQLite 的 JavaScript ORM。它借鉴 Active Record，让模型、关联和类 SQL 查询保持简洁；如果你希望 ORM 不远离 SQL，不妨试试看。
 
-Leoric has a SQL expression parser built-in, hence make following queries possible:
+## SSH Config Parser for Node.js
 
-```js
-Post.group('MONTH(createdAt) as month').count().having('count > 0')
-```
+[ssh-config](https://github.com/cyjake/ssh-config) parses and stringifies OpenSSH configuration files. It is useful for command-line tools and apps that need to inspect or generate SSH settings without treating them as loose text.
 
-## Instaport
+ssh-config 用来解析和生成 OpenSSH 配置文件，适合需要读取、修改或创建 SSH 设置的命令行工具与应用。下次要用代码处理 `~/.ssh/config` 时，可以试试它。
 
-[Instaport](https://github.com/erzu/instaport) is a consolidated solution for browser module authoring and code sharing between Node.js and browser. It features three parts:
+## 葉遊
 
-- a module loader for browser side module loading,
-- a koa/express middleware for server side module transpiling, and
-- a compiler for browser module transpiling and bundling to make them production ready.
+[葉遊](https://github.com/cyjake/yeyou) is a web app for turning text with furigana (振り仮名) into clean, shareable images. It is handy for Japanese study notes and annotated quotations—open it and make one of your own.
 
-Instaport has been used in several web applications at Alimama.com for more than three years and serves them well. For more introduction please visit the repo.
-
-Instaport 是一个集成前端模块化方案，方便前后端模块共享。它包含三个组件：
-
-- 用于浏览器模块加载的模块加载器；
-- 用于转换 CommonJS/`es6 module` 的 Koa/Express 中间件；以及
-- 用于转换、打包前端代码的编译工具。
-
-Instaport 已经在阿里妈妈事业部多个产品中使用多年，久经考验，欢迎访问仓库了解更多。
+葉遊可以把带振假名的文字制作成简洁、便于分享的图片，适合日语学习笔记和带注音的摘录。打开它，做一张自己的文字图片吧。

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Binaries in the Bit Sea / 码农
+title: Tools & Toys / 工具与玩具
 ---
 
 A computer hobbyist?

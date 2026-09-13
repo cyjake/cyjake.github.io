@@ -1,50 +1,11 @@
 ---
+layout: post
+title: 404 Not Found
 permalink: /404.html
+hide_nav: true
+style: 404
 ---
 
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>众里寻他千百度</title>
-  <link rel="stylesheet" type="text/css" href="/assets/css/404.css">
-</head>
-<body class="hidden">
-  <div id="page">
-    <h1>404</h1>
-    <div id="doudou">
-      <img src="/assets/img/doudou.jpg" alt="doudou the kitty"/>
-    </div>
-    <div id="guide">
-      <div id="words">
-        <h2>你要找的东西不见鸟</h2>
-        <p>这个域名被我搬了好多次，原先的版本，被我转移到了 <a href="http://cyj.me/2011">cyj.me/2011</a>。
-          而再往前，还有过 <a href="http://cyj.me/2012">cyj.me/blog</a> ，这些都已经不再有了。</p>
-        <p>左手边这只猫，叫豆豆。她是我和我女朋友领养的第一只小猫。和所有勾引你到这个页面的链接一样，她也不见了。
-          它们都曾属于过我，然而都走上了各自的路。</p>
-        <p>所以，亲们，向前看，到 <a href="http://cyj.me">cyj.me</a> 再玩会儿把！</p>
-      </div>
-      <div id="dispatcher">
-        <h2>你要找的东西也可能在</h2>
-        <ul>
-          <li><a href="http://cyj.me/2008/">cyj.me/2008</a></li>
-          <li><a href="http://cyj.me/2011/">cyj.me/2011</a></li>
-          <li><a href="http://cyj.me/2012/">cyj.me/2012</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <script>
-  var posts = [{% for post in site.posts %}
-    {
-      categories: {{ post.categories | jsonify }},
-      path: {{ post.path | jsonify }},
-      title: {{ post.title | jsonify }},
-      date: {{ post.date | date: '%Y/%m/%d' | jsonify }}
-    }{% unless forloop.last %},{% endunless %}
-  {% endfor %}
-  ]
-  </script>
-  <script src="/assets/js/404.js"></script>
-</body>
-</html>
+<p><img src="{{ '/assets/img/doudou.jpg' | relative_url }}" alt="Doudou the cat"></p>
+
+<p>That page isn't here. <a href="{{ '/' | relative_url }}">Back home</a>.</p>
