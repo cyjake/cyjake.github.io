@@ -113,6 +113,11 @@ article {
   img[src$=".svg"] {
     box-shadow: none;
   }
+
+  video {
+    display: block;
+    max-width: 100%;
+  }
 }
 
 .type table {
