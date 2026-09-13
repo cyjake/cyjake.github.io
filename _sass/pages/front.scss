@@ -27,6 +27,12 @@
 
     a.branding {
       background: none;
+      opacity: 0.55;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.75;
+      }
 
       .last-name {
         font-weight: bold;
