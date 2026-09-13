@@ -28,18 +28,15 @@ visit. You may find them on [500px][500px] and
 Besides current version, I've done a few versions of [cyj.me]({{ site.baseurl }})
 before. You may find these contents boring if you don't understand any Chinese.
 
-- [2012][2012] is a Octopress build,
 - [2011][2011] is a static mirror of my [Stacey](http://staceyapp.com/) app, and
 - [2008][2008] is a Emacs Muse build.
 
 在这个主页之前，我还曾有过如下几个小网站，用来介绍我自己：
 
-- [2012][2012] 是我曾经的博客；
 - [2011][2011] 是我曾经的主页；
 - [2008][2008] 是我初入计算机世界的主页。
 
 
 [2008]: http://cyj.me/2008
 [2011]: http://cyj.me/2011
-[2012]: http://cyj.me/2012
 [500px]: https://500px.com/chenyjake
