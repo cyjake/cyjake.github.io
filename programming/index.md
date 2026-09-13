@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Programming for Life / 活到老，码到老
+title: Programming for Fun / 编程作乐
 ---
 
 {% for category in site.categories %}

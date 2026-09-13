@@ -87,6 +87,12 @@ address {
   font-style: normal;
 }
 
+#content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .type p code {
   border-radius: 2px;
   border: 1px solid #ddd;
@@ -97,6 +103,8 @@ address {
 }
 
 article {
+  flex: 1 0 auto;
+
   address {
     display: block;
     margin-top: 1em;
@@ -260,6 +268,16 @@ nav {
 
 
 #footer {
+  flex: 0 0 auto;
   margin: 2em auto 1em;
   text-align: center;
+
+  .branding {
+    opacity: 0.55;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
 }

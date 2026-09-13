@@ -19,7 +19,7 @@
       </div>
     </div>
   </div>
-  <div id="toc" class="folded">
+  {% unless page.hide_nav %}<div id="toc" class="folded">
     <label>
       <i class="iconfont icon-cab"></i> 目录
     </label>
@@ -47,8 +47,8 @@
         <i class="iconfont icon-archive"></i> Blog
       </a>
     </div>
-  </nav>
-  <script src="/assets/js/app.js"></script>
+  </nav>{% endunless %}
+  {% unless page.hide_nav %}<script src="/assets/js/app.js"></script>{% endunless %}
   {% if page.script %}
   <script src="/assets/js/posts/{{ page.script }}.js"></script>
   {% endif %}

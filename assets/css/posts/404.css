@@ -1,0 +1,24 @@
+#page {
+  min-height: 100vh;
+  margin-top: 0;
+}
+
+#content {
+  min-height: 100vh;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+article img {
+  display: block;
+  margin: 1.5em auto;
+  opacity: 0.85;
+  filter: grayscale(55%) brightness(1.12);
+}
