@@ -38,7 +38,7 @@
   var image = document.querySelector('figure img')
   var caption = document.querySelector('figure figcaption')
   var loader = new Image()
-  var galleryIndex = 0
+  var galleryIndex = Math.floor(Math.random() * gallery.length)
 
   function load(index) {
     var data = gallery[index]
