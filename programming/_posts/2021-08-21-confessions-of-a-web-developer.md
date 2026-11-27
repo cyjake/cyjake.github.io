@@ -102,32 +102,18 @@ source: https://www.yuque.com/alpa/notes/fgoek8
 
 ## 参考链接
 
-[1]: [https://www.bilibili.com/video/BV1iC4y187nT](https://www.bilibili.com/video/BV1iC4y187nT)
-
-[2]: [https://www.gnu.org/software/emacs-muse/](https://www.gnu.org/software/emacs-muse/)
-
-[3]: [https://www.w3.org/Provider/Style/URI](https://www.w3.org/Provider/Style/URI)
-
-[4]: [https://book.douban.com/subject/3590768/](https://book.douban.com/subject/3590768/)
-
-[5]: [http://ued.taobao.com/](http://ued.taobao.com/)
-
-[6]: [https://re.taobao.com/](https://re.taobao.com/)
-
-[7]: [https://zuanshi.taobao.com/](https://zuanshi.taobao.com/)
-
-[8]: [https://github.com/thx/mux.alimama.com/tree/old-mux](https://github.com/thx/mux.alimama.com/tree/old-mux)
-
-[9]: [https://github.com/erzu/yen](https://github.com/erzu/yen)
-
-[10]: [https://thx.github.io/](https://thx.github.io/)
-
-[11]: [https://github.com/cyjake/darko](https://github.com/cyjake/darko)
-
-[12]: [https://leoric.js.org/](https://leoric.js.org/)
-
-[13]: [https://github.com/erzu/porter](https://github.com/erzu/porter)
-
-[14]: [https://www.yuque.com/yuque/blog/xsrv8e](https://www.yuque.com/yuque/blog/xsrv8e)
-
-[15]: [https://www.yuque.com/about/careers](https://www.yuque.com/about/careers)
+1. <https://www.bilibili.com/video/BV1iC4y187nT>
+2. <https://www.gnu.org/software/emacs-muse/>
+3. <https://www.w3.org/Provider/Style/URI>
+4. <https://book.douban.com/subject/3590768/>
+5. <http://ued.taobao.com/>
+6. <https://re.taobao.com/>
+7. <https://zuanshi.taobao.com/>
+8. <https://github.com/thx/mux.alimama.com/tree/old-mux>
+9. <https://github.com/erzu/yen>
+10. <https://thx.github.io/>
+11. <https://github.com/cyjake/darko>
+12. <https://leoric.js.org/>
+13. <https://github.com/erzu/porter>
+14. <https://www.yuque.com/yuque/blog/xsrv8e>
+15. <https://www.yuque.com/about/careers>
