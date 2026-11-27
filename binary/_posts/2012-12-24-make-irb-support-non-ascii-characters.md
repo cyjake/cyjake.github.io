@@ -1,6 +1,7 @@
 ---
 title: Make irb Support non-ASCII Characters
 layout: post
+lang: en
 ---
 
 For non-English speaking programmers, it's a bless that we can input some non-ASCII characters

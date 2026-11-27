@@ -1,227 +1,146 @@
 ;(function() {
-
   'use strict'
 
-  /**
-   * breed generations of descendants to complete the tree
-   */
-  function breed(parentNode, generations) {
-    while (generations-- > 0) {
-      var intermediateNode = {
-        level: parentNode.level,
-        parentNode: parentNode,
-        text: 'Untitled',
-        nodes: []
-      }
-      parentNode.nodes.push(intermediateNode)
-      parentNode = intermediateNode
-    }
+  var desktop = window.matchMedia('(min-width: 1200px)')
+  var header = document.querySelector('.site-header')
+  var navToggle = document.querySelector('.nav-toggle')
+  var toc = document.querySelector('#toc')
+  var articleBody = document.querySelector('.article-body')
 
-    return parentNode
+  function closeNav() {
+    if (!header || !navToggle) return
+    header.classList.remove('nav-open')
+    navToggle.setAttribute('aria-expanded', 'false')
   }
 
-  /**
-   * parse headings into a tree
-   */
-  function parseHeadings(el) {
-    var headings = el.querySelectorAll('h1, h2, h3, h4')
-    var root = { nodes: [] }
-    var prevNode = root
-    var prevLevel = 0
+  if (header && navToggle) {
+    navToggle.addEventListener('click', function() {
+      var isOpen = header.classList.toggle('nav-open')
+      navToggle.setAttribute('aria-expanded', isOpen.toString())
+    })
 
-    for (var i = 0, len = headings.length; i < len; i++) {
-      var heading = headings[i]
-      var level = parseInt(heading.tagName.toLowerCase().slice(1), 10)
+    header.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', closeNav)
+    })
 
-      if (!heading.id) {
-        heading.id = 'section-' + i.toString(36)
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && header.classList.contains('nav-open')) {
+        closeNav()
+        navToggle.focus()
       }
+    })
 
-      var node = {
-        level: level,
-        id: heading.id,
-        text: heading.innerText,
-        offsetTop: heading.offsetTop,
-        nodes: []
+    document.addEventListener('click', function(event) {
+      if (header.classList.contains('nav-open') && !header.contains(event.target)) {
+        closeNav()
       }
+    })
+  }
 
-      if (level - prevLevel > 1) {
-        prevNode = breed(prevNode, level - prevLevel - 1)
-        prevLevel = prevNode.level
-      }
-      else if (prevLevel - level >= 0) {
-        while (prevLevel - level >= 0) {
-          prevNode = prevNode.parentNode
-          prevLevel = prevNode.level
+  function setToCState() {
+    if (!toc) return
+    var toggle = toc.querySelector('.toc-toggle')
+    if (desktop.matches) {
+      toc.classList.remove('folded')
+      toggle.setAttribute('aria-expanded', 'true')
+    } else {
+      toc.classList.add('folded')
+      toggle.setAttribute('aria-expanded', 'false')
+    }
+  }
+
+  function renderToC() {
+    if (!toc || !articleBody) return
+
+    var headings = Array.from(articleBody.querySelectorAll('h2, h3, h4'))
+    if (headings.length < 2) return
+
+    var list = document.createElement('ol')
+    headings.forEach(function(heading, index) {
+      if (!heading.id) heading.id = 'section-' + index.toString(36)
+
+      var item = document.createElement('li')
+      var link = document.createElement('a')
+      link.href = '#' + heading.id
+      link.textContent = heading.textContent
+      item.className = 'heading heading' + heading.tagName.slice(1)
+      item.appendChild(link)
+      list.appendChild(item)
+    })
+
+    toc.appendChild(list)
+    // Keep the label outside the scrolling list so it can extend into the gutter.
+    var preview = document.createElement('span')
+    preview.className = 'toc-preview'
+    preview.setAttribute('aria-hidden', 'true')
+    preview.hidden = true
+    toc.appendChild(preview)
+
+    function updatePreview() {
+      var link = desktop.matches && (list.querySelector('a:hover') || list.querySelector('a:focus-visible'))
+      preview.hidden = true
+      if (!link) return
+
+      var row = link.getBoundingClientRect()
+      var rail = list.getBoundingClientRect()
+      if (row.bottom <= rail.top || row.top >= rail.bottom) return
+      preview.textContent = link.textContent
+      preview.hidden = false
+      var center = row.top + row.height / 2
+      var top = Math.max(4, Math.min(center - preview.offsetHeight / 2, window.innerHeight - preview.offsetHeight - 4))
+      preview.style.top = (top - rail.top) + 'px'
+    }
+
+    list.addEventListener('pointerover', updatePreview)
+    list.addEventListener('pointerleave', updatePreview)
+    list.addEventListener('focusin', updatePreview)
+    list.addEventListener('focusout', function() { window.requestAnimationFrame(updatePreview) })
+    list.addEventListener('scroll', updatePreview, { passive: true })
+    window.addEventListener('resize', updatePreview)
+    toc.hidden = false
+    toc.querySelector('.toc-toggle').addEventListener('click', function() {
+      var isFolded = toc.classList.toggle('folded')
+      this.setAttribute('aria-expanded', (!isFolded).toString())
+    })
+
+    toc.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (!desktop.matches) {
+          toc.classList.add('folded')
+          toc.querySelector('.toc-toggle').setAttribute('aria-expanded', 'false')
         }
-      }
-
-      node.parentNode = prevNode
-      prevNode.nodes.push(node)
-      prevNode = node
-      prevLevel = level
-    }
-
-    return root
-  }
-
-  /**
-   * format nodes into ordered list element
-   */
-  function renderNodes(nodes) {
-    var ol = document.createElement('ol')
-
-    for (var i = 0, len = nodes.length; i < len; i++) {
-      var node = nodes[i]
-      var li = document.createElement('li')
-      var a = document.createElement('a')
-
-      a.href = '#' + node.id
-      a.text = node.text
-
-      li.appendChild(a)
-      li.classList.add('heading', 'heading' + node.level)
-      if (node.level === 2) li.classList.add('folded')
-
-      ol.appendChild(li)
-
-      if (node.nodes && node.nodes.length) {
-        li.appendChild(renderNodes(node.nodes))
-      }
-    }
-
-    return ol
-  }
-
-  function onClickToC(e) {
-    if (e.target.closest('#toc label')) {
-      toggleToC(e)
-    }
-    else if (e.target.closest('#toc a[href]') && document.body.offsetWidth < 1200) {
-      var entry = e.target.closest('#toc a[href]')
-      var headingId = entry.href.split('#').pop()
-      document.querySelector('#toc').classList.add('folded')
-      setTimeout(function() {
-        var heading = document.getElementById(headingId)
-        var marginTop = window.getComputedStyle
-          ? getComputedStyle(heading).marginTop
-          : heading.currentStyle.marginTop
-        var delta = heading.offsetHeight + parseInt(marginTop, 10)
-        // adjust scrollTop to reveal the target heading
-        document.querySelector('#page').scrollTop -= delta
-      }, 1)
-    }
-  }
-
-  function toggleToC(e) {
-    var el = document.querySelector('#toc')
-
-    if (el.classList.contains('folded')) {
-      el.classList.remove('folded')
-    } else {
-      el.classList.add('folded')
-    }
-  }
-
-  function toggleToCEntry(el) {
-    Array.from(el.querySelectorAll('.active'), function(el) {
-      el.classList.remove('active')
+      })
     })
 
-    Array.from(el.querySelectorAll('.heading')).reverse().some(function(el) {
-      var headingId = decodeURIComponent(el.querySelector('a').href.split('#').pop())
-      var heading = document.getElementById(headingId)
-      var scrollTop = window.scrollY + parseInt(getComputedStyle(heading).marginTop, 10)
+    var scheduled = false
+    function updateActiveHeading() {
+      var activeLink = null
+      headings.forEach(function(heading) {
+        if (heading.getBoundingClientRect().top <= 160) {
+          activeLink = toc.querySelector('a[href="#' + CSS.escape(heading.id) + '"]')
+        }
+      })
 
-      if (scrollTop > heading.offsetTop) {
-        el.classList.add('active')
-        return true
+      toc.querySelectorAll('a').forEach(function(link) {
+        var isActive = link === activeLink
+        link.classList.toggle('active', isActive)
+        if (isActive) link.setAttribute('aria-current', 'location')
+        else link.removeAttribute('aria-current')
+      })
+      scheduled = false
+    }
+
+    window.addEventListener('scroll', function() {
+      if (!scheduled) {
+        scheduled = true
+        window.requestAnimationFrame(updateActiveHeading)
       }
-    })
+    }, { passive: true })
 
-    Array.from(el.querySelectorAll('.heading2'), function(el) {
-      el.classList.add('folded')
-    })
-
-    try {
-      el.querySelector('.active')
-        .closest('.heading2').classList.remove('folded')
-    } catch (err) {
-      // ignored on purpose
-    }
+    setToCState()
+    updateActiveHeading()
   }
 
-  /**
-   * initiate the table of contents
-   */
-  function renderToC(root) {
-    var el = document.querySelector('#toc')
-
-    if (el && root && root.nodes[0] && root.nodes[0].nodes.length) {
-      el.appendChild(renderNodes(root.nodes[0].nodes))
-    } else {
-      el.classList.add('hidden')
-    }
-  }
-
-  function sticky(el) {
-    var topWas = parseInt(el.dataset.offsetTop, 10)
-
-    if (!topWas) {
-      el.dataset.offsetTop = el.offsetTop
-      topWas = el.offsetTop
-    }
-
-    if (window.scrollY >= topWas - 30) {
-      el.classList.add('sticky')
-    } else {
-      el.classList.remove('sticky')
-    }
-  }
-
-  function onScroll() {
-    sticky(document.querySelector('#toc'))
-    sticky(document.querySelector('nav'))
-    toggleToCEntry(document.querySelector('#toc'))
-  }
-
-  function debounce(fn, wait) {
-    var timer
-
-    return function(e) {
-      if (timer) clearTimeout(timer)
-      timer = setTimeout(function() {
-        fn(e)
-        timer = null
-      }, wait)
-    }
-  }
-
-  function toggleNav() {
-    if (document.body.classList.contains('nav-active')) {
-      document.body.classList.remove('nav-active')
-    } else {
-      document.body.classList.add('nav-active')
-    }
-  }
-
-  function main() {
-    var articleEl = document.querySelector('#content article')
-
-    if (articleEl) {
-      renderToC(parseHeadings(articleEl))
-      document.querySelector('#toc').addEventListener('click', onClickToC, false)
-    }
-
-    if (document.body.offsetWidth >= 1200) {
-      document.querySelector('#toc').classList.remove('folded')
-      window.addEventListener('scroll', debounce(onScroll, 50), false)
-    } else {
-      document.querySelector('nav > label')
-        .addEventListener('click', toggleNav, false)
-    }
-  }
-
-  main()
-
+  if (desktop.addEventListener) desktop.addEventListener('change', setToCState)
+  renderToC()
 })()

@@ -1,4 +1,7 @@
-<a href="{{ site.baseurl }}/" class="branding">
+{% assign lang = page.lang | default: site.lang | default: 'zh-CN' %}
+{% assign locale_root = '' %}
+{% if lang == 'en' %}{% assign locale_root = '/en' %}{% endif %}
+<a href="{{ locale_root | append: '/' | relative_url }}" class="branding">
   <span class="last-name roll" data-title="CHEN">CHEN</span>
   <span class="first-name roll" data-title="Yangjian">Yangjian</span>
 </a>

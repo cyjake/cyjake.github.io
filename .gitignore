@@ -1,5 +1,6 @@
 .sass-cache
 _site
+.preview
 
 .DS_Store
 .*.swp

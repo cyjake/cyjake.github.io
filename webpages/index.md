@@ -1,9 +1,10 @@
 ---
 layout: post
-title: This is A Webpage / 这是一张网页
+title: 这是一张网页
+lang: zh-CN
 ---
 
-A quote from [Typographic Web Design](http://www.typographicwebdesign.com/)
+引自 [Typographic Web Design](http://www.typographicwebdesign.com/)：
 
     THIS IS A WEBPAGE
 

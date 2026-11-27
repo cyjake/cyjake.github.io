@@ -1,7 +1,15 @@
+{% assign lang = page.lang | default: site.lang | default: 'zh-CN' %}
 <meta charset="utf-8">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-<title>{% if page.title %}{{ page.title }} &raquo; {% endif %}CHEN Yangjian</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fafbf9">
+<title>{% if page.title %}{{ page.title }} · {% endif %}CHEN Yangjian</title>
 <link rel="canonical" href="{{ page.url | absolute_url }}">
-<link rel="stylesheet" type="text/css" href="/assets/css/app.css">
+{% if page.i18n_url %}
+{% assign alternate_lang = 'zh-CN' %}
+{% if lang == 'zh-CN' %}{% assign alternate_lang = 'en' %}{% endif %}
+<link rel="alternate" hreflang="{{ lang }}" href="{{ page.url | absolute_url }}">
+<link rel="alternate" hreflang="{{ alternate_lang }}" href="{{ page.i18n_url | absolute_url }}">
+{% endif %}
+<link rel="stylesheet" type="text/css" href="{{ '/assets/css/app.css' | relative_url }}">
 {% feed_meta %}

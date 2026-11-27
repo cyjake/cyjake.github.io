@@ -1,6 +1,6 @@
 # jekyll settings
 permalink: pretty
-exclude: [Gemfile, Gemfile.lock, Guardfile, Readme.md, CNAME, '*.scss']
+exclude: [Gemfile, Gemfile.lock, Guardfile, Readme.md, CNAME, package.json, scripts, '*.scss']
 excerpt_separator: "\n\n"
 kramdown:
   syntax_highlighter: rouge
@@ -10,6 +10,7 @@ plugins:
 
 title: Chen Yangjian
 description: Everything about Chen Yangjian.
+lang: zh-CN
 url: https://cyj.me
 baseurl: ""
 repository: cyjake/cyjake.github.io

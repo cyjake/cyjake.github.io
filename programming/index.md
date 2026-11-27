@@ -1,6 +1,10 @@
 ---
 layout: post
-title: Programming for Fun / 编程作乐
+title: 编程作乐
+lang: zh-CN
+section: programming
+i18n_url: /en/programming/
+body_class: archive-index
 ---
 
 {% for category in site.categories %}

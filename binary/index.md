@@ -1,9 +1,11 @@
 ---
 layout: post
-title: Tools & Toys / 工具与玩具
+title: 工具与玩具
+lang: zh-CN
+section: programming
+i18n_url: /en/binary/
+body_class: archive-index
 ---
-
-A computer hobbyist?
 
 计算机爱好者？别闹了，既然靠着它吃饭，总得对吃饭的家伙事儿讲究一点。
 

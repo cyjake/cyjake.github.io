@@ -1,0 +1,50 @@
+zh-CN:
+  switch_label: English
+  index_switch_label: English index
+  target_lang: en
+  skip: 跳到正文
+  home: 首页
+  menu: 菜单
+  navigation: 站点导航
+  footer: 文字、代码与摄影。
+  toc: 本页目录
+  blog_statistics: 博客统计
+  entries: 篇文章
+  since: 始于 2012
+  nav:
+    blog: 博文
+    programming: 编程作乐
+    life: 过日子
+    projects: 做点东西
+    about: 关于我
+    code: 代码
+    photography: 摄影
+  categories:
+    programming: 编程
+    life: 生活
+    binary: 工具与玩具
+en:
+  switch_label: 中文
+  index_switch_label: 中文分类索引
+  target_lang: zh-CN
+  skip: Skip to content
+  home: Home
+  menu: Menu
+  navigation: Site navigation
+  footer: Writing, code & photographs.
+  toc: On this page
+  blog_statistics: Blog statistics
+  entries: entries
+  since: Since 2012
+  nav:
+    blog: Blog
+    programming: Programming
+    life: Life
+    projects: Projects
+    about: About
+    code: Code
+    photography: Photography
+  categories:
+    programming: Programming
+    life: Life
+    binary: Tools & Toys

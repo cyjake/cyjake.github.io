@@ -1,0 +1,29 @@
+---
+lang: en
+i18n_url: /
+---
+{% assign t = site.data.i18n[page.lang] %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body id="front" data-theme="light">
+  <figure>
+    <img alt="">
+    <figcaption aria-live="polite"></figcaption>
+  </figure>
+  <section>
+    <h1>{% include branding.html %}</h1>
+    <nav class="front-nav" aria-label="{{ t.navigation }}">
+      <a href="{{ '/en/about/' | relative_url }}">{{ t.nav.about }}</a>
+      <a href="{{ '/en/blog/' | relative_url }}">{{ t.nav.blog }}</a>
+      <a href="https://github.com/cyjake" target="_blank" rel="noopener">{{ t.nav.code }}</a>
+      <a href="https://500px.com/_kotori" target="_blank" rel="noopener">{{ t.nav.photography }}</a>
+      <a href="{{ page.i18n_url | relative_url }}" hreflang="zh-CN" lang="zh-CN">中文</a>
+    </nav>
+  </section>
+  <script src="{{ site.baseurl }}/assets/js/front.js"></script>
+  {% include ga.html %}
+</body>
+</html>

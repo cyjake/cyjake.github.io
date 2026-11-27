@@ -19,11 +19,12 @@
     width: 320px;
     text-align: center;
     color: var(--front-ink);
-    transition: color 0.35s ease;
+    transition: none;
 
     a.branding {
       background: none;
-      color: inherit;
+      color: var(--front-ink);
+      transition: none;
 
       .last-name {
         color: inherit;
@@ -54,11 +55,13 @@
 
     a:link,
     a:visited {
+      flex-shrink: 0;
       padding: 4px 10px;
       border-radius: 999px;
       color: inherit;
       line-height: 20px;
       text-decoration: none;
+      white-space: nowrap;
       transition: background-color 0.2s ease;
     }
 
@@ -122,11 +125,25 @@
     }
 
     .front-nav {
+      font-size: 14px;
+
       a:link,
       a:visited {
         padding-right: 7px;
         padding-left: 7px;
       }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  #front .front-nav {
+    font-size: 13px;
+
+    a:link,
+    a:visited {
+      padding-right: 5px;
+      padding-left: 5px;
     }
   }
 }

@@ -1,0 +1,41 @@
+{% assign lang = page.lang | default: site.lang | default: 'zh-CN' %}
+{% assign t = site.data.i18n[lang] %}
+{% assign locale_root = '' %}
+{% if lang == 'en' %}{% assign locale_root = '/en' %}{% endif %}
+{% assign current_section = page.section %}
+{% if page.date %}{% assign current_section = 'blog' %}{% endif %}
+{% assign switch_url = page.i18n_url %}
+{% assign switch_label = t.switch_label %}
+{% if page.date and switch_url == nil %}
+  {% assign switch_label = t.index_switch_label %}
+  {% assign post_section = page.categories[0] | default: 'blog' %}
+  {% if lang == 'en' %}
+    {% assign switch_url = '/' | append: post_section | append: '/' %}
+  {% else %}
+    {% assign switch_url = '/en/' | append: post_section | append: '/' %}
+  {% endif %}
+{% endif %}
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="{{ locale_root | append: '/' | relative_url }}" class="site-home" aria-label="Chen Yangjian — {{ t.home }}">
+      <img src="{{ '/favicon.ico' | relative_url }}" alt="" width="32" height="32">
+    </a>
+    {% include branding.html %}
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5.5h14M3 10h14M3 14.5h14"/></svg>
+      <span>{{ t.menu }}</span>
+    </button>
+    <nav id="site-nav" aria-label="{{ t.navigation }}">
+      <div class="entries">
+        <a href="{{ locale_root | append: '/blog/' | relative_url }}" class="entry{% if current_section == 'blog' %} active{% endif %}"{% if current_section == 'blog' %} aria-current="page"{% endif %}>{{ t.nav.blog }}</a>
+        <a href="{{ locale_root | append: '/programming/' | relative_url }}" class="entry{% if current_section == 'programming' %} active{% endif %}"{% if current_section == 'programming' %} aria-current="page"{% endif %}>{{ t.nav.programming }}</a>
+        <a href="{{ locale_root | append: '/life/' | relative_url }}" class="entry{% if current_section == 'life' %} active{% endif %}"{% if current_section == 'life' %} aria-current="page"{% endif %}>{{ t.nav.life }}</a>
+        <a href="{{ locale_root | append: '/projects/' | relative_url }}" class="entry{% if current_section == 'projects' %} active{% endif %}"{% if current_section == 'projects' %} aria-current="page"{% endif %}>{{ t.nav.projects }}</a>
+        <a href="{{ locale_root | append: '/about/' | relative_url }}" class="entry{% if current_section == 'about' %} active{% endif %}"{% if current_section == 'about' %} aria-current="page"{% endif %}>{{ t.nav.about }}</a>
+        {% if switch_url %}
+        <a class="entry language-switch" href="{{ switch_url | relative_url }}" hreflang="{{ t.target_lang }}" lang="{{ t.target_lang }}">{{ switch_label }}</a>
+        {% endif %}
+      </div>
+    </nav>
+  </div>
+</header>

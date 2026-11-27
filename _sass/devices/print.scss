@@ -1,5 +1,27 @@
 @media only print {
-  nav {
-    display: none
+  .site-header,
+  #toc,
+  .nav-toggle,
+  .blog-stats {
+    display: none !important;
+  }
+
+  body,
+  html {
+    background: white;
+  }
+
+  #page {
+    max-width: none;
+    padding: 0;
+  }
+
+  .article-body {
+    max-width: none;
+    font-size: 11pt;
+  }
+
+  #footer {
+    margin-top: 32px;
   }
 }

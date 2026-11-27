@@ -2,6 +2,7 @@
 title: A Rails Bug Odyssey
 caption: Functional Testing with Authlogic and Cancan
 layout: post
+lang: en
 ---
 
 Yesterday one of the adminitrators of [ux.etao.com](http://ux.etao.com), which is a

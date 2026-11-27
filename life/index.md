@@ -1,6 +1,10 @@
 ---
 layout: post
-title: To Life / 过日子
+title: 过日子
+lang: zh-CN
+section: life
+i18n_url: /en/life/
+body_class: archive-index
 ---
 
 {% for category in site.categories %}
