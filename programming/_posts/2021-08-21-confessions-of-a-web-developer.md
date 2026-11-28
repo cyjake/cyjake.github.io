@@ -14,6 +14,8 @@ source: https://www.yuque.com/alpa/notes/fgoek8
 
 但这些心路历程都是后话，在大三的时候，我开始用一个笔记软件，或者说是一个编辑器的笔记插件，Emacs Muse[<sup>[2]</sup>](https://www.gnu.org/software/emacs-muse/)，用这个软件记笔记，生成个人主页，又顺带学习 HTML 和 CSS。
 
+![用 Emacs Muse 做的个人主页]({{ site.baseurl }}/assets/img/confessions-of-a-web-developer/01-redacted.png)
+
 和 Emacs Muse 类似的比较新的例子可能是 Jekyll 或者 Gitbook。如今我对这个工具的使用方式早已忘却，站点源码也已经不见，庆幸当时 `wget` 了全站镜像，至今这个站点仍可访问，反而是后来那些 WordPress 搭建的个人博客全都散佚在比特海里。
 
 写毕业论文的时候，正值北京奥运会，互联网环境空前开放，彼时还有一句非常有趣的号召，Cool URIs don't change[<sup>[3]</sup>](https://www.w3.org/Provider/Style/URI)，几乎就是当时我对心目中的 Web 的最佳总结，想要寻找的知识都在那里，仿佛亘古不变。
@@ -36,9 +38,13 @@ source: https://www.yuque.com/alpa/notes/fgoek8
 
 然后接手了钻石展位[<sup>[7]</sup>](https://zuanshi.taobao.com/)，算是入行前端以来第一个比较完整、正式的产品，但很快我被调整为全栈研发，学习 Ruby on Rails，参与维护 BannerMaker（基于 Flash 的 swf banner），负责一个名为创意中心的新版（基于 HTML）。
 
+![创意中心的模板详情页]({{ site.baseurl }}/assets/img/confessions-of-a-web-developer/03-redacted.png)
+
 创意中心的起点是当时两个主管的意志杂糅，偏设计的静态物料生成、偏技术的动态广告物料管理，最终在后者取得成功，很好地服务了当时的直通车站外投放需求。
 
 这个版本完成之后，我陷入了一个雕花的阶段，开始琢磨怎么样更好地抽象一个 300x250 尺寸的 HTML，如何拆解其中的轮播组件、请求模块，以及试图实现一个 WYSIWYG 的 HTML 编辑器。
+
+![HTML 创意编辑器的图层与画布]({{ site.baseurl }}/assets/img/confessions-of-a-web-developer/04-redacted.png)
 
 这一年还用 Ruby on Rails 做了当时新成立的一淘 UX 部门网站[<sup>[8]</sup>](https://github.com/thx/mux.alimama.com/tree/old-mux)：
 
@@ -59,6 +65,8 @@ source: https://www.yuque.com/alpa/notes/fgoek8
 在一个封闭格式上实现这些的难度很大，我们选择开放格式 SVG 作为中间格式，在这个基础上设计尺寸适配和配色规则，从而实现前两者。但在第三点上很快遇到了性能瓶颈，用 Node.js 调用 SVG 或者 HTML 转 JPEG 显然效率不够高，最后我们采用 Rust 实现了文字渲染和图层叠加逻辑，凭借极高的性能大幅简化了千人千面的图文创意投放技术方案。
 
 在这个阶段，许多技术攻坚已经是团队中成长起来的中坚力量完成，我自己在技术上的投入则放到更加基础的模块。在这些工作中，我实现并开源了 ORM 库 Leoric[<sup>[12]</sup>](https://leoric.js.org/)、前端构建工具 Porter[<sup>[13]</sup>](https://github.com/erzu/porter) （作为一个取名鬼才，我因此被小伙伴揶揄很久），这两个库也被我称为“献给互联网的两毛钱”（my own two cents for the web）。
+
+![创意中心首页]({{ site.baseurl }}/assets/img/confessions-of-a-web-developer/07-redacted.png)
 
 16/17 年我们没有多少犹豫，一方面完善技术方案，一方面对外输出，掺和了天猫双十一、Lazada、AliExpress 等等业务，想要成为集团内的图文创意事实标准。如今回顾，创意中心支持的业务遍布集团，可能我们真的做到了。
 
