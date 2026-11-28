@@ -78,13 +78,6 @@
     overflow-x: auto;
   }
 
-  .blog-intro {
-    margin-bottom: 36px;
-  }
-
-  #footer {
-    margin-top: 64px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -92,24 +85,17 @@
     font-size: 36px;
   }
 
-  .blog-intro {
-    font-size: 16px;
-  }
-
-  .blog-stats {
-    gap: 16px;
+  .post-page:lang(zh) .article-header h1 {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
   }
 
   .archive-year li {
     column-gap: 12px;
+    padding-block: 8px;
   }
 
   .archive-title {
     font-size: 18px;
-  }
-
-  #footer {
-    align-items: flex-start;
-    flex-direction: column;
   }
 }

@@ -41,7 +41,7 @@ Windows 2003，Windows 7 之类的服务，用远程桌面连接一下即可。�
 - Arch Linux
 
 Arch Linux 是我单凭个人喜好选择的最近一款 Linux 发行版，滚动发布，永远最新，
-Wiki 建设的非常好，社区反馈也一直很快。我的 [VPS](/binary/when-arch-linux-met-linode/)
+Wiki 建设的非常好，社区反馈也一直很快。我的 [VPS](/binary/2012/12/02/when-arch-linux-met-linode/)
 装的也是它，跑了一年多，中间只因我的个人疏忽强制更新而出了一次篓子，其余顺滑如丝。
 
 ### Arch Linux 安装步骤

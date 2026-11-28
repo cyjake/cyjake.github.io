@@ -20,10 +20,6 @@
     padding: 40px 28px;
   }
 
-  .site-header .branding {
-    display: none;
-  }
-
   .site-header .site-home {
     display: inline-flex;
     align-self: flex-start;
@@ -62,23 +58,12 @@
     min-height: calc(100dvh - 80px);
   }
 
-  .blog-intro {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-
-  .blog-stats {
-    flex: 0 0 auto;
-    margin-top: 5px;
-  }
 
   .archive-year {
     display: grid;
     grid-template-columns: 112px minmax(0, 1fr);
     gap: 32px;
-    padding: 40px 0;
+    padding: 20px 0;
   }
 
   .archive-year > h2 {
@@ -116,7 +101,7 @@
   .archive-year {
     grid-template-columns: 136px minmax(0, 1fr);
     gap: 40px;
-    padding: 48px 0;
+    padding: 24px 0;
   }
 
   .archive-year > h2 {
@@ -127,23 +112,57 @@
     grid-template-columns: 72px minmax(0, 1fr) auto;
   }
 
-  .post-page #toc {
-    position: fixed;
-    top: 50%;
-    left: calc(var(--sidebar-width) + 20px);
-    z-index: 10;
-    width: 38px;
-    margin: 0;
-    transform: translateY(-50%);
+}
+
+@media (min-width: 1200px) and (hover: hover) {
+  :is(.post-page, .blog-index, .archive-index) #page {
+    max-width: none;
+    padding-inline: 0;
+    --column-width: 720px;
+    --reading-start: calc((clamp(0px, 100%, 1280px) - var(--column-width)) / 2);
   }
 
-  .post-page #toc .toc-toggle {
+  :is(.blog-index, .archive-index) #page {
+    --column-width: clamp(0px, calc(100% - 192px), 960px);
+    --toc-width: 80px;
+  }
+
+  :is(.post-page, .blog-index, .archive-index) #content article { max-width: none; }
+
+  :is(.post-page, .blog-index, .archive-index) .article-header,
+  .post-page .post-end {
+    max-width: var(--column-width);
+    margin-inline-start: var(--reading-start);
+  }
+
+  :is(.post-page, .blog-index, .archive-index) .article-layout {
+    display: grid;
+    grid-template-columns: var(--reading-start) var(--column-width) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  :is(.post-page, .blog-index, .archive-index) .article-body {
+    grid-area: 1 / 2;
+    width: 100%;
+  }
+
+  #toc {
+    grid-area: 1 / 3;
+    position: sticky;
+    top: 32px;
+    z-index: 10;
+    width: 34px;
+    justify-self: end;
+    margin: 0 16px;
+  }
+
+  #toc .toc-toggle {
     display: none;
   }
 
-  .post-page #toc ol {
-    max-height: calc(100vh - 48px);
-    max-height: calc(100dvh - 48px);
+  #toc ol {
+    max-height: calc(100vh - 64px);
+    max-height: calc(100dvh - 64px);
     margin: 0;
     padding: 4px;
     overflow-y: auto;
@@ -151,54 +170,63 @@
     scrollbar-width: thin;
   }
 
-  .post-page #toc a {
+  #toc a {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     height: 24px;
     padding: 0;
     font-size: 0;
   }
 
-  .post-page #toc a::before {
-    content: '';
-    width: 16px;
-    height: 2px;
-    background: var(--muted);
+  #toc a::before {
+    // A single glyph keeps its rasterized stroke weight at fractional zoom.
+    content: '—' / '';
+    color: var(--muted);
+    font: 16px/1 Arial, sans-serif;
   }
 
-  .post-page #toc .heading3 a::before { width: 12px; }
-  .post-page #toc .heading4 a::before { width: 8px; }
-
-  .post-page #toc a:hover::before,
-  .post-page #toc a:focus-visible::before,
-  .post-page #toc a.active::before {
-    width: 24px;
-    background: var(--ink);
+  #toc .heading3 a::before {
+    color: color-mix(in srgb, var(--muted) 80%, var(--paper));
   }
 
-  .toc-preview:not([hidden]) {
-    display: block;
-    position: absolute;
-    left: 100%;
-    width: max-content;
-    max-width: 260px;
-    padding: 6px 10px;
-    border-radius: 4px;
-    background: var(--ink);
-    color: var(--paper);
-    overflow-wrap: anywhere;
-    pointer-events: none;
-  }
-}
-
-@media (min-width: 1350px) {
-  .post-page .article-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 720px) minmax(0, 1fr);
+  #toc .heading4 a::before {
+    color: color-mix(in srgb, var(--muted) 65%, var(--paper));
   }
 
-  .post-page .article-body {
-    grid-column: 2;
-    width: 100%;
+  #toc a.active::before {
+    color: var(--ink);
+  }
+
+  #toc:not(.outline-dismissed):is(:hover, :has(a:focus-visible)) {
+    width: var(--toc-width, 272px);
+    max-width: calc(100% - 32px);
+
+    ol {
+      padding: 4px 8px;
+      border-radius: 6px;
+      background: var(--paper);
+      box-shadow: 0 0 0 1px var(--line), 0 4px 16px rgba(0, 0, 0, 0.06);
+    }
+
+    a {
+      display: block;
+      height: auto;
+      min-height: 24px;
+      padding: 3px 6px;
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    a::before {
+      display: none;
+    }
+
+    .heading3 a { padding-left: 18px; }
+    .heading4 a { padding-left: 30px; }
+
+    a.active {
+      color: var(--ink);
+    }
   }
 }

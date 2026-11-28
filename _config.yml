@@ -11,7 +11,7 @@ plugins:
 title: Chen Yangjian
 description: Everything about Chen Yangjian.
 lang: zh-CN
-url: https://cyj.me
+url: https://www.cyj.me
 baseurl: ""
 repository: cyjake/cyjake.github.io
 author:

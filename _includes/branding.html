@@ -1,7 +1,5 @@
-{% assign lang = page.lang | default: site.lang | default: 'zh-CN' %}
-{% assign locale_root = '' %}
-{% if lang == 'en' %}{% assign locale_root = '/en' %}{% endif %}
-<a href="{{ locale_root | append: '/' | relative_url }}" class="branding">
-  <span class="last-name roll" data-title="CHEN">CHEN</span>
-  <span class="first-name roll" data-title="Yangjian">Yangjian</span>
+{% assign home_url = '/' %}
+{% if page.lang == 'en' %}{% assign home_url = '/en/' %}{% endif %}
+<a href="{{ home_url | relative_url }}" class="site-home" aria-label="Chen Yangjian — {{ t.home }}">
+  <img src="{{ '/favicon.ico' | relative_url }}" alt="" width="32" height="32">
 </a>

@@ -1,28 +1,5 @@
 ---
+layout: front
 lang: zh-CN
 i18n_url: /en/
 ---
-{% assign t = site.data.i18n[page.lang] %}
-<!DOCTYPE html>
-<html lang="{{ page.lang }}">
-<head>
-  {% include head.html %}
-</head>
-<body id="front" data-theme="light">
-  <figure>
-    <img alt="">
-    <figcaption aria-live="polite"></figcaption>
-  </figure>
-  <section>
-    <h1>{% include branding.html %}</h1>
-    <nav class="front-nav" aria-label="{{ t.navigation }}">
-      <a href="{{ '/about/' | relative_url }}">{{ t.nav.about }}</a>
-      <a href="{{ '/blog/' | relative_url }}">{{ t.nav.blog }}</a>
-      <a href="https://github.com/cyjake" target="_blank" rel="noopener">{{ t.nav.code }}</a>
-      <a href="https://500px.com/_kotori" target="_blank" rel="noopener">{{ t.nav.photography }}</a>
-      <a href="{{ page.i18n_url | relative_url }}" hreflang="en" lang="en">English</a>
-    </nav>
-  </section>
-  <script src="{{ site.baseurl }}/assets/js/front.js"></script>
-</body>
-</html>

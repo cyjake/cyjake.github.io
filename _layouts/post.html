@@ -1,5 +1,10 @@
 {% assign lang = page.lang | default: site.lang | default: 'zh-CN' %}
 {% assign t = site.data.i18n[lang] %}
+{% if page.body_class == 'blog-index' or page.body_class == 'archive-index' %}
+  {% assign toc_label = t.archive_years %}
+{% elsif page.date %}
+  {% assign toc_label = t.toc %}
+{% endif %}
 <!DOCTYPE html>
 <html lang="{{ lang }}">
 <head>
@@ -36,18 +41,15 @@
           {% endif %}
         </header>
         <div class="article-layout">
-          {% if page.date and page.hide_nav != true %}
-          <aside id="toc" hidden class="folded" aria-label="{{ t.toc }}">
-            <button class="toc-toggle" type="button" aria-expanded="false">{{ t.toc }}</button>
+          {% if toc_label and page.hide_nav != true %}
+          <aside id="toc" hidden class="folded" aria-label="{{ toc_label }}">
+            <button class="toc-toggle" type="button" aria-expanded="false">{{ toc_label }}</button>
           </aside>
           {% endif %}
           <div class="article-body" itemprop="articleBody">{{ content }}</div>
         </div>
+        {% if page.date %}<div class="post-end" aria-hidden="true">❦</div>{% endif %}
       </article>
-      <footer id="footer">
-        {% include branding.html %}
-        <span>{{ t.footer }}</span>
-      </footer>
     </main>
   </div>
   {% unless page.hide_nav %}<script src="{{ '/assets/js/app.js' | relative_url }}"></script>{% endunless %}

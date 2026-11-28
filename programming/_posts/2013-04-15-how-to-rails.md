@@ -72,7 +72,7 @@ mini_magick 即 ImageMagick 的 Ruby 接口封装，已经略有些坑；到了 
 
 好啦，我当你搞定了，不管用什么环境开发 Rails 项目，都有相应的方案，即使是支持程度不佳的
 Windows 操作系统，我们也可以曲线救国，通过
-[安装虚拟机来跑环境]({{ site.baseurl }}/binary/arch-linux-in-vbox)
+[安装虚拟机来跑环境](/binary/2013/06/19/arch-linux-in-vbox/)
 
 ## Mac 环境安装
 

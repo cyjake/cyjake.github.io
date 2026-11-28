@@ -7,29 +7,27 @@
       title: '',
       src: '/assets/gallery/village-1280.webp',
       srcset: '/assets/gallery/village-1280.webp 1280w, /assets/gallery/village-2560.webp 2560w',
-      tone: '#333640',
-      theme: 'light'
+      tone: '#333640'
     },
     {
       title: 'July 2025',
+      captionInk: '#16232c',
       src: '/assets/gallery/2025-07-20-r0001998-1280.webp',
       srcset: '/assets/gallery/2025-07-20-r0001998-1280.webp 1280w, /assets/gallery/2025-07-20-r0001998-2560.webp 2560w',
-      tone: '#94b8d4',
-      theme: 'dark'
+      tone: '#94b8d4'
     },
     {
       title: 'July 2020',
       src: '/assets/gallery/2020-07-13-dsc00639-1280.webp',
       srcset: '/assets/gallery/2020-07-13-dsc00639-1280.webp 1280w, /assets/gallery/2020-07-13-dsc00639-2560.webp 2560w',
-      tone: '#7c98ba',
-      theme: 'dark'
+      tone: '#7c98ba'
     },
     {
       title: 'October 2025',
+      captionInk: '#16232c',
       src: '/assets/gallery/2025-10-03-r0002395-1280.webp',
       srcset: '/assets/gallery/2025-10-03-r0002395-1280.webp 1280w, /assets/gallery/2025-10-03-r0002395-2560.webp 2560w',
-      tone: '#c0c8d0',
-      theme: 'dark'
+      tone: '#c0c8d0'
     }
   ]
 
@@ -44,7 +42,6 @@
     var data = gallery[index]
 
     document.body.style.setProperty('--gallery-tone', data.tone)
-    document.body.dataset.theme = data.theme
     image.style.opacity = 0
 
     loader.onload = function onload() {
@@ -52,6 +49,7 @@
       image.srcset = data.srcset
       image.sizes = '100vw'
       caption.textContent = data.title
+      caption.style.color = data.captionInk || ''
 
       window.requestAnimationFrame(function() {
         image.style.opacity = 1
@@ -72,6 +70,44 @@
     load(galleryIndex)
   }
 
+  function setupNavHighlight() {
+    var nav = document.querySelector('.front-nav')
+    var activeLink = null
+    var labelRange = document.createRange()
+
+    function highlight(link) {
+      nav.classList.toggle('highlight-moving', Boolean(activeLink && link && activeLink !== link))
+      nav.classList.toggle('highlight-visible', Boolean(link))
+      activeLink = link
+      if (!link) return
+      // The separator makes some hit areas asymmetric. Follow the label itself.
+      labelRange.selectNodeContents(link)
+      var label = labelRange.getBoundingClientRect()
+      var bounds = nav.getBoundingClientRect()
+      var hitArea = link.getBoundingClientRect()
+      nav.style.setProperty('--highlight-x', (label.left + label.width / 2 - bounds.left) + 'px')
+      nav.style.setProperty('--highlight-y', (hitArea.top + hitArea.height / 2 - bounds.top) + 'px')
+      nav.style.setProperty('--label-width', label.width + 'px')
+      nav.classList.toggle('highlight-language', link.classList.contains('front-language'))
+    }
+
+    nav.addEventListener('pointerover', function(event) {
+      var link = event.target.closest('a')
+      if (event.pointerType !== 'touch' && link && link !== activeLink) highlight(link)
+    })
+    nav.addEventListener('pointerleave', function() {
+      highlight(nav.querySelector('a:focus-visible'))
+    })
+    nav.addEventListener('focusin', function(event) {
+      if (event.target.matches('a:focus-visible')) highlight(event.target)
+    })
+    nav.addEventListener('focusout', function(event) {
+      if (!nav.contains(event.relatedTarget)) highlight(null)
+    })
+    window.addEventListener('resize', function() { highlight(activeLink) })
+  }
+
+  setupNavHighlight()
   load(galleryIndex)
 
 })()

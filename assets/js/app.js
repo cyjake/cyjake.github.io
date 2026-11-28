@@ -1,7 +1,7 @@
 ;(function() {
   'use strict'
 
-  var desktop = window.matchMedia('(min-width: 1200px)')
+  var desktop = window.matchMedia('(min-width: 1200px) and (hover: hover)')
   var header = document.querySelector('.site-header')
   var navToggle = document.querySelector('.nav-toggle')
   var toc = document.querySelector('#toc')
@@ -52,7 +52,10 @@
   function renderToC() {
     if (!toc || !articleBody) return
 
-    var headings = Array.from(articleBody.querySelectorAll('h2, h3, h4'))
+    var archive = articleBody.querySelector('.archive-list')
+    var headings = Array.from(archive
+      ? archive.querySelectorAll('.archive-year > h2')
+      : articleBody.querySelectorAll('h2, h3, h4'))
     if (headings.length < 2) return
 
     var list = document.createElement('ol')
@@ -69,34 +72,16 @@
     })
 
     toc.appendChild(list)
-    // Keep the label outside the scrolling list so it can extend into the gutter.
-    var preview = document.createElement('span')
-    preview.className = 'toc-preview'
-    preview.setAttribute('aria-hidden', 'true')
-    preview.hidden = true
-    toc.appendChild(preview)
-
-    function updatePreview() {
-      var link = desktop.matches && (list.querySelector('a:hover') || list.querySelector('a:focus-visible'))
-      preview.hidden = true
-      if (!link) return
-
-      var row = link.getBoundingClientRect()
-      var rail = list.getBoundingClientRect()
-      if (row.bottom <= rail.top || row.top >= rail.bottom) return
-      preview.textContent = link.textContent
-      preview.hidden = false
-      var center = row.top + row.height / 2
-      var top = Math.max(4, Math.min(center - preview.offsetHeight / 2, window.innerHeight - preview.offsetHeight - 4))
-      preview.style.top = (top - rail.top) + 'px'
+    function allowOutline() {
+      toc.classList.remove('outline-dismissed')
     }
-
-    list.addEventListener('pointerover', updatePreview)
-    list.addEventListener('pointerleave', updatePreview)
-    list.addEventListener('focusin', updatePreview)
-    list.addEventListener('focusout', function() { window.requestAnimationFrame(updatePreview) })
-    list.addEventListener('scroll', updatePreview, { passive: true })
-    window.addEventListener('resize', updatePreview)
+    toc.addEventListener('pointerenter', allowOutline)
+    toc.addEventListener('focusin', allowOutline)
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && desktop.matches && toc.matches(':hover, :focus-within')) {
+        toc.classList.add('outline-dismissed')
+      }
+    })
     toc.hidden = false
     toc.querySelector('.toc-toggle').addEventListener('click', function() {
       var isFolded = toc.classList.toggle('folded')

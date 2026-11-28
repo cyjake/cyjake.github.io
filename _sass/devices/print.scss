@@ -1,8 +1,7 @@
 @media only print {
   .site-header,
   #toc,
-  .nav-toggle,
-  .blog-stats {
+  .nav-toggle {
     display: none !important;
   }
 
@@ -19,9 +18,5 @@
   .article-body {
     max-width: none;
     font-size: 11pt;
-  }
-
-  #footer {
-    margin-top: 32px;
   }
 }

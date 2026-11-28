@@ -1,0 +1,23 @@
+{% assign t = site.data.i18n[page.lang] %}
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+<head>
+  {% include head.html %}
+</head>
+<body id="front">
+  <figure>
+    <img alt="">
+    <figcaption aria-live="polite"></figcaption>
+  </figure>
+  <nav class="front-nav" aria-label="{{ t.navigation }}">
+    <a href="{{ 'about/' | prepend: page.url | relative_url }}">{{ t.nav.about }}</a>
+    <a href="{{ 'blog/' | prepend: page.url | relative_url }}">{{ t.nav.blog }}</a>
+    <a href="https://github.com/cyjake" target="_blank" rel="noopener">{{ t.nav.code }}</a>
+    <div class="front-nav-end">
+      <a href="https://500px.com/p/_kotori" target="_blank" rel="noopener">{{ t.nav.photography }}</a>
+      <a class="front-language" href="{{ page.i18n_url | relative_url }}" hreflang="{{ t.target_lang }}" aria-label="{{ t.front_switch_label }}"><span lang="{{ t.target_lang }}">{{ t.front_switch_short }}</span></a>
+    </div>
+  </nav>
+  <script src="{{ '/assets/js/front.js' | relative_url }}"></script>
+</body>
+</html>

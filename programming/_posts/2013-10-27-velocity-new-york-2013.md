@@ -4,7 +4,7 @@ layout: post
 ---
 
 2013年10月11日，首次踏出国门，前往纽约参加 Velocity New York 2013，时间计划得比较充裕，
-因此有幸玩了两三天，感兴趣的同学可以看专门的[准备工作与游记](/life/touring-new-york)。
+因此有幸玩了两三天，感兴趣的同学可以看专门的[准备工作与游记](/life/2013/10/27/touring-new-york/)。
 
 先说总体印象，Velocity 技术大会的副标题是 Web 性能与运维，议题重点关注是性能优化与系统
 运行、维护的部分，本次大会的议题，性能方面专注于移动设备上 HTML5 的优化，运维方面，则有大多
@@ -580,7 +580,7 @@ Dropbox 的工程师 Kun Do 分享了 Dropbox 的云计算经历。
 - 可定制性差
 
 于是换到了数据中心，尽管它也有其问题，尤其是团队没有自行维护硬件的经验。而且还遇到奇葩情况，
-机房的 [HVAC](zh.wikipedia.org/zh-cn/Category:HVAC) 会喷洒不明液体到他们的服务器上。
+机房的 [HVAC](https://zh.wikipedia.org/zh-cn/Category:HVAC) 会喷洒不明液体到他们的服务器上。
 
 但是好处也很明显：
 
