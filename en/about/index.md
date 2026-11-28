@@ -11,7 +11,7 @@ A programmer, a photographer, and a daydreamer.
 ## Work
 
 - Code: [GitHub](https://github.com/cyjake)
-- Photography: [500px][500px] and [Instagram](https://www.instagram.com/sansmana/)
+- Photography: [500px][500px] and [Instagram](https://www.instagram.com/_cyjake)
 - Video: [Bilibili](https://space.bilibili.com/7689372/#!/) and [Youku](http://i.youku.com/u/UODA5NzU2MjQ=/videos)
 
 ## History

@@ -13,7 +13,7 @@ i18n_url: /en/about/
 作为一个全面发展，全面平庸的人，我有许多爱好。相应的，这些爱好都跑到了相应的网站上：
 
 - 我写的代码：[GitHub](https://github.com/cyjake)
-- 我拍的照片：[500px][500px]・[Instagram](https://www.instagram.com/sansmana/)
+- 我拍的照片：[500px][500px]・[Instagram](https://www.instagram.com/_cyjake)
 - 我做的视频：[哔哩哔哩](https://space.bilibili.com/7689372/#!/)・[优酷](http://i.youku.com/u/UODA5NzU2MjQ=/videos)
 
 ## 故纸堆
