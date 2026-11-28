@@ -6,7 +6,7 @@ section: about
 i18n_url: /about/
 ---
 
-A programmer, a photographer, and a daydreamer. Currently a frontend engineer at [alimama.com](https://www.alimama.com).
+A programmer, a photographer, and a daydreamer.
 
 ## Work
 

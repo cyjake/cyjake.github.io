@@ -10,9 +10,9 @@ source: https://www.yuque.com/alpa/notes/fgoek8
 
 2004 年就读浙江大学软件工程专业，在学校时印象最深刻的是学校内部的各种网站比如 cc98.org、缘网、以及各种 ftp，通过这些触手可及、五花八门的资源，快速拓宽了视野，领略到一个乐于分享、热切交流的~~互联网~~局域网。
 
-冲击最大的则是大三暑假的 Java 训练营，三周培训、一周实操，量产 Java 熟练工，对这门行业有了全新的认识。在这门课之前，心目中的程序员是纪录片《操作系统革命》[<sup>[1]</sup>](https://www.bilibili.com/video/BV1iC4y187nT?from=search&seid=10030910082143008802) 中的 Linus Torvalds、Richard Stallman、甚或对着比尔盖茨说“I'm your worst nightmare”的中二大叔 Eric Raymond。在这门课之后，写写 Java servlet 和 jsp 养家糊口近在眼前，和前者似乎云泥之别。
+冲击最大的则是大三暑假的 Java 训练营，三周培训、一周实操，量产 Java 熟练工，对这门行业有了全新的认识。在这门课之前，心目中的程序员是纪录片《操作系统革命》[<sup>[1]</sup>](https://www.bilibili.com/video/BV1iC4y187nT) 中的 Linus Torvalds、Richard Stallman、甚或对着比尔盖茨说“I'm your worst nightmare”的中二大叔 Eric Raymond。在这门课之后，写写 Java servlet 和 jsp 养家糊口近在眼前，和前者似乎云泥之别。
 
-但这些心路历程都是后话，在大三的时候，我开始用一个笔记软件，或者说是一个编辑器的笔记插件，Emacs Muse[<sup>[2]</sup>](https://www.gnu.org/software/emacs-muse/)，用这个软件记笔记，生成个人主页，又顺带学习 HTML 和 CSS，攒出来这样一个网页：![image.png]({{ site.baseurl }}/assets/img/confessions-of-a-web-developer/01.png)
+但这些心路历程都是后话，在大三的时候，我开始用一个笔记软件，或者说是一个编辑器的笔记插件，Emacs Muse[<sup>[2]</sup>](https://www.gnu.org/software/emacs-muse/)，用这个软件记笔记，生成个人主页，又顺带学习 HTML 和 CSS。
 
 和 Emacs Muse 类似的比较新的例子可能是 Jekyll 或者 Gitbook。如今我对这个工具的使用方式早已忘却，站点源码也已经不见，庆幸当时 `wget` 了全站镜像，至今这个站点仍可访问，反而是后来那些 WordPress 搭建的个人博客全都散佚在比特海里。
 
@@ -34,15 +34,11 @@ source: https://www.yuque.com/alpa/notes/fgoek8
 
 进入广告部门的第一件事情是一个“二跳页面”[<sup>[6]</sup>](https://re.taobao.com/)，这些广告行业术语并不是特别复杂，某种程度来说甚至有些过于直白，但对当时的我来说还是充满了新鲜感。这个页面和淘宝搜索结果页非常像，只是展示内容由广告引擎控制，借着熟悉业务，我记得花了足足两到三周才完成，没想到这页面过于健壮，2010 年上线后，默默陪伴广告业务日进斗金，直到两年后才有新的需求说，要不改个版吧。
 
-然后接手了钻石展位[<sup>[7]</sup>](https://zuanshi.taobao.com/)，算是入行前端以来第一个比较完整、正式的产品，但很快我被调整为全栈研发，学习 Ruby on Rails，参与维护 BannerMaker（基于 Flash 的 swf banner），负责一个名为创意中心的新版（基于 HTML）：
+然后接手了钻石展位[<sup>[7]</sup>](https://zuanshi.taobao.com/)，算是入行前端以来第一个比较完整、正式的产品，但很快我被调整为全栈研发，学习 Ruby on Rails，参与维护 BannerMaker（基于 Flash 的 swf banner），负责一个名为创意中心的新版（基于 HTML）。
 
-![image.png]({{ site.baseurl }}/assets/img/confessions-of-a-web-developer/03.png)
+创意中心的起点是当时两个主管的意志杂糅，偏设计的静态物料生成、偏技术的动态广告物料管理，最终在后者取得成功，很好地服务了当时的直通车站外投放需求。
 
-创意中心的起点是当时两个主管的意志杂糅，偏设计的静态物料生成、偏技术的动态广告物料管理，最终在后者取得成功，很好地服务了当时的直通车站外投放需求，我自己也在 2012 年初顺利晋升 P6。
-
-这个版本完成之后，我陷入了一个雕花的阶段，开始琢磨怎么样更好地抽象一个 300x250 尺寸的 HTML，如何拆解其中的轮播组件、请求模块，以及试图实现一个 WYSIWYG 的 HTML 编辑器：
-
-![image.png]({{ site.baseurl }}/assets/img/confessions-of-a-web-developer/04.png)
+这个版本完成之后，我陷入了一个雕花的阶段，开始琢磨怎么样更好地抽象一个 300x250 尺寸的 HTML，如何拆解其中的轮播组件、请求模块，以及试图实现一个 WYSIWYG 的 HTML 编辑器。
 
 这一年还用 Ruby on Rails 做了当时新成立的一淘 UX 部门网站[<sup>[8]</sup>](https://github.com/thx/mux.alimama.com/tree/old-mux)：
 
@@ -52,7 +48,7 @@ source: https://www.yuque.com/alpa/notes/fgoek8
 
 2013 年发生很多事情，回到广告，搬到西溪园区，工作内容也更加专注在创意中心。我决定把之前的积累推翻，后端实现切换到 Node.js，全部使用 JavaScript。在这个版本里，我们实现了基于 Canvas 动画生成视频，拆解了模板开发套件、针对广告场景的基础 DOM 库 yen[<sup>[9]</sup>](https://github.com/erzu/yen) 、甚至还有现在看来有些用力过猛的 html/css 解析器。
 
-这套方案大幅降低了后端研发成本，全组同学都能够参与到后端研发，相关技术创新还攒下两个专利，所服务的视频广告业务也取得成功。凭借这些因素，我在 2014 年顺利晋升 P7。
+这套方案大幅降低了后端研发成本，全组同学都能够参与到后端研发，相关技术创新还攒下两个专利，所服务的视频广告业务也取得成功。
 
 也是在这一年，我开始完全使用静态站点生成工具来建设团队门户[<sup>[10]</sup>](https://thx.github.io/) ，为了减少大团队的同事对安装 Jekyll 以及 Ruby 的抵触，还专门研发了一个 Node.js 版本叫做 darko[<sup>[11]</sup>](https://github.com/cyjake/darko) ：
 
@@ -64,13 +60,7 @@ source: https://www.yuque.com/alpa/notes/fgoek8
 
 在这个阶段，许多技术攻坚已经是团队中成长起来的中坚力量完成，我自己在技术上的投入则放到更加基础的模块。在这些工作中，我实现并开源了 ORM 库 Leoric[<sup>[12]</sup>](https://leoric.js.org/)、前端构建工具 Porter[<sup>[13]</sup>](https://github.com/erzu/porter) （作为一个取名鬼才，我因此被小伙伴揶揄很久），这两个库也被我称为“献给互联网的两毛钱”（my own two cents for the web）。
 
-这套方案在当时取得的影响是空前且深远的，直接推高了手淘首页焦点图等广告位的投放单价，但最终也是因为这个原因没有被大幅铺开。无论如何，我们都迎来了「大数据下的智能创意」：
-
-![image.png]({{ site.baseurl }}/assets/img/confessions-of-a-web-developer/07.png)
-
-而我也侥幸凭借这些工作在 2016 年晋升 P8。
-
-这一波晋升后的迷惘期比预期的来得要晚一些，16/17 年我们没有多少犹豫，一方面完善技术方案，一方面对外输出，掺和了天猫双十一、Lazada、AliExpress 等等业务，想要成为集团内的图文创意事实标准。如今回顾，创意中心支持的业务遍布集团，可能我们真的做到了。
+16/17 年我们没有多少犹豫，一方面完善技术方案，一方面对外输出，掺和了天猫双十一、Lazada、AliExpress 等等业务，想要成为集团内的图文创意事实标准。如今回顾，创意中心支持的业务遍布集团，可能我们真的做到了。
 
 但因为集团内同一赛道上还有一只房间里的大象，业务上的重心又需要我们从图文创意抽离，探索移动端的视频广告场景，我在 17/18 年陷入拉扯，到 18/19 年，自觉不再能给团队带来新的东西，又想要跟 Web 再续前缘，我选择转岗加入语雀。
 

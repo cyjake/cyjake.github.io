@@ -6,7 +6,7 @@ section: about
 i18n_url: /en/about/
 ---
 
-程序员、摄影师，以及白日造梦者。目前是 [阿里妈妈](https://www.alimama.com) 的前端工程师。
+程序员、摄影师，以及白日造梦者。
 
 ## 我的作品
 

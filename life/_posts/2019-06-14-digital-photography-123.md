@@ -116,7 +116,7 @@ The flag of victory – Yevgeny Khaldei, 1945
 
 一百多年过去，即便顺应潮流开始数字化，徕卡机身还是原来的造型，标志性的银色机身+红色徕卡圆标。使用徕卡拍摄的摄影师可能越来越少了，徕卡自身的宣传也让我觉得更加偏重情怀、相机设计，而不是摄影本身。
 
-不知道六万块的 [M10](https://detail.tmall.com/item.htm?spm=a1z10.1-b-s.w17542291-20141356298.11.2fcc7909ICRvCJ&id=544550677328&scene=taobao_shop&sku_properties=5919063:10010) 加上四万块的 [SUMMILUX 35mm/f1.4](https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-18404977930.59.770d3e09uTH108&id=540794755456&rn=633d7e12ca2ec94145106275270d9b43&abbucket=13&sku_properties=29029:129275117;5919063:6536025) 镜头拍摄出来的照片是否仍然还是那个味道呢？
+不知道六万块的 [M10](https://detail.tmall.com/item.htm?id=544550677328) 加上四万块的 [SUMMILUX 35mm/f1.4](https://detail.tmall.com/item.htm?id=540794755456) 镜头拍摄出来的照片是否仍然还是那个味道呢？
 
 ### 柯达、富士、禄来
 
